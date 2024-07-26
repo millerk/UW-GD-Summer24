@@ -468,7 +468,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8402db157795a684996a53075b73a286, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  newGameScene: Scenes/SampleScene
+  newGameScene: Scenes/Battlefield
 --- !u!4 &722231711
 Transform:
   m_ObjectHideFlags: 0
@@ -518,7 +518,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -15, y: 134.81847}
+  m_AnchoredPosition: {x: 0, y: 134.81847}
   m_SizeDelta: {x: 1198.7455, y: 450.0934}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1201648428
