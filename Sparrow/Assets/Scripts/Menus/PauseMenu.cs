@@ -40,7 +40,7 @@ public class PauseMenu : MonoBehaviour
         GameIsPaused = true;
     }
 
-    public void LoadMenu(String menuName)
+    public void LoadMenu(string menuName)
     {
         Resume();
         SceneManager.LoadScene(menuName);
@@ -48,6 +48,7 @@ public class PauseMenu : MonoBehaviour
 
     public void QuitGame()
     {
+        Metrics.RegisterGameQuit(Metrics.InPauseMenu);
         Application.Quit();
     }
 }
