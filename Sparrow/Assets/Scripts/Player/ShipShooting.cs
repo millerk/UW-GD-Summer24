@@ -15,7 +15,10 @@ public class ShipShooting : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1"))
         {
-            Shoot();
+            if (!PauseMenu.GameIsPaused)
+            {
+                Shoot();
+            }
         }
     }
 
