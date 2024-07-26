@@ -22,7 +22,6 @@ public class CannonLogic : MonoBehaviour
         Vector3 distance = firePoint - transform.position;
         if (maxDistance < Mathf.Abs(distance.magnitude))
         {
-            Debug.Log("Distance " + distance);
             Destroy(gameObject);
         }
     }
