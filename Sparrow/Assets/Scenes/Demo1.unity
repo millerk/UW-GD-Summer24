@@ -288,6 +288,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b76460235d9056438b9d37dd404da00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cameraComponent: {fileID: 1719125046}
   zoomOutDelay: 2
   zoomOutDuration: 3
   closeUpDistance: 15

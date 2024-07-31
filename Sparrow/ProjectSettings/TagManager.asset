@@ -38,6 +38,12 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: MapTile
+    uniqueID: 3713618901
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Ships
+    uniqueID: 2247510495
     locked: 0

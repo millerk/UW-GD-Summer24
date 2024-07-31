@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
+    public Camera cameraComponent;
     public float zoomOutDelay = 2f; // Delay before starting the zoom-out
     public float zoomOutDuration = 2f; // Duration of the zoom-out effect
     public float closeUpDistance = 5f; // Distance for the close-up effect
@@ -11,14 +12,12 @@ public class CameraController : MonoBehaviour
     public float minFOV = 30f; // Minimum Field of View for close-up
     public float maxFOV = 60f; // Maximum Field of View for zoomed-out
 
-    private Camera cameraComponent;
     private Vector3 targetPosition;
     private float targetFOV;
     private Vector3 initialCameraPosition;
 
     void Start()
     {
-        cameraComponent = Camera.main;
         if (cameraComponent == null || cameraComponent.orthographic)
         {
             Debug.LogError("Main camera is either not found or not perspective. Ensure there's a perspective camera with the 'MainCamera' tag.");
