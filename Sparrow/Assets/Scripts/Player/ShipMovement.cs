@@ -24,6 +24,14 @@ public class ShipMovement : MonoBehaviour
     Vector2 mousePos;
     float angle;
 
+    void Start()
+    {
+        cam = Camera.main;
+        if (cam == null || cam.orthographic)
+        {
+            Debug.LogError("Main camera is either not found or not perspective. Ensure there's a perspective camera with the 'MainCamera' tag.");
+        }
+    }
     // Update is called once per frame
     void Update()
     {
