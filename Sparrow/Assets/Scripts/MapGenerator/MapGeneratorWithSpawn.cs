@@ -246,7 +246,7 @@ public class MapGeneratorWithSpawn : MonoBehaviour
         GameObject tileGroup = tileGroups[tileID];
         GameObject tile = Instantiate(tilePrefab, tileGroup.transform);
 
-        tile.name = string.Format("tile_x(0)_y(1)", x, y);
+        tile.name = string.Format("tile_x{0}_y{1}", x, y);
         tile.transform.localPosition = new Vector3(x, y, 0);
 
         tileGrid[x].Add(tile);

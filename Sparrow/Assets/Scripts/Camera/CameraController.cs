@@ -15,6 +15,8 @@ public class CameraController : MonoBehaviour
     private Vector3 targetPosition;
     private float targetFOV;
     private Vector3 initialCameraPosition;
+    private Vector3 velocity = Vector3.zero; // For SmoothDamp
+    private float fovVelocity = 0f; // For SmoothDamp
 
     void Start()
     {
@@ -36,18 +38,19 @@ public class CameraController : MonoBehaviour
         float mapDiagonal = Mathf.Sqrt(mapWidth * mapWidth + mapHeight * mapHeight);
         float requiredFOV = 2 * Mathf.Atan(mapDiagonal / (2 * zoomOutDistance)) * Mathf.Rad2Deg;
 
-        targetPosition = new Vector3(mapCenter.x, mapCenter.y, -zoomOutDistance);
+        // Clamp the FOV to be within min and max FOV
         targetFOV = Mathf.Clamp(requiredFOV, minFOV, maxFOV);
+
+        targetPosition = new Vector3(mapCenter.x, mapCenter.y, -zoomOutDistance);
 
         StartCoroutine(ZoomOutRoutine(playerPosition));
     }
 
-    private IEnumerator ZoomOutRoutine(Vector3 playerPositon)
+    private IEnumerator ZoomOutRoutine(Vector3 playerPosition)
     {
         // Wait for the delay
         yield return new WaitForSeconds(zoomOutDelay);
 
-        // Smoothly transition to the target position and FOV
         Vector3 startPosition = cameraComponent.transform.position;
         float startFOV = cameraComponent.fieldOfView;
 
@@ -56,21 +59,39 @@ public class CameraController : MonoBehaviour
         while (elapsedTime < zoomOutDuration)
         {
             float t = elapsedTime / zoomOutDuration;
-            cameraComponent.transform.position = Vector3.Lerp(startPosition, targetPosition, t);
-            cameraComponent.fieldOfView = Mathf.Lerp(startFOV, targetFOV, t);
 
-            adjustCameraToKeepPlayerInView(playerPositon);
+            // Smoothly transition the camera's position and FOV
+            cameraComponent.transform.position = Vector3.SmoothDamp(
+                cameraComponent.transform.position,
+                targetPosition,
+                ref velocity,
+                zoomOutDuration - elapsedTime
+            );
+
+            cameraComponent.fieldOfView = Mathf.SmoothDamp(
+                cameraComponent.fieldOfView,
+                targetFOV,
+                ref fovVelocity,
+                zoomOutDuration - elapsedTime
+            );
+
+            // Ensure FOV stays within boundaries during transition
+            cameraComponent.fieldOfView = Mathf.Clamp(cameraComponent.fieldOfView, minFOV, maxFOV);
+
+            adjustCameraToKeepPlayerInView(playerPosition);
 
             elapsedTime += Time.deltaTime;
             yield return null;
         }
 
-        cameraComponent.transform.position = targetPosition; // Ensure the camera ends at the final position
-        cameraComponent.fieldOfView = targetFOV; // Ensure the camera ends at the final FOV
+        // Ensure final values are applied
+        cameraComponent.transform.position = targetPosition;
+        cameraComponent.fieldOfView = targetFOV;
+
         Debug.Log("Zoom out complete.");
     }
 
-    private void adjustCameraToKeepPlayerInView(Vector3 playerPositon)
+    private void adjustCameraToKeepPlayerInView(Vector3 playerPosition)
     {
         // Get the camera's position and field of view
         Vector3 cameraPosition = cameraComponent.transform.position;
@@ -80,14 +101,18 @@ public class CameraController : MonoBehaviour
         float maxDistance = Mathf.Tan(currentFOV * 0.5f * Mathf.Deg2Rad) * Mathf.Abs(cameraPosition.z);
 
         // Calculate the camera's new position to ensure the player remains in view
-        Vector3 directionToPlayer = playerPositon - cameraPosition;
+        Vector3 directionToPlayer = playerPosition - cameraPosition;
         float distanceToPlayer = directionToPlayer.magnitude;
 
         if (distanceToPlayer > maxDistance)
         {
-            // Adjust camera position to keep player in view
-            Vector3 newCameraPosition = playerPositon - directionToPlayer.normalized * maxDistance;
-            cameraComponent.transform.position = new Vector3(newCameraPosition.x, newCameraPosition.y, cameraPosition.z);
+            // Adjust camera position to keep player in view, but limit adjustment to avoid abrupt changes
+            Vector3 newCameraPosition = playerPosition - directionToPlayer.normalized * maxDistance;
+            cameraComponent.transform.position = Vector3.Lerp(
+                cameraComponent.transform.position,
+                new Vector3(newCameraPosition.x, newCameraPosition.y, cameraComponent.transform.position.z),
+                Time.deltaTime * 5f // Adjust this multiplier to control smoothness
+            );
         }
     }
 }

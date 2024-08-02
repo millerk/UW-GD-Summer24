@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8048577682434080658}
   - component: {fileID: 8673676931803435969}
   m_Layer: 0
-  m_Name: DeepWaterTexture
+  m_Name: prefabDeepWater
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -126,7 +126,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d0808cb445cc5744a9ed304949f25fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxDistance: 0
+  maxDistance: 6
   projectileSpawnPoint: {x: 0, y: 0, z: 0}
 --- !u!58 &4372930403595334076
 CircleCollider2D:
@@ -157,7 +157,7 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
