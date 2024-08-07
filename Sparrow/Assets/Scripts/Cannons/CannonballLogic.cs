@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 public class CannonballLogic : MonoBehaviour
 {
@@ -9,6 +6,7 @@ public class CannonballLogic : MonoBehaviour
     public float maxDistance;
 
     public Vector3 projectileSpawnPoint;
+    public float projectileSpeed;
 
     void Start()
     {
