@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2389612218673027417}
   - component: {fileID: 7271211498097975965}
+  - component: {fileID: 7832517865966826289}
+  - component: {fileID: 5557751387789077775}
   m_Layer: 0
   m_Name: CannonTemplate
   m_TagString: Untagged
@@ -32,7 +34,6 @@ Transform:
   m_Children:
   - {fileID: 397114187321988696}
   - {fileID: 8325774226561609442}
-  - {fileID: 1302701152421278918}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7271211498097975965
@@ -51,6 +52,58 @@ MonoBehaviour:
   cannon: {fileID: 6036224603389971451}
   cannonBase: {fileID: 7214291902977800142}
   firePoint: {fileID: 5938253002244781237}
+--- !u!50 &7832517865966826289
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 248383343662709132}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
+--- !u!233 &5557751387789077775
+HingeJoint2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 248383343662709132}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_EnableCollision: 0
+  m_ConnectedRigidBody: {fileID: 5808770053515232665}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_BreakAction: 3
+  m_AutoConfigureConnectedAnchor: 0
+  m_Anchor: {x: 0, y: 0}
+  m_ConnectedAnchor: {x: 0, y: 0}
+  m_UseMotor: 0
+  m_Motor:
+    m_MotorSpeed: 0
+    m_MaximumMotorForce: 10000
+  m_UseLimits: 0
+  m_AngleLimits:
+    m_LowerAngle: 0
+    m_UpperAngle: 359
 --- !u!1 &5938253002244781237
 GameObject:
   m_ObjectHideFlags: 0
@@ -75,12 +128,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5938253002244781237}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2389612218673027417}
+  m_Father: {fileID: 397114187321988696}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6036224603389971451
 GameObject:
@@ -93,7 +146,8 @@ GameObject:
   - component: {fileID: 397114187321988696}
   - component: {fileID: 2484571247548741701}
   - component: {fileID: 6229224847718482174}
-  - component: {fileID: 3963248201231259400}
+  - component: {fileID: 5808770053515232665}
+  - component: {fileID: 6530671088036745752}
   m_Layer: 0
   m_Name: Cannon
   m_TagString: Untagged
@@ -113,7 +167,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1302701152421278918}
   m_Father: {fileID: 2389612218673027417}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2484571247548741701
@@ -189,7 +244,34 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &3963248201231259400
+--- !u!50 &5808770053515232665
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6036224603389971451}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
+--- !u!114 &6530671088036745752
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -198,13 +280,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 6036224603389971451}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eaa5cb1a3f6736c4f8a0cb85adb640b2, type: 3}
+  m_Script: {fileID: 11500000, guid: 4432741e7de0127489939369b92f5739, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firePoint: {fileID: 1302701152421278918}
+  projectileSpawnPoint: {fileID: 1302701152421278918}
   projectile: {fileID: 0}
+  animator: {fileID: 0}
+  target: {fileID: 0}
   cannonDef: {fileID: 0}
-  animator: {fileID: 6229224847718482174}
+  cannonRb: {fileID: 0}
 --- !u!1 &7214291902977800142
 GameObject:
   m_ObjectHideFlags: 0

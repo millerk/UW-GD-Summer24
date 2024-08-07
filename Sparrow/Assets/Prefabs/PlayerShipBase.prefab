@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 686960933207461281}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: CannonPoint2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7078027437278796141}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: CannonPoint5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71,7 +71,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 370770642880432956}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: CannonPoint0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -102,7 +102,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6123873241028074175}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: CannonPoint3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -138,7 +138,8 @@ GameObject:
   - component: {fileID: 8012477136870077316}
   - component: {fileID: 9223001490044897287}
   - component: {fileID: -5228896584721120679}
-  m_Layer: 0
+  - component: {fileID: -7025868003506739830}
+  m_Layer: 2
   m_Name: PlayerShipBase
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -282,13 +283,14 @@ MonoBehaviour:
   - {fileID: 7597696367023192810}
   - {fileID: 1665600918682020118}
   cannonDefs:
-  - {fileID: 11400000, guid: b10e627261f058b4ebf0e71ca3bfae5a, type: 2}
+  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 11400000, guid: d8ed48c2720aaa64d8e7a6961abaafca, type: 2}
   cannonTemplate: {fileID: 248383343662709132, guid: 6b9d6f80cad33044893fbbf9221d52b1, type: 3}
+  shipRb: {fileID: 8430742869276604322}
 --- !u!61 &-5228896584721120679
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -321,7 +323,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.0033195019}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -332,8 +334,43 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.8, y: 1.6}
+  m_Size: {x: 0.574278, y: 1.2746949}
   m_EdgeRadius: 0
+--- !u!58 &-7025868003506739830
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6847842634037359419}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 4
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.8
 --- !u!1 &7597696367023192810
 GameObject:
   m_ObjectHideFlags: 0
@@ -343,7 +380,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6703897931969418458}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: CannonPoint4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -374,7 +411,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7282356502502803154}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: CannonPoint1
   m_TagString: Untagged
   m_Icon: {fileID: 0}

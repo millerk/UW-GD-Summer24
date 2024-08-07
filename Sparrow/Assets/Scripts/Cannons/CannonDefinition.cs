@@ -14,5 +14,6 @@ public class Cannon : ScriptableObject
     public Vector2 firePointOffset;
     public Sprite cannonBaseSprite;
     public GameObject projectile;
+    public float projectileSpeed;
     public RuntimeAnimatorController animationController;
 }

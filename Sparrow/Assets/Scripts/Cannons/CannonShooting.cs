@@ -12,7 +12,7 @@ public class CannonShooting : MonoBehaviour
 
     void Start()
     {
-        CannonBuilder cannonBuilder = GetComponentInParent<CannonBuilder>();
+        CannonContainer cannonBuilder = GetComponentInParent<CannonContainer>();
         cannonDef = cannonBuilder.cannonDef;
         projectile = cannonDef.projectile;
         CannonballLogic projectileConfig = projectile.GetComponent<CannonballLogic>();

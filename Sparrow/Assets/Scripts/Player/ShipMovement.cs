@@ -62,9 +62,11 @@ public class ShipMovement : MonoBehaviour
 
     private void updateMovementTank()
     {
-        // Change angle by [rorateSpeed] degrees per second
+        // Change angle by [rotateSpeed] degrees per second
         float moveDir = Input.GetAxisRaw("Vertical");
         angle -= Input.GetAxisRaw("Horizontal") * rotateSpeed * 360 * Time.deltaTime;
+        // Keep within range of [-360, 360] for sanity's sake
+        angle %= 360;
         
         float angleRad = angle * Mathf.Deg2Rad;
         movement.x = Mathf.Cos(angleRad) * moveDir;
