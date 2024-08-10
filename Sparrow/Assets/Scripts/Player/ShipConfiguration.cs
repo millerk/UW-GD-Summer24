@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class ShipConfiguration : MonoBehaviour
@@ -50,8 +49,9 @@ public class ShipConfiguration : MonoBehaviour
 
     void SetTargetOnMouseClick()
     {
+        LayerMask enemyLayers = LayerMask.GetMask("Enemy");
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction);
+        RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction, enemyLayers);
         if (hit.collider != null && hit.transform.gameObject.CompareTag(ENEMY_TAG))
         {
              _targetWasClicked = true;
