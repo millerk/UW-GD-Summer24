@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4332703334164343706}
   - component: {fileID: -6183314917113772691}
   - component: {fileID: 605418080969120408}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EnemyShipTEST1-Sheet(Mast)
   m_TagString: Enemy
   m_Icon: {fileID: 0}

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6429600250352139018}
   - component: {fileID: 7309664084518155287}
   - component: {fileID: 4372930403595334076}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cannonball
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -126,8 +126,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d0808cb445cc5744a9ed304949f25fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxDistance: 6
+  maxDistance: 5
   projectileSpawnPoint: {x: 0, y: 0, z: 0}
+  projectileSpeed: 3
 --- !u!58 &4372930403595334076
 CircleCollider2D:
   m_ObjectHideFlags: 0
