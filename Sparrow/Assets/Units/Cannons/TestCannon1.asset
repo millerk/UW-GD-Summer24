@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: TestBarrelTurret
   description: This fires stuff
-  attackStrength: 1
+  attackStrength: 2
   attackDistance: 5
   cannonSpriteOffsetFromBase: {x: -0.25, y: 0.2}
   firePointOffset: {x: -0.45, y: 0}

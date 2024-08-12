@@ -9,9 +9,6 @@ public class ShipConfiguration : MonoBehaviour
     public GameObject cannonTemplate;
     public Rigidbody2D shipRb;
     private List<GameObject> _cannons = new();
-    private GameObject _target = null;
-    private bool _targetWasClicked = false;
-    private string ENEMY_TAG = "Enemy";
 
     // Start is called before the first frame update
     void Start()
@@ -39,60 +36,12 @@ public class ShipConfiguration : MonoBehaviour
         _autoTargetCollider.radius = _maxDistance - 0.05f; // a little wiggle room so that we don't auto-target things just on the edge of range
     }
     
-    void Update()
+    public void UpdateTarget(GameObject target)
     {
-        if (Input.GetMouseButtonDown(0) && !PauseMenu.GameIsPaused)
-        {
-            SetTargetOnMouseClick();
-        }
-    }
-
-    void SetTargetOnMouseClick()
-    {
-        LayerMask enemyLayers = LayerMask.GetMask("Enemy");
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction, enemyLayers);
-        if (hit.collider != null && hit.transform.gameObject.CompareTag(ENEMY_TAG))
-        {
-             _targetWasClicked = true;
-            UpdateTarget(hit.transform.gameObject);
-        }
-        else
-        {
-            // Clicked somewhere else on screen, deselect the target
-            UpdateTarget(null);
-            _targetWasClicked = false;
-        }   
-    }
-
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        Debug.Log("Entered trigger");
-        if (_target == null && other.CompareTag(ENEMY_TAG))
-        {
-            Debug.Log("Updating target to " + other.name);
-            UpdateTarget(other.gameObject);
-            _targetWasClicked = false;
-        }
-    }
-
-    void OnTriggerExit2D(Collider2D other)
-    {
-        // If player clicked to target we should always respect it
-        // If target was selected by auto-fire then deselect when we go out of range
-        if (GameObject.ReferenceEquals(other.gameObject, _target) && !_targetWasClicked)
-        {
-            UpdateTarget(null);
-        }
-    }
-
-    void UpdateTarget(GameObject target)
-    {
-        _target = target;
         for (int i = 0; i < _cannons.Count; i++)
         {
             CannonContainer container = _cannons[i].GetComponent<CannonContainer>();
-            container.cannon.GetComponent<CannonStateMachine>().SetTarget(_target);
+            container.cannon.GetComponent<CannonStateMachine>().SetTarget(target);
         }
     }
 }

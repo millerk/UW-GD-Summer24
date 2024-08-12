@@ -35,12 +35,12 @@ public class CannonContainer : MonoBehaviour
         CannonballLogic projectileConfig = projectile.GetComponent<CannonballLogic>();
         projectileConfig.maxDistance = cannonDef.attackDistance;
         projectileConfig.projectileSpeed = cannonDef.projectileSpeed;
+        projectileConfig.attackStrength = cannonDef.attackStrength;
 
         // Pass whatever additional references are needed by the cannon state machine
         CannonStateMachine _sm = cannon.GetComponent<CannonStateMachine>();
         _sm.projectile = projectile;
         _sm.projectileConfig = projectile.GetComponent<CannonballLogic>();
-        // _sm.CannonDef = cannonDef;
         _sm.CannonAnim = _cannonAnimator;
         _sm.CannonRb = cannon.GetComponent<Rigidbody2D>();
         _sm.ShipRb = shipRb;
