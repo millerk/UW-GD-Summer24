@@ -151,7 +151,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0aaf447f802e28438e100555c09b523, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characterPrefab: {fileID: 3632393490432388215, guid: 15c264c0908fd0d48923f56bafceced3, type: 3}
+  characterPrefab: {fileID: 6847842634037359419, guid: 9e7965dd074dd0a4abcb3864277b5d27, type: 3}
 --- !u!4 &642829876
 Transform:
   m_ObjectHideFlags: 0
@@ -343,7 +343,7 @@ MonoBehaviour:
   prefabWater: {fileID: 8979340069536578346, guid: 09b108a04595b6540b97fc1ed5afdd6b, type: 3}
   prefabSand: {fileID: 5896505433429229737, guid: f2f0ec9b45559d54fb267a5477aefb2a, type: 3}
   prefabGrass: {fileID: 2594190323953209280, guid: 7f5f5de2ecec21c489b5d7f05fd28042, type: 3}
-  player: {fileID: 3632393490432388215, guid: 15c264c0908fd0d48923f56bafceced3, type: 3}
+  player: {fileID: 6847842634037359419, guid: 9e7965dd074dd0a4abcb3864277b5d27, type: 3}
   enemyPrefab: {fileID: 1739139097824912367, guid: e6705a9387e6dc540b52c0d10860a8db, type: 3}
   numberOfEnemies: 5
   enemySpawnRadius: 5

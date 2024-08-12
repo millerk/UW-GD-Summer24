@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4332703334164343706}
   - component: {fileID: -6183314917113772691}
   - component: {fileID: 605418080969120408}
+  - component: {fileID: 974075676751969829}
   m_Layer: 8
   m_Name: EnemyShipTEST1-Sheet(Mast)
   m_TagString: Enemy
@@ -95,7 +96,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1739139097824912367}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -162,3 +163,16 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: -0.051427245}
   m_Size: {x: 0.5371456, y: 0.95429444}
   m_Direction: 0
+--- !u!114 &974075676751969829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1739139097824912367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18a9049f58596d741951f3caafddfaf7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HitPoints: 5
