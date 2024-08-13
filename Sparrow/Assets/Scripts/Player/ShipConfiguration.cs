@@ -35,8 +35,8 @@ public class ShipConfiguration : MonoBehaviour
         CircleCollider2D _autoTargetCollider = gameObject.GetComponent<CircleCollider2D>();
         _autoTargetCollider.radius = _maxDistance - 0.05f; // a little wiggle room so that we don't auto-target things just on the edge of range
     }
-    
-    public void UpdateTarget(GameObject target)
+
+    public void UpdateCannonTarget(GameObject target)
     {
         for (int i = 0; i < _cannons.Count; i++)
         {

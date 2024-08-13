@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class EnemyHealthManager : MonoBehaviour
 {
+    public GameEvent enemyDeath;
     public int HitPoints = 5;
 
     void OnCollisionEnter2D(Collision2D other)
@@ -14,6 +15,7 @@ public class EnemyHealthManager : MonoBehaviour
         }
         if (HitPoints <= 0)
         {
+            enemyDeath.TriggerEvent(gameObject);
             Destroy(gameObject);
         }
     }

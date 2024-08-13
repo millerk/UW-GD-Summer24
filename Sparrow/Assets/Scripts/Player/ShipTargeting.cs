@@ -20,6 +20,14 @@ public class ShipTargeting : MonoBehaviour
         }
     }
 
+    public void OnEnemyDeath(GameObject enemy)
+    {
+        if (ReferenceEquals(target, enemy))
+        {
+            UpdateTarget(null, false);
+        }
+    }
+
     void SetTargetOnMouseClick()
     {
         LayerMask enemyLayers = LayerMask.GetMask("Enemy");
@@ -27,16 +35,12 @@ public class ShipTargeting : MonoBehaviour
         RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction, Mathf.Infinity, enemyLayers);
         if (hit.collider != null && hit.transform.gameObject.CompareTag(ENEMY_TAG))
         {
-            target = hit.transform.gameObject;
-            shipConfig.UpdateTarget(target);
-            _targetWasClicked = true;
+            UpdateTarget(hit.transform.gameObject, true);
         }
         else
         {
             // Clicked somewhere else on screen, deselect the target
-            target = null;
-            shipConfig.UpdateTarget(target);
-            _targetWasClicked = false;
+            UpdateTarget(null, false);
         }   
     }
 
@@ -44,10 +48,8 @@ public class ShipTargeting : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         if (target == null && other.CompareTag(ENEMY_TAG))
-        {   
-            target = other.gameObject;
-            shipConfig.UpdateTarget(target);
-            _targetWasClicked = false;
+        {
+            UpdateTarget(other.gameObject, false);
         }
     }
 
@@ -56,9 +58,7 @@ public class ShipTargeting : MonoBehaviour
     {
         if (target == null && other.CompareTag(ENEMY_TAG))
         {
-            target = other.gameObject;
-            shipConfig.UpdateTarget(target);
-            _targetWasClicked = false;
+            UpdateTarget(other.gameObject, false);
         }
     }
 
@@ -68,9 +68,14 @@ public class ShipTargeting : MonoBehaviour
         // If target was selected by auto-fire then deselect when we go out of range
         if (ReferenceEquals(other.gameObject, target) && !_targetWasClicked)
         {
-            target = null;
-            shipConfig.UpdateTarget(target);
-            _targetWasClicked = false;
+            UpdateTarget(null, false);
         }
+    }
+
+    private void UpdateTarget(GameObject newTarget, bool wasClicked)
+    {
+        target = newTarget;
+        _targetWasClicked = wasClicked;
+        shipConfig.UpdateCannonTarget(target);
     }
 }

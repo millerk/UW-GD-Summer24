@@ -175,4 +175,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18a9049f58596d741951f3caafddfaf7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyDeath: {fileID: 11400000, guid: 414dfc9853bd0654daa1e3928b01376e, type: 2}
   HitPoints: 5
