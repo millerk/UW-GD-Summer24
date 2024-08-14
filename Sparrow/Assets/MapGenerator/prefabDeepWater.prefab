@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8048577682434080658}
   - component: {fileID: 8673676931803435969}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: prefabDeepWater
   m_TagString: Untagged
   m_Icon: {fileID: 0}
