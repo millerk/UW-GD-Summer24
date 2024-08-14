@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 90603510914185317}
   - component: {fileID: 6289684261163721386}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: WaterTexture
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8738988905993918705}
   - component: {fileID: 2934891449973209359}
   - component: {fileID: -4399088753897792223}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: SandTexture
   m_TagString: Untagged
   m_Icon: {fileID: 0}
