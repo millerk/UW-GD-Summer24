@@ -18,6 +18,7 @@ public class MapGeneratorWithSpawn : MonoBehaviour
     //Spawner
     public GameObject player;
     public GameObject enemyPrefab; // The enemy prefab
+    public GameEvent enemySpawned;
     public int numberOfEnemies = 5;
     public float enemySpawnRadius = 5f;
     public float minDistanceFromPlayer = 10f;
@@ -387,7 +388,8 @@ public class MapGeneratorWithSpawn : MonoBehaviour
                     continue;
                 }
 
-                Instantiate(enemyPrefab, spawnPosition, Quaternion.identity);
+                GameObject enemy = Instantiate(enemyPrefab, spawnPosition, Quaternion.identity);
+                enemySpawned.TriggerEvent(enemy);
             }            
         }
     }
