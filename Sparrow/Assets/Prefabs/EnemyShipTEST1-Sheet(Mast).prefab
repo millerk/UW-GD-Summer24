@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: -6183314917113772691}
   - component: {fileID: 605418080969120408}
   - component: {fileID: 974075676751969829}
+  - component: {fileID: 7149692812225392152}
   m_Layer: 8
   m_Name: EnemyShipTEST1-Sheet(Mast)
   m_TagString: Enemy
@@ -177,3 +178,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyDeath: {fileID: 11400000, guid: 414dfc9853bd0654daa1e3928b01376e, type: 2}
   HitPoints: 5
+--- !u!114 &7149692812225392152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1739139097824912367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 545aeb05ff8efda4fa37ca43d2560716, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _initialState: {fileID: 11400000, guid: a70cd4b7380fd004e9f9e8a5e441ddab, type: 2}
