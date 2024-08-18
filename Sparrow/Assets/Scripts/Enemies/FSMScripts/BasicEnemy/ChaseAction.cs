@@ -27,7 +27,7 @@ namespace FSM
                 moveSpeed * Time.deltaTime
             );
 
-            Debug.Log("Chasing player...");
+            // Debug.Log("Chasing player...");
         }
     }
 }

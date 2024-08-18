@@ -11,7 +11,7 @@ namespace FSM
         {
             // Implementation of idle behavior
             // For example, the enemy could just wait and do nothing
-            Debug.Log("Enemy is idling...");
+            // Debug.Log("Enemy is idling...");
         }
     }
 }
