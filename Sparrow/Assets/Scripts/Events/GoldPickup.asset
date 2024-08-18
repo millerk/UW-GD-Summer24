@@ -9,9 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7c6cd7bd09344b34986eddd03ad3667e, type: 3}
-  m_Name: ChaseState
+  m_Script: {fileID: 11500000, guid: e07af557ca8d0ce418ddd5ef736576f4, type: 3}
+  m_Name: GoldPickup
   m_EditorClassIdentifier: 
-  Action:
-  - {fileID: 11400000, guid: 432663453bd6f49438f99859c08730ce, type: 2}
-  Transitions: []
