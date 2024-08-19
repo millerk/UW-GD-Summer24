@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 442c1aed9d35e534696819bbd19338d9
+guid: adfe7445a86ab994ebd0a548a5fba09e
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -147,133 +147,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: EnemyShipCannon-Sheet_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 160
-        width: 104
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 16902b53e8aab7a48a0e6a89e58941e9
-      internalID: 1068990525
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: EnemyShipCannon-Sheet_1
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 128
-        width: 104
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4a1abe9de7dfd5e489a942a6e582aee3
-      internalID: -505689812
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: EnemyShipCannon-Sheet_2
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 96
-        width: 104
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1aad8829fb08d8040bf0bb6b20b7f1a6
-      internalID: 868816784
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: EnemyShipCannon-Sheet_3
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 64
-        width: 104
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3e2d327f5a62e424aa1eab72ad24dfdd
-      internalID: -1887240310
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: EnemyShipCannon-Sheet_4
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 32
-        width: 104
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 977a6c0dfd32b4745b413ed47606af88
-      internalID: 1591640892
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: EnemyShipCannon-Sheet_5
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 104
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: faa4041f8ecafd343b2e7422ce9bb078
-      internalID: 1647263456
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
@@ -284,13 +158,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      EnemyShipCannon-Sheet_0: 1068990525
-      EnemyShipCannon-Sheet_1: -505689812
-      EnemyShipCannon-Sheet_2: 868816784
-      EnemyShipCannon-Sheet_3: -1887240310
-      EnemyShipCannon-Sheet_4: 1591640892
-      EnemyShipCannon-Sheet_5: 1647263456
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
