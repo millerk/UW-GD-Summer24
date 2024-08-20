@@ -82,6 +82,8 @@ MonoBehaviour:
     instantiationMode: 0
   - dependency: {fileID: 5743417108097213276, guid: 8294936f375755e46bb734b3c3af1913, type: 3}
     instantiationMode: 0
+  - dependency: {fileID: 11400000, guid: 7951c64df9968d24792219d7a48e486d, type: 2}
+    instantiationMode: 1
   - dependency: {fileID: 11400000, guid: d8ed48c2720aaa64d8e7a6961abaafca, type: 2}
     instantiationMode: 1
   - dependency: {fileID: 11400000, guid: b1edf3c5d1e23fc448ebc5d74f661a49, type: 2}
@@ -132,6 +134,8 @@ MonoBehaviour:
     instantiationMode: 1
   - dependency: {fileID: 2800000, guid: 9ad5571e14ac03142bb2ebba94c1ac1a, type: 3}
     instantiationMode: 0
+  - dependency: {fileID: 11400000, guid: 525f618103afe3d499e29e13d20c11bd, type: 2}
+    instantiationMode: 1
   templatePipeline: {fileID: 0}
   badge: {fileID: 0}
   addToDefaults: 1
