@@ -53,9 +53,10 @@ public class MapGeneratorWithSpawn : MonoBehaviour
     //Ref to CameraController
     public CameraController cameraController;
 
-    //Activations on Start
-    void Start()
+    //Activations on LevelLoaded
+    public void OnLevelLoad(GameObject levelManager)
     {
+        LevelDefinition levelDefinition = levelManager.GetComponent<LevelManager>().levelDefinition;
         CreateTileset();
         CreateTileGroups();
         GenerateNoiseMap();
@@ -66,7 +67,7 @@ public class MapGeneratorWithSpawn : MonoBehaviour
         Vector3 playerSpawnPosition = AddCharacterSpawnerToRandomTileOfType(prefabDeepWater);
 
         FindEnemySpawnPoints();
-        SpawnEnemies();
+        SpawnEnemies(levelDefinition.enemiesToSpawn);
 
         Vector3 mapCenter = new Vector3(mapWidth / 2, mapHeight / 2, 0);
 
@@ -361,7 +362,7 @@ public class MapGeneratorWithSpawn : MonoBehaviour
         }
     }
 
-    void SpawnEnemies()
+    void SpawnEnemies(List<LevelDefinition.EnemyConfiguration> enemiesToSpawn)
     {
         if (enemySpawnPoints.Count == 0)
         {
@@ -375,14 +376,18 @@ public class MapGeneratorWithSpawn : MonoBehaviour
             return;
         }
 
-        for (int i = 0; i < numberOfEnemies; i++)
+        foreach (LevelDefinition.EnemyConfiguration enemyType in enemiesToSpawn)
         {
-            Vector2Int spawnPoint = enemySpawnPoints[Random.Range(0, enemySpawnPoints.Count)];
-            Vector3 spawnPosition = new Vector3(spawnPoint.x, spawnPoint.y, 0);
+            int numberOfEnemies = enemyType.Count;
+            GameObject enemyPrefab = enemyType.Enemy;
+            for (int i = 0; i < numberOfEnemies; i++)
+            {
+                Vector2Int spawnPoint = enemySpawnPoints[Random.Range(0, enemySpawnPoints.Count)];
+                Vector3 spawnPosition = new Vector3(spawnPoint.x, spawnPoint.y, 0);
 
-            // Ensure enemies are spawned at least 'minDistanceFromCharacterSpawner' away from the character
-            float distanceFromPlayer = Vector3.Distance(spawnPosition, player.transform.position);
-            if (distanceFromPlayer < minDistanceFromPlayer)
+                // Ensure enemies are spawned at least 'minDistanceFromCharacterSpawner' away from the character
+                float distanceFromPlayer = Vector3.Distance(spawnPosition, player.transform.position);
+                if (distanceFromPlayer < minDistanceFromPlayer)
                 {
                     i--;
                     continue;
@@ -390,6 +395,7 @@ public class MapGeneratorWithSpawn : MonoBehaviour
 
                 GameObject enemy = Instantiate(enemyPrefab, spawnPosition, Quaternion.identity);
                 enemySpawned.TriggerEvent(enemy);
-            }            
-        }
+            }
+        }            
     }
+}

@@ -1,11 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class TitleMenuLogic : MonoBehaviour
 {
     public string newGameScene;
+    public LevelDefinition gameStartLevel;
 
     public void Start()
     {
@@ -16,6 +15,7 @@ public class TitleMenuLogic : MonoBehaviour
 
     public void loadNewGame()
     {
+        GlobalVariables.Set(LevelManager.NEXT_LEVEL, gameStartLevel);
         SceneManager.LoadScene(newGameScene);
     }
 
