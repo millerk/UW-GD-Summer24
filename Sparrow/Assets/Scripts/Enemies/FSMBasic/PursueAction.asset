@@ -9,10 +9,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b4e57822786b114489c18524799fb964, type: 3}
-  m_Name: PlayerInRangeDecision
+  m_Script: {fileID: 11500000, guid: d54e8ea449cc5af4ca90a0065d00f741, type: 3}
+  m_Name: PursueAction
   m_EditorClassIdentifier: 
-  detectionRange: 10
-  detectionLayerMask:
+  detectionRadius: 5
+  moveSpeed: 3
+  safeDistance: 2
+  rayLength: 5
+  obstacleLayerMask:
     serializedVersion: 2
-    m_Bits: 7232
+    m_Bits: 3072
+  numberOfCheckDirections: 8
+  parallelOffsetDistance: 0.5

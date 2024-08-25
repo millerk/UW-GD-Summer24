@@ -48,10 +48,14 @@ public class MapGeneratorWithSpawn : MonoBehaviour
     public GameObject[] gameObjectAddCollider;
 
     //Enemy Spawning Positions
-    private List<Vector2Int> enemySpawnPoints = new List<Vector2Int>();
+    private List<Vector2Int> playerSpawnPoints = new List<Vector2Int>();
+    private List<Vector2Int> spawnPoints = new List<Vector2Int>();
 
     //Ref to CameraController
-    public CameraController cameraController;
+    public Transform playerTransform;
+    public Transform mapCenterTransform;
+    public CinemachineCameraController cameraController;
+
 
     //Activations on Start
     void Start()
@@ -63,21 +67,10 @@ public class MapGeneratorWithSpawn : MonoBehaviour
         CreateBorderColliders();      
         SetTileColliders();
 
-        Vector3 playerSpawnPosition = AddCharacterSpawnerToRandomTileOfType(prefabDeepWater);
-
-        FindEnemySpawnPoints();
+        FindSpwanPoints();
+        SpawnPlayer();
         SpawnEnemies();
 
-        Vector3 mapCenter = new Vector3(mapWidth / 2, mapHeight / 2, 0);
-
-        if (cameraController != null)
-        {
-            cameraController.SetCameraTarget(playerSpawnPosition, mapCenter, mapWidth, mapHeight);
-        }
-        else
-        {
-            Debug.LogError("CameraController reference is not set.");
-        }
 
     }
 
@@ -195,11 +188,28 @@ public class MapGeneratorWithSpawn : MonoBehaviour
     {
         /**Create empty gameobjects for grouping tiles of the same type, ie forest tiles **/
         tileGroups = new Dictionary<int, GameObject>();
+
         foreach (KeyValuePair<int, GameObject> prefabPair in tileSet)
         {
             GameObject tileGroup = new GameObject(prefabPair.Value.name);
             tileGroup.transform.parent = gameObject.transform;
             tileGroup.transform.localPosition = new Vector3(0, 0, 0);
+
+            // Add Rigidbody2D and set to static
+            Rigidbody2D rb = tileGroup.AddComponent<Rigidbody2D>();
+            rb.bodyType = RigidbodyType2D.Static;  // Ensure it's static
+
+            // Add BoxCollider2D or PolygonCollider2D and make them used by composite
+            BoxCollider2D boxCollider = tileGroup.AddComponent<BoxCollider2D>();
+            boxCollider.usedByComposite = true;
+
+            // Add CompositeCollider2D
+            CompositeCollider2D compositeCollider = tileGroup.AddComponent<CompositeCollider2D>();
+
+            // Set tag and layer from prefab
+            tileGroup.tag = prefabPair.Value.tag;
+            tileGroup.layer = prefabPair.Value.layer;
+
             tileGroups.Add(prefabPair.Key, tileGroup);
         }
     }
@@ -250,6 +260,10 @@ public class MapGeneratorWithSpawn : MonoBehaviour
         tile.name = string.Format("tile_x{0}_y{1}", x, y);
         tile.transform.localPosition = new Vector3(x, y, 0);
 
+        // Set the tag and layer
+        tile.tag = tilePrefab.tag;
+        tile.layer = tilePrefab.layer;
+
         tileGrid[x].Add(tile);
     }
 
@@ -282,80 +296,49 @@ public class MapGeneratorWithSpawn : MonoBehaviour
 
     void SetTileColliders() {
         //Sets Collieder to Specified GameObject Tiles
-        gameObjectAddCollider = new GameObject[] { prefabSand, prefabGrass };
-        foreach (GameObject obj in gameObjectAddCollider)
+        foreach (var tileGroup in tileGroups.Values)
         {
-            // Add BoxCollider2D component if not already present
-            if (!obj.GetComponent<BoxCollider2D>())
+            BoxCollider2D[] colliders = tileGroup.GetComponentsInChildren<BoxCollider2D>();
+
+            foreach (BoxCollider2D collider in colliders)
             {
-                obj.AddComponent<BoxCollider2D>();
+                collider.usedByComposite = true;  // Enable merging with CompositeCollider2D
             }
         }
     }
-        
 
-    Vector3 AddCharacterSpawnerToRandomTileOfType(GameObject tileType)
-        {
-        // Create a list to store tiles of the specified type
-        List<GameObject> tilesOfType = new List<GameObject>();
-
-        // Iterate over tileGrid to find tiles of the specified type
-        foreach (var row in tileGrid)
-        {
-            foreach (var tile in row)
-            {
-                if (tile != null && tile.CompareTag(tileType.tag)) // Use tag or another identifier
-                {
-                    tilesOfType.Add(tile);
-                }
-            }
-        }
-
-        // Ensure there are tiles of the specified type
-        if (tilesOfType.Count == 0)
-        {
-            Debug.LogWarning($"No tiles of the type {tileType.name} found.");
-            return Vector3.zero;
-        }
-
-        // Pick a random tile from the list
-        GameObject randomTile = tilesOfType[Random.Range(0, tilesOfType.Count)];
-
-        // Add a CharacterSpawner component to the chosen tile
-        AddCharacterSpawner(randomTile);
-
-        // Return the spawn position
-        return randomTile.transform.position;
-    }
-
-    void AddCharacterSpawner(GameObject tile)
+    void SpawnPlayer()
     {
-        if (tile != null)
-        {
-            CharacterSpawner spawner = tile.AddComponent<CharacterSpawner>();
-            spawner.characterPrefab = player;
+        Vector2Int playerSpawnPoint = spawnPoints[Random.Range(0, spawnPoints.Count)];
+        Vector3 playerSpawnPosition = new Vector3(playerSpawnPoint.x, playerSpawnPoint.y, 0);
+        GameObject playerSpawn = Instantiate(player, playerSpawnPosition, Quaternion.identity);
 
-            // Optionally, immediately spawn a character
-            spawner.SpawnCharacter();
+       
+
+        if (cameraController != null)
+        {
+            Vector3 mapCenter = new Vector3(mapWidth / 2, mapHeight / 2, 0);
+            cameraController.SetCameraTarget(playerSpawn.transform, mapCenter);
         }
         else
         {
-            Debug.LogWarning("Selected tile is null.");
+            Debug.LogError("CameraController reference is not set.");
         }
+
     }
 
-    void FindEnemySpawnPoints()
+    void FindSpwanPoints()
     {
         int spawnTileID = 0;//first prefab in in tile ID set (ex. prefabDeepWater)
 
-        enemySpawnPoints.Clear();
+        spawnPoints.Clear();
         for (int x = 0; x < mapWidth; x++)
         {
             for (int y = 0; y < mapHeight; y++)
             {
                 if (noiseGrid[x][y] == spawnTileID)
                 {
-                    enemySpawnPoints.Add(new Vector2Int(x, y));
+                    spawnPoints.Add(new Vector2Int(x, y));
                 }
             }
         }
@@ -363,7 +346,7 @@ public class MapGeneratorWithSpawn : MonoBehaviour
 
     void SpawnEnemies()
     {
-        if (enemySpawnPoints.Count == 0)
+        if (spawnPoints.Count == 0)
         {
             Debug.LogWarning("No valid enemy spawn points found.");
             return;
@@ -377,7 +360,7 @@ public class MapGeneratorWithSpawn : MonoBehaviour
 
         for (int i = 0; i < numberOfEnemies; i++)
         {
-            Vector2Int spawnPoint = enemySpawnPoints[Random.Range(0, enemySpawnPoints.Count)];
+            Vector2Int spawnPoint = spawnPoints[Random.Range(0, spawnPoints.Count)];
             Vector3 spawnPosition = new Vector3(spawnPoint.x, spawnPoint.y, 0);
 
             // Ensure enemies are spawned at least 'minDistanceFromCharacterSpawner' away from the character

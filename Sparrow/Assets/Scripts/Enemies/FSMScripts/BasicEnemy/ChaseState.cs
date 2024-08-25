@@ -9,7 +9,7 @@ namespace FSM
     {
         private void OnEnable()
         {
-            //Action.Add(ScriptableObject.CreateInstance<ChaseAction>());
+
         }
     }
 }

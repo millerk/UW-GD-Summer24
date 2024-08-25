@@ -9,10 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b4e57822786b114489c18524799fb964, type: 3}
-  m_Name: PlayerInRangeDecision
+  m_Script: {fileID: 11500000, guid: 20bda4313f62060489b2d74a29e569dd, type: 3}
+  m_Name: PursueState
   m_EditorClassIdentifier: 
-  detectionRange: 10
-  detectionLayerMask:
-    serializedVersion: 2
-    m_Bits: 7232
+  Action:
+  - {fileID: 11400000, guid: c6f7a5916fb8e6a4cb51fdbf44cb9909, type: 2}
+  Transitions: []
