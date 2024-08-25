@@ -12,10 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d54e8ea449cc5af4ca90a0065d00f741, type: 3}
   m_Name: PursueAction
   m_EditorClassIdentifier: 
-  detectionRadius: 5
-  moveSpeed: 3
-  safeDistance: 2
-  rayLength: 5
+  speed: 5
+  maxSpeed: 10
+  avoidanceForceMultiplier: 10
+  raySpacing: 10
+  minAvoidanceDistance: 2
+  cornerAvoidanceForceMultiplier: 20
   obstacleLayerMask:
     serializedVersion: 2
     m_Bits: 3072

@@ -47,7 +47,7 @@ public class MapGeneratorWithSpawn : MonoBehaviour
     //Tile Collider
     public GameObject[] gameObjectAddCollider;
 
-    //Enemy Spawning Positions
+    //Spawning Positions
     private List<Vector2Int> playerSpawnPoints = new List<Vector2Int>();
     private List<Vector2Int> spawnPoints = new List<Vector2Int>();
 
@@ -56,9 +56,8 @@ public class MapGeneratorWithSpawn : MonoBehaviour
     public Transform mapCenterTransform;
     public CinemachineCameraController cameraController;
 
-
-    //Activations on Start
-    void Start()
+    //Activations on LevelLoaded
+    public void OnLevelLoad(GameObject levelManager)
     {
         CreateTileset();
         CreateTileGroups();
@@ -69,7 +68,7 @@ public class MapGeneratorWithSpawn : MonoBehaviour
 
         FindSpwanPoints();
         SpawnPlayer();
-        SpawnEnemies();
+        SpawnEnemies(levelDefinition.enemiesToSpawn);
 
 
     }
@@ -313,7 +312,7 @@ public class MapGeneratorWithSpawn : MonoBehaviour
         Vector3 playerSpawnPosition = new Vector3(playerSpawnPoint.x, playerSpawnPoint.y, 0);
         GameObject playerSpawn = Instantiate(player, playerSpawnPosition, Quaternion.identity);
 
-       
+
 
         if (cameraController != null)
         {
@@ -358,10 +357,14 @@ public class MapGeneratorWithSpawn : MonoBehaviour
             return;
         }
 
-        for (int i = 0; i < numberOfEnemies; i++)
+        foreach (LevelDefinition.EnemyConfiguration enemyType in enemiesToSpawn)
         {
-            Vector2Int spawnPoint = spawnPoints[Random.Range(0, spawnPoints.Count)];
-            Vector3 spawnPosition = new Vector3(spawnPoint.x, spawnPoint.y, 0);
+            int numberOfEnemies = enemyType.Count;
+            GameObject enemyPrefab = enemyType.Enemy;
+            for (int i = 0; i < numberOfEnemies; i++)
+            {
+                Vector2Int spawnPoint = spawnPoints[Random.Range(0, spawnPoints.Count)];
+                Vector3 spawnPosition = new Vector3(spawnPoint.x, spawnPoint.y, 0);
 
             // Ensure enemies are spawned at least 'minDistanceFromCharacterSpawner' away from the character
             float distanceFromPlayer = Vector3.Distance(spawnPosition, player.transform.position);
