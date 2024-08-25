@@ -63,7 +63,7 @@ public class MapGeneratorWithSpawn : MonoBehaviour
         CreateTileGroups();
         GenerateNoiseMap();
         GenerateMap();
-        CreateBorderColliders();      
+        CreateBorderColliders();
         SetTileColliders();
 
         FindSpwanPoints();
@@ -293,7 +293,8 @@ public class MapGeneratorWithSpawn : MonoBehaviour
         collider.points = new Vector2[] { pointA, pointB };
     }
 
-    void SetTileColliders() {
+    void SetTileColliders()
+    {
         //Sets Collieder to Specified GameObject Tiles
         foreach (var tileGroup in tileGroups.Values)
         {
@@ -366,9 +367,9 @@ public class MapGeneratorWithSpawn : MonoBehaviour
                 Vector2Int spawnPoint = spawnPoints[Random.Range(0, spawnPoints.Count)];
                 Vector3 spawnPosition = new Vector3(spawnPoint.x, spawnPoint.y, 0);
 
-            // Ensure enemies are spawned at least 'minDistanceFromCharacterSpawner' away from the character
-            float distanceFromPlayer = Vector3.Distance(spawnPosition, player.transform.position);
-            if (distanceFromPlayer < minDistanceFromPlayer)
+                // Ensure enemies are spawned at least 'minDistanceFromCharacterSpawner' away from the character
+                float distanceFromPlayer = Vector3.Distance(spawnPosition, player.transform.position);
+                if (distanceFromPlayer < minDistanceFromPlayer)
                 {
                     i--;
                     continue;
@@ -376,6 +377,7 @@ public class MapGeneratorWithSpawn : MonoBehaviour
 
                 GameObject enemy = Instantiate(enemyPrefab, spawnPosition, Quaternion.identity);
                 enemySpawned.TriggerEvent(enemy);
-            }            
+            }
         }
     }
+}
