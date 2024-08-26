@@ -13,13 +13,29 @@ public class HealthManager : MonoBehaviour
     public GameEvent healthChanged;
     public GameEvent onDeath;
     public List<DamageSourceTag> damageSourceTags;
-    public int HitPoints = 5;
+    public int hitPoints = 5;
+    public bool isPlayer = false;
+    
+    private static string PLAYER_HEALTH = "Player Health";
 
     void OnEnable()
     {
+        if (isPlayer && GlobalVariables.Get<int>(PLAYER_HEALTH) != 0)
+        {
+            hitPoints = GlobalVariables.Get<int>(PLAYER_HEALTH);
+        }
+
         if (healthChanged != null)
         {
             healthChanged.TriggerEvent(gameObject);
+        }
+    }
+
+    public void OnLevelComplete(GameObject obj)
+    {
+        if (isPlayer)
+        {
+            GlobalVariables.Set(PLAYER_HEALTH, hitPoints);
         }
     }
 
@@ -35,7 +51,7 @@ public class HealthManager : MonoBehaviour
                 {
                     damage = other.gameObject.GetComponent<CannonballLogic>().attackStrength;
                 }
-                HitPoints -= damage;
+                hitPoints -= damage;
                 if (healthChanged != null)
                 {
                     healthChanged.TriggerEvent(gameObject);
@@ -43,7 +59,7 @@ public class HealthManager : MonoBehaviour
                 break;
             }
         }
-        if (HitPoints <= 0)
+        if (hitPoints <= 0)
         {
             if (onDeath != null)
             {

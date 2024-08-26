@@ -15,6 +15,7 @@ public class TitleMenuLogic : MonoBehaviour
 
     public void loadNewGame()
     {
+        GlobalVariables.ClearAll();
         GlobalVariables.Set(LevelManager.NEXT_LEVEL, gameStartLevel);
         SceneManager.LoadScene(newGameScene);
     }
