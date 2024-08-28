@@ -1,24 +1,22 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class CannonballLogic : MonoBehaviour
+public class ExplosiveLogic : MonoBehaviour
 {
-
     public float maxDistance;
     public int attackStrength;
     public Vector3 projectileSpawnPoint;
     public float projectileSpeed;
-
-
     public GameObject explosionPrefab; // Reference to the explosion prefab
     public float explosionRadius = 5f; // Radius of the explosion
     public float explosionDamage = 10f; // Damage dealt by the explosion
-    public bool hasExplosives = false; // Flag to enable or disable explosive behavior
-
+    public LayerMask damageableLayer; // Layer(s) that can be damaged
 
     // From inspector
-    public LayerMask collisionLayerMask;
-    public LayerMask damageableLayer; // Layers that can be damaged
-    
+    private int _enemyLayer = 8;
+    private int _grassLayer = 10;
+
     void Start()
     {
         projectileSpawnPoint = transform.position;
@@ -34,27 +32,17 @@ public class CannonballLogic : MonoBehaviour
         }
     }
 
-    void OnCollisionEnter2D(Collision2D other){
+    void OnCollisionEnter2D(Collision2D other)
+    {
         // Check if we hit something (land, enemy) that would cause us to "explode"
         // Can combine into a LayerMask check but keeping separate in case we want to
         // do something different based on the collision source
-        // Check if the collision is with a layer that should trigger an explosion or destruction
-        if (hasExplosives)
+        if (other.gameObject.layer == _enemyLayer ||
+            other.gameObject.layer == _grassLayer)
         {
-            // If explosive, trigger explosion only if the collided object is on a damageable layer
-            if ((collisionLayerMask & (1 << other.gameObject.layer)) != 0)
-            {
-                TriggerExplosion();
-                Destroy(gameObject);
-            }
-        }
-        else
-        {
-            // If not explosive, destroy the object if it collides with a layer specified in collisionLayerMask
-            if ((collisionLayerMask & (1 << other.gameObject.layer)) != 0)
-            {
-                Destroy(gameObject);
-            }
+
+            TriggerExplosion();
+            Destroy(gameObject);
         }
     }
 
@@ -62,7 +50,7 @@ public class CannonballLogic : MonoBehaviour
     {
         if (explosionPrefab != null)
         {
-            // Instantiate the explosion prefab at the projectile's position
+            // Instantiate the explosion prefab at the projectile's position and rotation
             GameObject explosion = Instantiate(explosionPrefab, transform.position, Quaternion.identity);
 
             // Set the explosion parameters
@@ -75,5 +63,4 @@ public class CannonballLogic : MonoBehaviour
             }
         }
     }
-
 }

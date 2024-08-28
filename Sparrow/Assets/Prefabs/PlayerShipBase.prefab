@@ -430,7 +430,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthChanged: {fileID: 11400000, guid: 525f618103afe3d499e29e13d20c11bd, type: 2}
   onDeath: {fileID: 0}
-  damageSourceTags: 0100000002000000
+  damageSourceTags: 010000000200000003000000
   HitPoints: 10
 --- !u!1 &7597696367023192810
 GameObject:

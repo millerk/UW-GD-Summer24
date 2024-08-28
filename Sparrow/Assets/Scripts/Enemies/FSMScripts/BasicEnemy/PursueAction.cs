@@ -15,6 +15,9 @@ namespace FSM
         public float minAvoidanceDistance = 2f; // Minimum distance to maintain from obstacles
         public float cornerAvoidanceForceMultiplier = 20f; // Stronger force for corner avoidance
         public LayerMask obstacleLayerMask;
+        public float rotationSpeed = 200f; // Speed of rotation towards the player
+        public float rotationOffset = 90f; // Offset to correct angle
+        public float angularDamping = 1f; // Angular damping to reduce spinning
 
         public override void Execute(BaseStateMachine stateMachine)
         {
@@ -44,8 +47,8 @@ namespace FSM
 
             for (int i = 0; i < numberOfRays; i++)
             {
-                float angle = i * angleStep;
-                Vector2 rayDirection = Quaternion.Euler(0, 0, angle) * playerDirection;
+                float rayAngle = i * angleStep;
+                Vector2 rayDirection = Quaternion.Euler(0, 0, rayAngle) * playerDirection;
                 RaycastHit2D hit = Physics2D.Raycast(entityTransform.position, rayDirection, raySpacing, obstacleLayerMask);
 
                 if (hit.collider != null)
@@ -91,6 +94,17 @@ namespace FSM
             }
 
             rb.velocity = newVelocity;
+
+            // Rotate towards player with offset adjustment
+            float targetAngle = Mathf.Atan2(playerDirection.y, playerDirection.x) * Mathf.Rad2Deg;
+            float currentAngle = rb.rotation;
+            float angleDifference = Mathf.DeltaAngle(currentAngle, targetAngle + rotationOffset);
+
+            // Apply rotation, clamped to prevent excessive spinning
+            rb.rotation = Mathf.MoveTowardsAngle(currentAngle, targetAngle + rotationOffset, rotationSpeed * Time.deltaTime);
+
+            // Apply angular damping to prevent uncontrolled spinning
+            rb.angularVelocity *= (1f - angularDamping * Time.deltaTime);
 
             // Backup plan for stuck scenarios
             if (rb.velocity.magnitude < 0.1f) // If the enemy is not moving

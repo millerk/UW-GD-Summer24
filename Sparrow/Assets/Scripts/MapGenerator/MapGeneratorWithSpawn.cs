@@ -193,6 +193,22 @@ public class MapGeneratorWithSpawn : MonoBehaviour
             GameObject tileGroup = new GameObject(prefabPair.Value.name);
             tileGroup.transform.parent = gameObject.transform;
             tileGroup.transform.localPosition = new Vector3(0, 0, 0);
+
+            // Add Rigidbody2D and set to static
+            Rigidbody2D rb = tileGroup.AddComponent<Rigidbody2D>();
+            rb.bodyType = RigidbodyType2D.Static;  // Ensure it's static
+
+            // Add BoxCollider2D or PolygonCollider2D and make them used by composite
+            BoxCollider2D boxCollider = tileGroup.AddComponent<BoxCollider2D>();
+            boxCollider.usedByComposite = true;
+
+            // Add CompositeCollider2D
+            CompositeCollider2D compositeCollider = tileGroup.AddComponent<CompositeCollider2D>();
+
+            // Set tag and layer from prefab
+            tileGroup.tag = prefabPair.Value.tag;
+            tileGroup.layer = prefabPair.Value.layer;
+
             tileGroups.Add(prefabPair.Key, tileGroup);
         }
     }
