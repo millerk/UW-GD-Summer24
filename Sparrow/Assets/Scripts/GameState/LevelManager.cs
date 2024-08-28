@@ -9,6 +9,7 @@ public class LevelManager : MonoBehaviour
 
     public static string NEXT_LEVEL = "Next Level";
     public GameEvent LevelLoaded;
+    public GameEvent LevelCompleted;
     
     private List<GameObject> _enemies = new List<GameObject>();
     private bool _levelCleared = false;
@@ -30,12 +31,6 @@ public class LevelManager : MonoBehaviour
         SceneManager.LoadScene("Scenes/Battlefield");
     }
 
-
-    void Update()
-    {
-
-    }
-
     public void OnEnemySpawn(GameObject eventSource)
     {
         _enemies.Add(eventSource);
@@ -52,6 +47,7 @@ public class LevelManager : MonoBehaviour
             _levelCleared = true;
             Debug.Log("Level Cleared");
             // TODO: Add timer or some mechanism to gate this so player has time to collect loot
+            LevelCompleted.TriggerEvent(gameObject);
             LoadNextLevel();
         }
     }

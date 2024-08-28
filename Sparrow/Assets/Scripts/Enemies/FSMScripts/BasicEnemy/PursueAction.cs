@@ -113,6 +113,10 @@ namespace FSM
                 float randomAngle = Random.Range(0f, 360f);
                 rb.velocity = new Vector2(Mathf.Cos(randomAngle), Mathf.Sin(randomAngle)) * speed;
             }
+
+            // Ensure that enemy is always pointed in the direction of movement
+            // 90f offset due to sprite facing "up" (90 degrees) by default
+            rb.rotation = (Mathf.Atan2(rb.velocity.y, rb.velocity.x) * Mathf.Rad2Deg) - 90f;
         }
     }
 }

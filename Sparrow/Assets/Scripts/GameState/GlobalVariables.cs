@@ -33,4 +33,9 @@ public static class GlobalVariables
         }
         _variablesDictionary[key] = value;
     }
+
+    public static void ClearAll()
+    {
+        _variablesDictionary.Clear();
+    }
 }

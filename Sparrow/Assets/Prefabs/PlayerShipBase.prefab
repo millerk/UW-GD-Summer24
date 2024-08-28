@@ -142,6 +142,7 @@ GameObject:
   - component: {fileID: 3332890461431351674}
   - component: {fileID: -2631711962479061696}
   - component: {fileID: 2948438652008200204}
+  - component: {fileID: 6148248609884579871}
   m_Layer: 6
   m_Name: PlayerShipBase
   m_TagString: Player
@@ -430,8 +431,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthChanged: {fileID: 11400000, guid: 525f618103afe3d499e29e13d20c11bd, type: 2}
   onDeath: {fileID: 0}
-  damageSourceTags: 010000000200000003000000
-  HitPoints: 10
+  damageSourceTags: 0100000002000000
+  hitPoints: 5
+  isPlayer: 1
+--- !u!114 &6148248609884579871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6847842634037359419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d71e0b6cc8f7e5f4f85b219916a62af4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: a2ea2112d92e16a4094caba09b6161b2, type: 2}
+  onEventTriggered:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2948438652008200204}
+        m_TargetAssemblyTypeName: HealthManager, Assembly-CSharp
+        m_MethodName: OnLevelComplete
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &7597696367023192810
 GameObject:
   m_ObjectHideFlags: 0
