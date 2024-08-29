@@ -7,7 +7,8 @@ public class HealthManager : MonoBehaviour
     {
         PlayerAttack,
         EnemyAttack,
-        Enemy
+        Enemy,
+        Explosion
     }
 
     public GameEvent healthChanged;
@@ -47,19 +48,15 @@ public class HealthManager : MonoBehaviour
             {   
                 // Default for collision damage
                 int damage = 1;
-                if (other.gameObject.GetComponent<CannonballLogic>())
+                if (other.gameObject.TryGetComponent(out CannonballLogic cannonball))
                 {
-                    damage = other.gameObject.GetComponent<CannonballLogic>().attackStrength;
+                    damage = cannonball.attackStrength;
                 }
-                hitPoints -= damage;
-                if (healthChanged != null)
-                {
-                    healthChanged.TriggerEvent(gameObject);
-                }
+                ApplyDamage(damage, DamageSourceTag.PlayerAttack); // Example tag
                 break;
             }
         }
-        if (hitPoints <= 0)
+        /*if (HitPoints <= 0)
         {
             if (onDeath != null)
             {
@@ -71,6 +68,44 @@ public class HealthManager : MonoBehaviour
             {
                 Destroy(gameObject);
             }
+        }*/
+    }
+    public void ApplyDamage(float damageAmount, DamageSourceTag damageSourceTag)
+    {
+        hitPoints -= Mathf.RoundToInt(damageAmount); // Assuming damage is an integer
+        if (healthChanged != null)
+        {
+            healthChanged.TriggerEvent(gameObject);
+        }
+
+        CheckHealthStatus();
+
+        /*if (HitPoints <= 0)
+        {
+            if (onDeath != null)
+            {
+                onDeath.TriggerEvent(gameObject);
+            }
+            // Destroy the GameObject if it's an enemy (specific handling can be done here)
+            if (gameObject.CompareTag("Enemy"))
+            {
+                Destroy(gameObject);
+            }
+        }*/
+    }
+    private void CheckHealthStatus()
+    {
+        if (hitPoints <= 0)
+        {
+            if (onDeath != null)
+            {
+                onDeath.TriggerEvent(gameObject);
+            }
+            if (gameObject.CompareTag("Enemy"))
+            {
+                Destroy(gameObject);
+            }
         }
     }
+
 }

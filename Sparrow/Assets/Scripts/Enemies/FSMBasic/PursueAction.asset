@@ -21,3 +21,6 @@ MonoBehaviour:
   obstacleLayerMask:
     serializedVersion: 2
     m_Bits: 3072
+  rotationSpeed: 50
+  rotationOffset: -90
+  angularDamping: 1

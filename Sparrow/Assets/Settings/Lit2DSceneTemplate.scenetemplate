@@ -84,6 +84,8 @@ MonoBehaviour:
     instantiationMode: 1
   - dependency: {fileID: 2800000, guid: 686a910561c298d4d9ba3b71d0be1d65, type: 3}
     instantiationMode: 0
+  - dependency: {fileID: 11400000, guid: 735dcbdadd265694995a06a3216425b1, type: 2}
+    instantiationMode: 1
   - dependency: {fileID: 248383343662709132, guid: 6b9d6f80cad33044893fbbf9221d52b1, type: 3}
     instantiationMode: 0
   - dependency: {fileID: 11400000, guid: c6f7a5916fb8e6a4cb51fdbf44cb9909, type: 2}
@@ -102,10 +104,18 @@ MonoBehaviour:
     instantiationMode: 0
   - dependency: {fileID: 474650801237723220, guid: 06124022d7883c54998b6bcdbcf12a5a, type: 3}
     instantiationMode: 0
+  - dependency: {fileID: 11400000, guid: 42d809bc0ca08194689935d656157514, type: 2}
+    instantiationMode: 1
   - dependency: {fileID: 11400000, guid: 414dfc9853bd0654daa1e3928b01376e, type: 2}
     instantiationMode: 1
+  - dependency: {fileID: 1033850868763416502, guid: 984abc31018bb8e47a6ddf271cf2f30c, type: 3}
+    instantiationMode: 0
+  - dependency: {fileID: 2208619554058997048, guid: d656bccf74484a74995d5c82c006bd77, type: 3}
+    instantiationMode: 0
   - dependency: {fileID: 2800000, guid: 55010c902c3f4dc44ad94770fe4a8bbe, type: 3}
     instantiationMode: 0
+  - dependency: {fileID: 11400000, guid: 1d8240a3e22a14c46a4bbe38caa9ef0c, type: 2}
+    instantiationMode: 1
   - dependency: {fileID: 2800000, guid: af4e9c2d4fa12574a85fa188f63546fc, type: 3}
     instantiationMode: 0
   - dependency: {fileID: 2800000, guid: 10d9ce21a50180342b26948a013cac34, type: 3}
@@ -121,6 +131,8 @@ MonoBehaviour:
   - dependency: {fileID: 2800000, guid: b9d6f9731e290cc40ac247831a4e29a7, type: 3}
     instantiationMode: 0
   - dependency: {fileID: 6847842634037359419, guid: 9e7965dd074dd0a4abcb3864277b5d27, type: 3}
+    instantiationMode: 0
+  - dependency: {fileID: 8678284688648251416, guid: d7a5c59962eb5dc4fb04cb4341a7e6e2, type: 3}
     instantiationMode: 0
   - dependency: {fileID: 2800000, guid: 9ad5571e14ac03142bb2ebba94c1ac1a, type: 3}
     instantiationMode: 0
