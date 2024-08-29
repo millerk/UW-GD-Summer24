@@ -10,7 +10,7 @@ public class ShipConfiguration : MonoBehaviour
     public Rigidbody2D shipRb;
     private List<GameObject> _cannons = new();
 
-    private static string PLAYER_CANNON_DEF = "Player Cannon Configuration";
+    public static string PLAYER_CANNON_DEF = "Player Cannon Configuration";
 
     // Start is called before the first frame update
     void Start()
@@ -53,7 +53,7 @@ public class ShipConfiguration : MonoBehaviour
         }
     }
 
-    public void SaveConfiguration()
+    public void OnLevelComplete(GameObject source)
     {
         GlobalVariables.Set(PLAYER_CANNON_DEF, cannonDefs);
     }

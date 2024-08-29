@@ -28,7 +28,7 @@ public class LevelManager : MonoBehaviour
     public void LoadNextLevel()
     {
         GlobalVariables.Set(NEXT_LEVEL, levelDefinition.nextLevel);
-        SceneManager.LoadScene("Scenes/Battlefield");
+        SceneManager.LoadScene("Scenes/Menus/Shop");
     }
 
     public void OnEnemySpawn(GameObject eventSource)

@@ -7,7 +7,7 @@ public class PlayerStatus : MonoBehaviour
     public Text currencyText;
     public Text healthText;
 
-    private static string CURRENT_GOLD = "Player Gold";
+    public static string CURRENT_GOLD = "Player Gold";
 
     public void OnGoldCollection(GameObject gold)
     {

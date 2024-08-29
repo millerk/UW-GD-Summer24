@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Battlefield.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Menus/Shop.unity
+    guid: eb8a9301317bd824ab3e20e74642416e
   m_configObjects: {}

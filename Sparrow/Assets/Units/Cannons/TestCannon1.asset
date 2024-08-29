@@ -22,3 +22,5 @@ MonoBehaviour:
   projectile: {fileID: 2208619554058997048, guid: 04d9f6f7d5254bf47820ec348b06a317, type: 3}
   projectileSpeed: 3
   animationController: {fileID: 9100000, guid: 21a2e19c324b1764182c524bb2e8b335, type: 2}
+  shopCost: 10
+  shopIcon: {fileID: -718068008, guid: afb04c1de87d80b47b1c4430299a219a, type: 3}
