@@ -151,8 +151,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.05142725}
-  m_Size: {x: 0.5371456, y: 0.9542944}
+  m_Offset: {x: 0, y: -0}
+  m_Size: {x: 0.76, y: 1.87}
   m_Direction: 0
 --- !u!114 &9067650017605020827
 MonoBehaviour:
@@ -169,7 +169,8 @@ MonoBehaviour:
   healthChanged: {fileID: 0}
   onDeath: {fileID: 11400000, guid: 414dfc9853bd0654daa1e3928b01376e, type: 2}
   damageSourceTags: 00000000
-  HitPoints: 5
+  hitPoints: 5
+  isPlayer: 0
 --- !u!114 &4923481306775066278
 MonoBehaviour:
   m_ObjectHideFlags: 0

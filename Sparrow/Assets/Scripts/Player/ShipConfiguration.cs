@@ -17,7 +17,7 @@ public class ShipConfiguration : MonoBehaviour
     {
         // If we have transitioned from previous screen, use the players existing cannon setup, otherwise
         // reset to default (definied in editor Player ship prefab)
-        if (GlobalVariables.Get<Cannon[]>(PLAYER_CANNON_DEF) != null)
+        if (gameObject.CompareTag("Player") && GlobalVariables.Get<Cannon[]>(PLAYER_CANNON_DEF) != null)
         {
             cannonDefs = GlobalVariables.Get<Cannon[]>(PLAYER_CANNON_DEF);
         }
@@ -55,6 +55,9 @@ public class ShipConfiguration : MonoBehaviour
 
     public void OnLevelComplete(GameObject source)
     {
-        GlobalVariables.Set(PLAYER_CANNON_DEF, cannonDefs);
+        if (gameObject.CompareTag("Player"))
+        {
+            GlobalVariables.Set(PLAYER_CANNON_DEF, cannonDefs);
+        }
     }
 }
