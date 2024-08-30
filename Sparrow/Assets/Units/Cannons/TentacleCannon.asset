@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a6af9a1349cc11143930ff6103bf2f6b, type: 3}
-  m_Name: EnemyCannon
+  m_Name: TentacleCannon
   m_EditorClassIdentifier: 
-  name: EnemyCannon
-  description: This fires stuff too
+  name: TentacleCannon
+  description: For Tentacle Damage
   attackStrength: 2
   attackDistance: 5
-  cannonSpriteOffsetFromBase: {x: -0.25, y: 0.2}
-  firePointOffset: {x: -0.45, y: 0}
-  cannonBaseSprite: {fileID: 21300000, guid: b9d6f9731e290cc40ac247831a4e29a7, type: 3}
+  cannonSpriteOffsetFromBase: {x: 0, y: 0}
+  firePointOffset: {x: 0, y: 0}
+  cannonBaseSprite: {fileID: 21300000, guid: b5195aee303f748498548baf6c1af7c9, type: 3}
   projectile: {fileID: 2208619554058997048, guid: d656bccf74484a74995d5c82c006bd77, type: 3}
   projectileSpeed: 8
   animationController: {fileID: 9100000, guid: 21a2e19c324b1764182c524bb2e8b335, type: 2}
