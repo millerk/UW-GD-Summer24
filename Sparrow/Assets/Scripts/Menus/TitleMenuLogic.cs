@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -24,5 +25,13 @@ public class TitleMenuLogic : MonoBehaviour
     {
         Metrics.RegisterGameQuit(Metrics.InTitleMenu);
         Application.Quit();
+    }
+    public void settings()
+    {
+        SceneManager.LoadScene("Settings");
+    }
+    public void credits()
+    {
+        SceneManager.LoadScene("Credits");
     }
 }
