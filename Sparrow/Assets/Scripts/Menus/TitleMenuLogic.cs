@@ -30,4 +30,8 @@ public class TitleMenuLogic : MonoBehaviour
     {
         SceneManager.LoadScene("Settings");
     }
+    public void credits()
+    {
+        SceneManager.LoadScene("Credits");
+    }
 }
