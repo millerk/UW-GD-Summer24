@@ -15,6 +15,11 @@ public class MapGeneratorWithSpawn : MonoBehaviour
     public GameObject prefabSand;
     public GameObject prefabGrass;
 
+    //tilemaps
+    public Vector3Int tilePositions;
+    public Tilemap tileMap;
+    public TileBase tileTesting;
+
     //Spawner
     public GameObject player;
     public GameObject enemyPrefab; // The enemy prefab
@@ -64,6 +69,7 @@ public class MapGeneratorWithSpawn : MonoBehaviour
         CreateTileGroups();
         GenerateNoiseMap();
         GenerateMap();
+        GenerateTileMap();
         CreateBorderColliders();      
         SetTileColliders();
 
@@ -230,6 +236,34 @@ public class MapGeneratorWithSpawn : MonoBehaviour
 
             }
         }
+    }
+
+    void GenerateTileMap()
+    {
+        int stupidTileTestID = 0;
+        int stupiderTileTestID = 1;
+        Debug.Log("TESTING");
+        //clears tilemap
+        //tileMap.ClearAllTiles();
+        for (int x = 0; x < mapWidth; x++)
+        {
+            for (int y = 0; y < mapHeight; y++)
+            {
+                //SETS TILES BASED ON NUMBER IN THE ARRAY POSITION OF X AND Y 
+                if (noiseGrid[x][y] == stupidTileTestID)
+                {
+                    tilePositions = new Vector3Int(x, y, 0);
+                    tileMap.SetTile(tilePositions, tileTesting);
+                }
+                if (noiseGrid[x][y] == stupiderTileTestID)
+                {
+                    tilePositions = new Vector3Int(x, y, 0);
+                    tileMap.SetTile(tilePositions, tileTesting);
+                }
+
+            }
+        }
+        tileMap.RefreshAllTiles();
     }
 
     int GetIdUsingPerlin(int x, int y)
