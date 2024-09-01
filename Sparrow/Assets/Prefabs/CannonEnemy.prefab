@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 4923481306775066278}
   - component: {fileID: -929967745506634110}
   - component: {fileID: 1362167076348130097}
-  - component: {fileID: 9020734252736101346}
+  - component: {fileID: 3415467602741651611}
   m_Layer: 8
   m_Name: CannonEnemy
   m_TagString: Enemy
@@ -237,7 +237,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.8
---- !u!114 &9020734252736101346
+--- !u!114 &3415467602741651611
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
