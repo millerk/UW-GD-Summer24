@@ -10,14 +10,14 @@ public class ShipConfiguration : MonoBehaviour
     public Rigidbody2D shipRb;
     private List<GameObject> _cannons = new();
 
-    private static string PLAYER_CANNON_DEF = "Player Cannon Configuration";
+    public static string PLAYER_CANNON_DEF = "Player Cannon Configuration";
 
     // Start is called before the first frame update
     void Start()
     {
         // If we have transitioned from previous screen, use the players existing cannon setup, otherwise
         // reset to default (definied in editor Player ship prefab)
-        if (GlobalVariables.Get<Cannon[]>(PLAYER_CANNON_DEF) != null)
+        if (gameObject.CompareTag("Player") && GlobalVariables.Get<Cannon[]>(PLAYER_CANNON_DEF) != null)
         {
             cannonDefs = GlobalVariables.Get<Cannon[]>(PLAYER_CANNON_DEF);
         }
@@ -53,8 +53,11 @@ public class ShipConfiguration : MonoBehaviour
         }
     }
 
-    public void SaveConfiguration()
+    public void OnLevelComplete(GameObject source)
     {
-        GlobalVariables.Set(PLAYER_CANNON_DEF, cannonDefs);
+        if (gameObject.CompareTag("Player"))
+        {
+            GlobalVariables.Set(PLAYER_CANNON_DEF, cannonDefs);
+        }
     }
 }

@@ -16,4 +16,6 @@ public class Cannon : ScriptableObject
     public GameObject projectile;
     public float projectileSpeed;
     public RuntimeAnimatorController animationController;
+    public int shopCost;
+    public Sprite shopIcon;
 }

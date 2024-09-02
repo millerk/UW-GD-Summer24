@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6af9a1349cc11143930ff6103bf2f6b, type: 3}
+  m_Name: TentacleCannon
+  m_EditorClassIdentifier: 
+  name: TentacleCannon
+  description: For Tentacle Damage
+  attackStrength: 2
+  attackDistance: 5
+  cannonSpriteOffsetFromBase: {x: 0, y: 0}
+  firePointOffset: {x: 0, y: 0}
+  cannonBaseSprite: {fileID: 21300000, guid: b5195aee303f748498548baf6c1af7c9, type: 3}
+  projectile: {fileID: 2208619554058997048, guid: d656bccf74484a74995d5c82c006bd77, type: 3}
+  projectileSpeed: 8
+  animationController: {fileID: 9100000, guid: 21a2e19c324b1764182c524bb2e8b335, type: 2}
+  shopCost: 0
+  shopIcon: {fileID: 0}

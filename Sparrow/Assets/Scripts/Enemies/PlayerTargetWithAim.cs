@@ -46,6 +46,27 @@ public class PlayerTargetWithAim : MonoBehaviour
         }
     }
 
+
+    // Enemy ship enters our shooting range
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (target == null && other.CompareTag(PLAYER_TAG))
+        {
+            UpdateTarget(other.gameObject, false);
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D other)
+    {
+        // If player clicked to target we should always respect it
+        // If target was selected by auto-fire then deselect when we go out of range
+        if (ReferenceEquals(other.gameObject, target) && !_targetWasClicked)
+        {
+            UpdateTarget(null, false);
+        }
+    }
+
+
     private void UpdateTarget(GameObject newTarget, bool wasClicked)
     {
         target = newTarget;
@@ -91,6 +112,7 @@ public class PlayerTargetWithAim : MonoBehaviour
         // Calculate the relative velocity
         Vector3 relativeVelocity = targetVelocity - shooterVelocity;
 
+
         // Calculate the time to impact
         float timeToImpact = distanceToTarget / projectileSpeed;
 
@@ -103,6 +125,9 @@ public class PlayerTargetWithAim : MonoBehaviour
 
         // Predict the future position of the target
         Vector3 predictedPosition = targetPosition + relativeVelocity * timeToImpact;
+        //great for melee
+        //transform.position = Vector3.Lerp(transform.position, targetPosition + new Vector3(velocity.x, velocity.y, 0f) * 0.5f, Time.deltaTime * 1f);
+
 
         return predictedPosition;
     }

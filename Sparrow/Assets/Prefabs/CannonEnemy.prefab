@@ -16,11 +16,12 @@ GameObject:
   - component: {fileID: 4923481306775066278}
   - component: {fileID: -929967745506634110}
   - component: {fileID: 1362167076348130097}
-<<<<<<< Updated upstream
-  - component: {fileID: 9020734252736101346}
-=======
+EnemiesThatSootBack
+Updated upstream
   - component: {fileID: -5506888093403843285}
->>>>>>> Stashed changes
+Stashed changes
+  - component: {fileID: 3415467602741651611}
+main
   m_Layer: 8
   m_Name: CannonEnemy
   m_TagString: Enemy
@@ -155,8 +156,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.05142725}
-  m_Size: {x: 0.5371456, y: 0.9542944}
+  m_Offset: {x: 0, y: -0}
+  m_Size: {x: 0.76, y: 1.87}
   m_Direction: 0
 --- !u!114 &9067650017605020827
 MonoBehaviour:
@@ -173,7 +174,8 @@ MonoBehaviour:
   healthChanged: {fileID: 0}
   onDeath: {fileID: 11400000, guid: 414dfc9853bd0654daa1e3928b01376e, type: 2}
   damageSourceTags: 00000000
-  HitPoints: 5
+  hitPoints: 5
+  isPlayer: 0
 --- !u!114 &4923481306775066278
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -240,11 +242,12 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.8
-<<<<<<< Updated upstream
---- !u!114 &9020734252736101346
-=======
+EnemiesThatSootBack
+Updated upstream
 --- !u!114 &-5506888093403843285
->>>>>>> Stashed changes
+Stashed changes
+--- !u!114 &3415467602741651611
+main
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
