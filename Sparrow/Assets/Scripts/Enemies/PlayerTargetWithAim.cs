@@ -50,7 +50,7 @@ public class PlayerTargetWithAim : MonoBehaviour
     // Enemy ship enters our shooting range
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (target == null && other.CompareTag(PLAYER_TAG))
+        if (target == null)
         {
             UpdateTarget(other.gameObject, false);
         }
@@ -125,6 +125,7 @@ public class PlayerTargetWithAim : MonoBehaviour
 
         // Predict the future position of the target
         Vector3 predictedPosition = targetPosition + relativeVelocity * timeToImpact;
+
         //great for melee
         //transform.position = Vector3.Lerp(transform.position, targetPosition + new Vector3(velocity.x, velocity.y, 0f) * 0.5f, Time.deltaTime * 1f);
 
