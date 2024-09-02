@@ -16,7 +16,12 @@ GameObject:
   - component: {fileID: 4923481306775066278}
   - component: {fileID: -929967745506634110}
   - component: {fileID: 1362167076348130097}
+EnemiesThatSootBack
+Updated upstream
+  - component: {fileID: -5506888093403843285}
+Stashed changes
   - component: {fileID: 3415467602741651611}
+main
   m_Layer: 8
   m_Name: CannonEnemy
   m_TagString: Enemy
@@ -237,7 +242,12 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.8
+EnemiesThatSootBack
+Updated upstream
+--- !u!114 &-5506888093403843285
+Stashed changes
 --- !u!114 &3415467602741651611
+main
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -246,11 +256,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1033850868763416502}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95fcc0405e1301d45ae0b64b58313d6d, type: 3}
+  m_Script: {fileID: 11500000, guid: e79b7baf9fcb96b4185a216819de09db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   shipConfig: {fileID: -929967745506634110}
-  target: {fileID: 6847842634037359419, guid: 9e7965dd074dd0a4abcb3864277b5d27, type: 3}
+  cannon: {fileID: 11400000, guid: 42d809bc0ca08194689935d656157514, type: 2}
 --- !u!1 &6275176127456288987
 GameObject:
   m_ObjectHideFlags: 0

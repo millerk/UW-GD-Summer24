@@ -39,16 +39,24 @@ namespace FSM
             }
 
             Vector2 playerDirection = (player.transform.position - entityTransform.position).normalized;
-            Vector2 avoidanceForce = Vector2.zero;
+            Vector2 avoidanceForce = CalculateAvoidanceForce(entityTransform);
 
-            // Use multiple rays for obstacle detection
-            int numberOfRays = 8; // Number of rays to cast
-            float angleStep = 360f / numberOfRays; // Full circle
+            ApplyAvoidanceForce(rb, avoidanceForce);
+            MoveTowardsPlayer(rb, playerDirection);
+            RotateTowardsPlayer(rb, playerDirection);
+            HandleStuckScenario(rb);
+        }
+
+        private Vector2 CalculateAvoidanceForce(Transform entityTransform)
+        {
+            Vector2 avoidanceForce = Vector2.zero;
+            int numberOfRays = 8;
+            float angleStep = 360f / numberOfRays;
 
             for (int i = 0; i < numberOfRays; i++)
             {
                 float rayAngle = i * angleStep;
-                Vector2 rayDirection = Quaternion.Euler(0, 0, rayAngle) * playerDirection;
+                Vector2 rayDirection = Quaternion.Euler(0, 0, rayAngle) * Vector2.right;
                 RaycastHit2D hit = Physics2D.Raycast(entityTransform.position, rayDirection, raySpacing, obstacleLayerMask);
 
                 if (hit.collider != null)
@@ -58,33 +66,41 @@ namespace FSM
 
                     if (distanceToMaintain > 0)
                     {
-                        // Avoid corners with stronger force
-                        Vector2 parallelDirection = Vector2.Perpendicular(hit.normal);
-                        if (Vector2.Dot(parallelDirection, playerDirection) < 0)
-                        {
-                            parallelDirection = -parallelDirection;
-                        }
-
-                        Vector2 avoidanceVector = parallelDirection * (distanceToMaintain * avoidanceForceMultiplier);
+                        Vector2 avoidanceVector = GetAvoidanceVector(hit, distanceToMaintain);
                         avoidanceForce += avoidanceVector;
 
                         // Draw debug rays for visualization
                         Debug.DrawRay(entityTransform.position, rayDirection * hit.distance, Color.red);
-                        Debug.DrawRay(hit.point, parallelDirection * 2f, Color.green);
+                        Debug.DrawRay(hit.point, avoidanceVector, Color.green);
                     }
                 }
             }
 
-            // Check if the avoidance force is too strong, which might cause the enemy to get stuck
+            return avoidanceForce;
+        }
+
+        private Vector2 GetAvoidanceVector(RaycastHit2D hit, float distanceToMaintain)
+        {
+            Vector2 parallelDirection = Vector2.Perpendicular(hit.normal);
+            if (Vector2.Dot(parallelDirection, Vector2.right) < 0)
+            {
+                parallelDirection = -parallelDirection;
+            }
+
+            return parallelDirection * (distanceToMaintain * avoidanceForceMultiplier);
+        }
+
+        private void ApplyAvoidanceForce(Rigidbody2D rb, Vector2 avoidanceForce)
+        {
             if (avoidanceForce.magnitude > maxSpeed)
             {
                 avoidanceForce = avoidanceForce.normalized * maxSpeed;
             }
-
-            // Apply avoidance force
             rb.AddForce(avoidanceForce);
+        }
 
-            // Calculate desired velocity and ensure it does not exceed maxSpeed
+        private void MoveTowardsPlayer(Rigidbody2D rb, Vector2 playerDirection)
+        {
             Vector2 desiredVelocity = playerDirection * speed;
             Vector2 newVelocity = rb.velocity + (desiredVelocity - rb.velocity) * Time.deltaTime;
 
@@ -94,29 +110,25 @@ namespace FSM
             }
 
             rb.velocity = newVelocity;
+        }
 
-            // Rotate towards player with offset adjustment
+        private void RotateTowardsPlayer(Rigidbody2D rb, Vector2 playerDirection)
+        {
             float targetAngle = Mathf.Atan2(playerDirection.y, playerDirection.x) * Mathf.Rad2Deg;
             float currentAngle = rb.rotation;
             float angleDifference = Mathf.DeltaAngle(currentAngle, targetAngle + rotationOffset);
 
-            // Apply rotation, clamped to prevent excessive spinning
             rb.rotation = Mathf.MoveTowardsAngle(currentAngle, targetAngle + rotationOffset, rotationSpeed * Time.deltaTime);
-
-            // Apply angular damping to prevent uncontrolled spinning
             rb.angularVelocity *= (1f - angularDamping * Time.deltaTime);
+        }
 
-            // Backup plan for stuck scenarios
-            if (rb.velocity.magnitude < 0.1f) // If the enemy is not moving
+        private void HandleStuckScenario(Rigidbody2D rb)
+        {
+            if (rb.velocity.magnitude < 0.1f)
             {
-                // Rotate randomly to escape the corner
                 float randomAngle = Random.Range(0f, 360f);
                 rb.velocity = new Vector2(Mathf.Cos(randomAngle), Mathf.Sin(randomAngle)) * speed;
             }
-
-            // Ensure that enemy is always pointed in the direction of movement
-            // 90f offset due to sprite facing "up" (90 degrees) by default
-            rb.rotation = (Mathf.Atan2(rb.velocity.y, rb.velocity.x) * Mathf.Rad2Deg) - 90f;
         }
     }
 }
