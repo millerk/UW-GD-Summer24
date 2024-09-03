@@ -1534,6 +1534,7 @@ GameObject:
   - component: {fileID: 3976620816633983205}
   - component: {fileID: 7164335495317329830}
   - component: {fileID: 5677997009656851762}
+  - component: {fileID: 3377210559871924644}
   m_Layer: 8
   m_Name: KrakenBarrel
   m_TagString: Enemy
@@ -1676,7 +1677,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 3.02, y: 5.3}
+  m_Size: {x: 6.59, y: 7.7}
   m_Direction: 0
 --- !u!58 &3976620816633983205
 CircleCollider2D:
@@ -1712,7 +1713,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 3.5
+  m_Radius: 4.4
 --- !u!114 &7164335495317329830
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1743,6 +1744,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _initialState: {fileID: 11400000, guid: bc5b51c68f3e3314bbbc20628a42d13e, type: 2}
+--- !u!114 &3377210559871924644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7755128683342313001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fec2d972d544a3542b39d878e4a5ae04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anchorPoints: []
+  cannonDefs: []
+  cannonTemplate: {fileID: 248383343662709132, guid: 6b9d6f80cad33044893fbbf9221d52b1, type: 3}
+  shipRb: {fileID: 5779444652730490323}
 --- !u!1 &8090033349613920462
 GameObject:
   m_ObjectHideFlags: 0

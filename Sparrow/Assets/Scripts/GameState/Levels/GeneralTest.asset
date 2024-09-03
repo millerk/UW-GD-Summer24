@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9cfcda6365f4eae4396f1f23e45bb59a, type: 3}
-  m_Name: CloseEnemyTest
+  m_Name: GeneralTest
   m_EditorClassIdentifier: 
   name: 
   enemiesToSpawn:
-  - Enemy: {fileID: 8678284688648251416, guid: d7a5c59962eb5dc4fb04cb4341a7e6e2, type: 3}
-    Count: 2
-  nextLevel: {fileID: 11400000, guid: fe66e0f7b7bcc874f9243228fba17b18, type: 2}
+  - Enemy: {fileID: 1739139097824912367, guid: caa1042112744b04aa642809da03aa5b, type: 3}
+    Count: 10
+  nextLevel: {fileID: 0}
