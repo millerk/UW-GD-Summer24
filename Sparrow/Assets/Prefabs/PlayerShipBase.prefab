@@ -348,6 +348,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
+  dashSpeed: 27
+  dashDuration: 0.1
+  dashCooldown: 5
   rb: {fileID: 8430742869276604322}
   cam: {fileID: 0}
   moveMode: 1
