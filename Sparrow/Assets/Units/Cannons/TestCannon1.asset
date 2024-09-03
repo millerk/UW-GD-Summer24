@@ -15,7 +15,7 @@ MonoBehaviour:
   name: TestBarrelTurret
   description: This fires stuff
   attackStrength: 2
-  attackDistance: 5
+  attackDistance: 0
   cannonSpriteOffsetFromBase: {x: -0.25, y: 0.2}
   firePointOffset: {x: -0.45, y: 0}
   cannonBaseSprite: {fileID: 21300000, guid: b9d6f9731e290cc40ac247831a4e29a7, type: 3}
