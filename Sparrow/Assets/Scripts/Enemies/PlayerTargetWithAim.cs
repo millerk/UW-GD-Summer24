@@ -8,8 +8,9 @@ public class PlayerTargetWithAim : MonoBehaviour
     private GameObject _predictedTarget; // Dummy target object
     private GameObject target; // Target is no longer public
 
-    // New variable to adjust the prediction forward or backward
-    public float predictionAdjustment = 0.0f;
+    // New variables to adjust the prediction angle and distance
+    public float predictionAdjustment = 0.0f; // Distance adjustment
+    public float angleAdjustment = 0.0f; // Angle adjustment in degrees
 
     void Start()
     {
@@ -127,7 +128,10 @@ public class PlayerTargetWithAim : MonoBehaviour
         Vector3 predictedPosition = targetPosition + relativeVelocity * timeToImpact;
 
         // Apply manual adjustment to the prediction
-        predictedPosition += directionToTarget.normalized * predictionAdjustment;
+        // Convert angle adjustment to radians and adjust position accordingly
+        float angleInRadians = angleAdjustment * Mathf.Deg2Rad;
+        Vector3 adjustedDirection = Quaternion.Euler(0, 0, angleAdjustment) * (predictedPosition - transform.position).normalized;
+        predictedPosition = transform.position + adjustedDirection * distanceToTarget + (predictedPosition - transform.position).normalized * predictionAdjustment;
 
         return predictedPosition;
     }
