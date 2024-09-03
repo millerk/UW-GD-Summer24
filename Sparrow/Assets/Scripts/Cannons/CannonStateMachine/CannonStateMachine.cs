@@ -26,6 +26,8 @@ public class CannonStateMachine : MonoBehaviour
     public Rigidbody2D ShipRb { get {return shipRb;} set {shipRb = value;} }
     public bool CanFire { get {return _canFire;} set {_canFire = value;} }
 
+
+
     // Start is called before the first frame update
     void Start()
     {

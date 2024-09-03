@@ -1626,6 +1626,79 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1465869133}
   m_CullTransparentMesh: 1
+--- !u!1001 &1473408162
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 605418080969120408, guid: e6705a9387e6dc540b52c0d10860a8db, type: 3}
+      propertyPath: m_Size.x
+      value: 1.4229889
+      objectReference: {fileID: 0}
+    - target: {fileID: 605418080969120408, guid: e6705a9387e6dc540b52c0d10860a8db, type: 3}
+      propertyPath: m_Size.y
+      value: 2.1846428
+      objectReference: {fileID: 0}
+    - target: {fileID: 605418080969120408, guid: e6705a9387e6dc540b52c0d10860a8db, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.012298584
+      objectReference: {fileID: 0}
+    - target: {fileID: 605418080969120408, guid: e6705a9387e6dc540b52c0d10860a8db, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.039125443
+      objectReference: {fileID: 0}
+    - target: {fileID: 1739139097824912367, guid: e6705a9387e6dc540b52c0d10860a8db, type: 3}
+      propertyPath: m_Name
+      value: EnemyShipTEST1-Sheet(Mast)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2803948586991084623, guid: e6705a9387e6dc540b52c0d10860a8db, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 93.29663
+      objectReference: {fileID: 0}
+    - target: {fileID: 2803948586991084623, guid: e6705a9387e6dc540b52c0d10860a8db, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 50.30087
+      objectReference: {fileID: 0}
+    - target: {fileID: 2803948586991084623, guid: e6705a9387e6dc540b52c0d10860a8db, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2803948586991084623, guid: e6705a9387e6dc540b52c0d10860a8db, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2803948586991084623, guid: e6705a9387e6dc540b52c0d10860a8db, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2803948586991084623, guid: e6705a9387e6dc540b52c0d10860a8db, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2803948586991084623, guid: e6705a9387e6dc540b52c0d10860a8db, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2803948586991084623, guid: e6705a9387e6dc540b52c0d10860a8db, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2803948586991084623, guid: e6705a9387e6dc540b52c0d10860a8db, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2803948586991084623, guid: e6705a9387e6dc540b52c0d10860a8db, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e6705a9387e6dc540b52c0d10860a8db, type: 3}
 --- !u!1 &1502723076
 GameObject:
   m_ObjectHideFlags: 0
@@ -2961,3 +3034,4 @@ SceneRoots:
   - {fileID: 54189215}
   - {fileID: 2106283824}
   - {fileID: 1138486782}
+  - {fileID: 1473408162}
