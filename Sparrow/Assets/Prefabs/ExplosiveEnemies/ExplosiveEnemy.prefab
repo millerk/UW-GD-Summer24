@@ -25,9 +25,9 @@ Transform:
   m_GameObject: {fileID: 602915137703008252}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.69, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 6019108611958058140}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -183,7 +183,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: -0.05142725}
-  m_Size: {x: 0.5371456, y: 0.9542944}
+  m_Size: {x: 1.49, y: 3.12}
   m_Direction: 0
 --- !u!114 &-1325999024209347325
 MonoBehaviour:
@@ -200,7 +200,8 @@ MonoBehaviour:
   healthChanged: {fileID: 0}
   onDeath: {fileID: 11400000, guid: 414dfc9853bd0654daa1e3928b01376e, type: 2}
   damageSourceTags: 000000000100000002000000
-  HitPoints: 5
+  hitPoints: 5
+  isPlayer: 0
 --- !u!114 &9034353145717550610
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -266,7 +267,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 1
+  m_Radius: 1.72
 --- !u!114 &-1919192721383592508
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6af9a1349cc11143930ff6103bf2f6b, type: 3}
+  m_Name: PlayerCannon
+  m_EditorClassIdentifier: 
+  name: PlayerCannon
+  description: Normal Cannon
+  attackStrength: 2
+  attackDistance: 10
+  cannonSpriteOffsetFromBase: {x: 0, y: 0}
+  firePointOffset: {x: 0, y: 0}
+  cannonBaseSprite: {fileID: 0}
+  projectile: {fileID: 2208619554058997048, guid: 04d9f6f7d5254bf47820ec348b06a317, type: 3}
+  projectileSpeed: 8
+  animationController: {fileID: 9100000, guid: 21a2e19c324b1764182c524bb2e8b335, type: 2}
+  shopCost: 0
+  shopIcon: {fileID: 0}

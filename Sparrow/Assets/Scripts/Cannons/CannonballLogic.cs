@@ -18,15 +18,23 @@ public class CannonballLogic : MonoBehaviour
     // From inspector
     public LayerMask collisionLayerMask;
     public LayerMask damageableLayer; // Layers that can be damaged
+
+    private Animator animator;
     
     void Start()
     {
         projectileSpawnPoint = transform.position;
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (animator != null)
+        {
+            animator.Play("ProjectileAnimation");
+        }
+
         Vector3 _distance = projectileSpawnPoint - transform.position;
         if (maxDistance < Mathf.Abs(_distance.magnitude))
         {

@@ -17,7 +17,7 @@ MonoBehaviour:
   attackStrength: 2
   attackDistance: 15
   cannonSpriteOffsetFromBase: {x: 0, y: 0}
-  firePointOffset: {x: 0, y: 0}
+  firePointOffset: {x: -1, y: 0}
   cannonBaseSprite: {fileID: 0}
   projectile: {fileID: 2208619554058997048, guid: d656bccf74484a74995d5c82c006bd77, type: 3}
   projectileSpeed: 8
