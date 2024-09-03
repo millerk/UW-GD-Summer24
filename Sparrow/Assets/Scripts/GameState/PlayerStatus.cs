@@ -5,8 +5,7 @@ public class PlayerStatus : MonoBehaviour
 {
     public int totalGold = 0;
     public Text currencyText;
-    
-    public Slider healthBarSlider;
+    public Text healthText;
 
     public static string CURRENT_GOLD = "Player Gold";
 
@@ -15,21 +14,10 @@ public class PlayerStatus : MonoBehaviour
         UpdateGold(gold.GetComponent<Gold>().value);
     }
 
-    public void SetMaxHealth(int health)
-    {
-        healthBarSlider.maxValue = health;
-        healthBarSlider.value = health;
-    }
-
     public void OnHealthUpdate(GameObject player)
     {
-        HealthManager healthManager = player.GetComponent<HealthManager>();
-        if (healthBarSlider.maxValue == 1)
-        {
-            SetMaxHealth(healthManager.maxHealth);
-        }
-        int health = healthManager.hitPoints;
-        healthBarSlider.value = health;
+        int health = player.GetComponent<HealthManager>().hitPoints;
+        healthText.text = health.ToString();
     }
 
     public void OnLevelLoad(GameObject levelDef)
