@@ -1,5 +1,8 @@
+using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class HealthManager : MonoBehaviour
 {
@@ -14,9 +17,17 @@ public class HealthManager : MonoBehaviour
     public GameEvent healthChanged;
     public GameEvent onDeath;
     public List<DamageSourceTag> damageSourceTags;
+    public int maxHealth;
     public int hitPoints = 5;
     public bool isPlayer = false;
+    public GameObject model;
     
+    [SerializeField]
+    private float hitInvulnDurationSeconds;
+    [SerializeField]
+    private float invulnDeltaTime;
+
+    private bool isInvlun = false;
     private static string PLAYER_HEALTH = "Player Health";
 
     void OnEnable()
@@ -42,6 +53,8 @@ public class HealthManager : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D other)
     {
+        if (isInvlun) return;
+
         foreach (DamageSourceTag tag in damageSourceTags)
         {
             if (other.gameObject.CompareTag(tag.ToString()))
@@ -53,22 +66,10 @@ public class HealthManager : MonoBehaviour
                     damage = cannonball.attackStrength;
                 }
                 ApplyDamage(damage, DamageSourceTag.PlayerAttack); // Example tag
+                StartCoroutine(BecomeInvuln());
                 break;
             }
         }
-        /*if (HitPoints <= 0)
-        {
-            if (onDeath != null)
-            {
-                onDeath.TriggerEvent(gameObject);
-            }
-            // TODO: move this to enemy specific "on death" handler since this will cause problems with player death
-            // and the "if tag" branch is ehhhhhh
-            if (gameObject.CompareTag("Enemy"))
-            {
-                Destroy(gameObject);
-            }
-        }*/
     }
     public void ApplyDamage(float damageAmount, DamageSourceTag damageSourceTag)
     {
@@ -79,20 +80,8 @@ public class HealthManager : MonoBehaviour
         }
 
         CheckHealthStatus();
-
-        /*if (HitPoints <= 0)
-        {
-            if (onDeath != null)
-            {
-                onDeath.TriggerEvent(gameObject);
-            }
-            // Destroy the GameObject if it's an enemy (specific handling can be done here)
-            if (gameObject.CompareTag("Enemy"))
-            {
-                Destroy(gameObject);
-            }
-        }*/
     }
+
     private void CheckHealthStatus()
     {
         if (hitPoints <= 0)
@@ -108,4 +97,28 @@ public class HealthManager : MonoBehaviour
         }
     }
 
+    private IEnumerator BecomeInvuln()
+    {
+        isInvlun = true;
+        for (float i = 0; i < hitInvulnDurationSeconds; i += invulnDeltaTime)
+        {
+            if (model.transform.localScale == Vector3.one)
+            {
+                ScaleModelTo(Vector3.zero);
+            }
+            else
+            {
+                ScaleModelTo(Vector3.one);
+            }
+            yield return new WaitForSeconds(invulnDeltaTime);
+
+        }
+        ScaleModelTo(Vector3.one);
+        isInvlun = false;
+    }
+
+    private void ScaleModelTo(Vector3 scale)
+    {
+        model.transform.localScale = scale;
+    }
 }
