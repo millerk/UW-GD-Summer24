@@ -8,6 +8,9 @@ public class PlayerTargetWithAim : MonoBehaviour
     private GameObject _predictedTarget; // Dummy target object
     private GameObject target; // Target is no longer public
 
+    // New variable to adjust the prediction forward or backward
+    public float predictionAdjustment = 0.0f;
+
     void Start()
     {
         // Create or assign the dummy target object
@@ -46,7 +49,6 @@ public class PlayerTargetWithAim : MonoBehaviour
         }
     }
 
-
     // Enemy ship enters our shooting range
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -65,7 +67,6 @@ public class PlayerTargetWithAim : MonoBehaviour
             UpdateTarget(null, false);
         }
     }
-
 
     private void UpdateTarget(GameObject newTarget, bool wasClicked)
     {
@@ -112,7 +113,6 @@ public class PlayerTargetWithAim : MonoBehaviour
         // Calculate the relative velocity
         Vector3 relativeVelocity = targetVelocity - shooterVelocity;
 
-
         // Calculate the time to impact
         float timeToImpact = distanceToTarget / projectileSpeed;
 
@@ -126,9 +126,8 @@ public class PlayerTargetWithAim : MonoBehaviour
         // Predict the future position of the target
         Vector3 predictedPosition = targetPosition + relativeVelocity * timeToImpact;
 
-        //great for melee
-        //transform.position = Vector3.Lerp(transform.position, targetPosition + new Vector3(velocity.x, velocity.y, 0f) * 0.5f, Time.deltaTime * 1f);
-
+        // Apply manual adjustment to the prediction
+        predictedPosition += directionToTarget.normalized * predictionAdjustment;
 
         return predictedPosition;
     }
