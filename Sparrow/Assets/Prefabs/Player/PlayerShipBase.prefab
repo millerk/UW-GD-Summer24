@@ -351,6 +351,9 @@ MonoBehaviour:
   dashSpeed: 27
   dashDuration: 0.1
   dashCooldown: 5
+  dashCooldownRemaining: 0
+  dashCooldownSlider: {fileID: 0}
+  dashCooldownUpdated: {fileID: 11400000, guid: 11ee4d590a9194b409968a15a757f4af, type: 2}
   rb: {fileID: 8430742869276604322}
   cam: {fileID: 0}
   moveMode: 1
