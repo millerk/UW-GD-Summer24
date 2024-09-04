@@ -7,6 +7,8 @@ public class PlayerStatus : MonoBehaviour
     public Text currencyText;
     
     public Slider healthBarSlider;
+    public Slider dashCooldownSlider;
+    public GameObject dashCooldownText;
 
     public static string CURRENT_GOLD = "Player Gold";
 
@@ -30,6 +32,15 @@ public class PlayerStatus : MonoBehaviour
         }
         int health = healthManager.hitPoints;
         healthBarSlider.value = health;
+    }
+
+    public void OnDashCooldownUpdate(GameObject player)
+    {
+        ShipMovement shipMovement = player.GetComponent<ShipMovement>();
+        float maxCooldown = shipMovement.dashCooldown;
+        float remaining = shipMovement.dashCooldownRemaining;
+        dashCooldownText.SetActive(remaining > 0f);
+        dashCooldownSlider.value = remaining / maxCooldown;
     }
 
     public void OnLevelLoad(GameObject levelDef)

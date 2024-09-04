@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public enum MovementMode
 {
@@ -14,6 +15,8 @@ public class ShipMovement : MonoBehaviour
     public float dashSpeed = 10f; // Speed during dash
     public float dashDuration = 0.2f; // Duration of the dash
     public float dashCooldown = 1f; // Cooldown between dashes
+    public float dashCooldownRemaining = 0f;
+    public GameEvent dashCooldownUpdated;
 
     public Rigidbody2D rb;
     public Camera cam;
@@ -99,8 +102,20 @@ public class ShipMovement : MonoBehaviour
             rb.MovePosition(rb.position + dashDirection * dashSpeed * Time.fixedDeltaTime);
             yield return null;
         }
-
         // End the dash
         isDashing = false;
+
+        // Start cooldown
+        float timeSinceLastDash = Time.time - lastDashTime;
+        dashCooldownRemaining = Mathf.Max(0, dashCooldown - timeSinceLastDash);
+        while (dashCooldownRemaining > 0f)
+        {
+            timeSinceLastDash = Time.time - lastDashTime;
+            dashCooldownRemaining = Mathf.Max(0, dashCooldown - timeSinceLastDash);
+            dashCooldownUpdated.TriggerEvent(gameObject);
+            yield return null;
+        }
+        dashCooldownRemaining = 0.0f;
+        dashCooldownUpdated.TriggerEvent(gameObject);
     }
 }
