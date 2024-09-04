@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public enum MovementMode
 {
@@ -19,6 +20,7 @@ public class ShipMovement : MonoBehaviour
     public Camera cam;
     public MovementMode moveMode;
     public float rotateSpeed;
+    public Text dashUIText;
 
     private Vector2 movement;
     private Vector2 mousePos;
@@ -37,20 +39,23 @@ public class ShipMovement : MonoBehaviour
 
     void Update()
     {
-        if (moveMode == MovementMode.mouseLook)
+        if (!PauseMenu.GameIsPaused)
         {
-            updateMovementMouseLook();
-        }
-        else
-        {
-            // default to tank
-            updateMovementTank();
-        }
+            if (moveMode == MovementMode.mouseLook)
+            {
+                updateMovementMouseLook();
+            }
+            else
+            {
+                // default to tank
+                updateMovementTank();
+            }
 
-        // Dash functionality
-        if (Input.GetKeyDown(KeyCode.Space) && Time.time >= lastDashTime + dashCooldown)
-        {
-            StartCoroutine(Dash());
+            // Dash functionality
+            if (Input.GetKeyDown(KeyCode.Space) && Time.time >= lastDashTime + dashCooldown)
+            {
+                StartCoroutine(Dash());
+            }
         }
     }
 
@@ -96,11 +101,23 @@ public class ShipMovement : MonoBehaviour
         float startTime = Time.time;
         while (Time.time < startTime + dashDuration)
         {
+
             rb.MovePosition(rb.position + dashDirection * dashSpeed * Time.fixedDeltaTime);
             yield return null;
+        
         }
-
-        // End the dash
         isDashing = false;
+        float timeSinceLastDash = Time.time - lastDashTime;
+        float cooldownRemaining = Mathf.Max(0, dashCooldown - timeSinceLastDash);
+        while (cooldownRemaining > 0)
+
+        {
+            timeSinceLastDash = Time.time - lastDashTime;
+            cooldownRemaining = Mathf.Max(0, dashCooldown - timeSinceLastDash);
+
+            dashUIText.text = cooldownRemaining.ToString("F1"); // Format to show one decimal place
+            yield return null;
+        }
+        // End the dash
     }
 }
