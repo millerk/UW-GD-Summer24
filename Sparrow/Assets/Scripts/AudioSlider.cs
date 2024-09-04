@@ -1,57 +1,77 @@
 using UnityEngine;
 using UnityEngine.Audio;
-using UnityEngine.UI; // Use UnityEngine.UI if you are using the UI Slider component for the volume control
+using UnityEngine.UI;
 
 public class AudioSlider : MonoBehaviour
 {
-    [SerializeField]
-    private AudioMixer mixer; // Ensure the AudioMixer is assigned in the inspector
-    [SerializeField]
-    private AudioMixMode mixMode;
+    [SerializeField] AudioMixer mixer;
+    [SerializeField] Slider musicSlider;
+    [SerializeField] Slider effectSlider;
+    [SerializeField] Slider volumeSlider;
 
-    [SerializeField]
-    private Slider volumeSlider; // The Slider UI component that controls the volume
+    const string MIXER_VOLUME = "Volume";
+    const string MIXER_MUSIC = "MusicVolume";
+    const string MIXER_EFFECT = "EffectVolume";
 
-    private const string VolumeKey = "Volume";
-    private const float DefaultVolume = 1.0f; // Default volume if not set in PlayerPrefs
+    // PlayerPrefs keys for slider values
+    const string PREF_VOLUME = "VolumeSliderValue";
+    const string PREF_MUSIC = "MusicSliderValue";
+    const string PREF_EFFECT = "EffectSliderValue";
 
-    private void Start()
+    void Awake()
     {
-        // Load the saved volume value from PlayerPrefs
-        float savedVolume = PlayerPrefs.GetFloat(VolumeKey, DefaultVolume);
+        // Load saved values
+        LoadSettings();
 
-        // Set the slider value to the saved volume value
-        volumeSlider.value = savedVolume;
-
-        // Apply the volume setting based on the saved value
-        OnChangeSlider(savedVolume);
-
-        // Add a listener to the slider to call OnChangeSlider when the value changes
-        volumeSlider.onValueChanged.AddListener(OnChangeSlider);
+        // Add listeners for slider changes
+        volumeSlider.onValueChanged.AddListener(SetVolume);
+        musicSlider.onValueChanged.AddListener(SetMusicVolume);
+        effectSlider.onValueChanged.AddListener(SetEffectVolume);
     }
 
-    public void OnChangeSlider(float value)
+    void SetMusicVolume(float value)
     {
-        // Apply the slider value based on the mix mode
-        switch (mixMode)
-        {
-            case AudioMixMode.LinearMixerVolume:
-                mixer.SetFloat("Volume", -80 + value * 80);
-                break;
-            case AudioMixMode.LogrithmicMixerVolume:
-                mixer.SetFloat("Volume", Mathf.Log10(Mathf.Max(value, 0.0001f)) * 20);
-                break;
-        }
+        mixer.SetFloat(MIXER_MUSIC, Mathf.Log10(value) * 20);
+        SaveSettings();
+    }
 
-        // Save the volume value to PlayerPrefs
-        PlayerPrefs.SetFloat(VolumeKey, value);
+    void SetEffectVolume(float value)
+    {
+        mixer.SetFloat(MIXER_EFFECT, Mathf.Log10(value) * 20);
+        SaveSettings();
+    }
+
+    void SetVolume(float value)
+    {
+        mixer.SetFloat(MIXER_VOLUME, Mathf.Log10(value) * 20);
+        SaveSettings();
+    }
+
+    void LoadSettings()
+    {
+        // Load saved values or use defaults if none found
+        float volume = PlayerPrefs.GetFloat(PREF_VOLUME, 0.75f); // Default to 0.75
+        float music = PlayerPrefs.GetFloat(PREF_MUSIC, 0.75f); // Default to 0.75
+        float effect = PlayerPrefs.GetFloat(PREF_EFFECT, 0.75f); // Default to 0.75
+
+        volumeSlider.value = volume;
+        musicSlider.value = music;
+        effectSlider.value = effect;
+
+        // Apply values to the mixer
+        mixer.SetFloat(MIXER_VOLUME, Mathf.Log10(volume) * 20);
+        mixer.SetFloat(MIXER_MUSIC, Mathf.Log10(music) * 20);
+        mixer.SetFloat(MIXER_EFFECT, Mathf.Log10(effect) * 20);
+    }
+
+    void SaveSettings()
+    {
+        // Save the slider values to PlayerPrefs
+        PlayerPrefs.SetFloat(PREF_VOLUME, volumeSlider.value);
+        PlayerPrefs.SetFloat(PREF_MUSIC, musicSlider.value);
+        PlayerPrefs.SetFloat(PREF_EFFECT, effectSlider.value);
+
+        // It's a good practice to call Save to ensure data is written to disk
         PlayerPrefs.Save();
     }
-}
-
-public enum AudioMixMode
-{
-    LinearAudioSourceVolume,
-    LinearMixerVolume,
-    LogrithmicMixerVolume,
 }
