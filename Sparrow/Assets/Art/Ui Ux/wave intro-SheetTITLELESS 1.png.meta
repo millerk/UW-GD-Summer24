@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 12c81a371940bc14c8eb2e0009a91305
+guid: 7e747ab9b6ebdf84fb31ed5041b4eed7
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 64
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -69,7 +69,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -149,526 +149,379 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: wave intro-Sheet_0
+      name: wave intro-SheetTITLELESS 1_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1620
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d7131c012b4a66478697be245ede50a
+      internalID: -146898589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wave intro-SheetTITLELESS 1_1
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 1620
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03485ed5f3d438048877607793c82edd
+      internalID: -173886666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wave intro-SheetTITLELESS 1_2
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 1620
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c474f12e83e5f549914044e62024a99
+      internalID: 716082949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wave intro-SheetTITLELESS 1_3
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 1620
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a194c7e9624476b40b47ea71b349670a
+      internalID: 1179159167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wave intro-SheetTITLELESS 1_4
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 1620
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 106de457446302b479a8f6d013d666c2
+      internalID: -1559761013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wave intro-SheetTITLELESS 1_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1080
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f96cc0ea4c83f24d93f70ad1f13b40b
+      internalID: -1629470146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wave intro-SheetTITLELESS 1_6
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 1080
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e261e34d7129b146a193dcfa12ca41e
+      internalID: 195453513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wave intro-SheetTITLELESS 1_7
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 1080
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d304efd56081fa45a321c10d4116c01
+      internalID: -1961325938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wave intro-SheetTITLELESS 1_8
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 1080
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bfb9d5ca85255b488547bcbb5f5d2ef
+      internalID: 1566419241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wave intro-SheetTITLELESS 1_9
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 1080
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b4c21a199a16f64487e80c9c02f2ad3
+      internalID: -1994855718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wave intro-SheetTITLELESS 1_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 540
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8c30da392cec4f49a5d20185c9abe6f
+      internalID: -1904528201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wave intro-SheetTITLELESS 1_11
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 540
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca9533b05540b984f9883ca3eb2d68f6
+      internalID: -1692419076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wave intro-SheetTITLELESS 1_12
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 540
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6d262702f057c24bac2eea24d390814
+      internalID: -895103152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wave intro-SheetTITLELESS 1_13
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 540
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95a384d0814b5d74cb8d4fa9a29ba80e
+      internalID: -635421141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wave intro-SheetTITLELESS 1_14
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 540
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c4443ca201df2341922d19adf2b2ccf
+      internalID: 1589442327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wave intro-SheetTITLELESS 1_15
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 480
-        height: 270
+        width: 960
+        height: 540
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1db20ab39624a0d458045f5c6a54e1d5
-      internalID: 1622737867
+      spriteID: 4be7212a53a35c04c82285a57cd0b9a8
+      internalID: -2021727526
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wave intro-Sheet_1
-      rect:
-        serializedVersion: 2
-        x: 480
-        y: 0
-        width: 480
-        height: 270
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e283799e3d8ca2b48b30db099e90b54f
-      internalID: -1089372724
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: wave intro-Sheet_2
+      name: wave intro-SheetTITLELESS 1_16
       rect:
         serializedVersion: 2
         x: 960
         y: 0
-        width: 480
-        height: 270
+        width: 960
+        height: 540
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c79ba3a60d3355e44b02db4b48684b6e
-      internalID: -1411682820
+      spriteID: 63f0753289800614cb92a1667a13904c
+      internalID: -778214003
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wave intro-Sheet_3
-      rect:
-        serializedVersion: 2
-        x: 1440
-        y: 0
-        width: 480
-        height: 270
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d4bbc403234474845b7498785c9be731
-      internalID: -107893145
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: wave intro-Sheet_4
+      name: wave intro-SheetTITLELESS 1_17
       rect:
         serializedVersion: 2
         x: 1920
         y: 0
-        width: 480
-        height: 270
+        width: 960
+        height: 540
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7523e25c7cc806941b44140e57d17550
-      internalID: -1174887460
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: wave intro-Sheet_5
-      rect:
-        serializedVersion: 2
-        x: 2400
-        y: 0
-        width: 480
-        height: 270
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 265ad01313da20a41ba990b6daa4f362
-      internalID: 785214155
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: wave intro-Sheet_6
-      rect:
-        serializedVersion: 2
-        x: 2880
-        y: 0
-        width: 480
-        height: 270
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f4c887e102937064aa2b680f1a7a19f9
-      internalID: -2041997912
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: wave intro-Sheet_7
-      rect:
-        serializedVersion: 2
-        x: 3360
-        y: 0
-        width: 480
-        height: 270
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 030d3569365227f4bbb36540d4ff8f37
-      internalID: -1944153071
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: wave intro-Sheet_8
-      rect:
-        serializedVersion: 2
-        x: 3840
-        y: 0
-        width: 480
-        height: 270
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b9c77a5c09e52734b988c6091008581a
-      internalID: 1209533113
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: wave intro-Sheet_9
-      rect:
-        serializedVersion: 2
-        x: 4320
-        y: 0
-        width: 480
-        height: 270
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 48696fc5565ef2f4ea0de7dc44ccadbd
-      internalID: 1957252307
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: wave intro-Sheet_10
-      rect:
-        serializedVersion: 2
-        x: 4800
-        y: 0
-        width: 480
-        height: 270
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 03dec244a08054b4c9067c5dba4132ae
-      internalID: 193203581
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: wave intro-Sheet_11
-      rect:
-        serializedVersion: 2
-        x: 5280
-        y: 0
-        width: 480
-        height: 270
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f49f41e9a5c59234bbdc37289b636e5e
-      internalID: -1857248097
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: wave intro-Sheet_12
-      rect:
-        serializedVersion: 2
-        x: 5760
-        y: 0
-        width: 480
-        height: 270
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bbe26e74e5fccf641b387e3d8781307c
-      internalID: 442748180
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: wave intro-Sheet_13
-      rect:
-        serializedVersion: 2
-        x: 6240
-        y: 0
-        width: 480
-        height: 270
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e54c2dfc3a641f940a18eee43d0e9437
-      internalID: 124812126
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: wave intro-Sheet_14
-      rect:
-        serializedVersion: 2
-        x: 6720
-        y: 0
-        width: 480
-        height: 270
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 80f6674497ea2ea438ca37ee05a796b1
-      internalID: 118922518
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: wave intro-Sheet_15
-      rect:
-        serializedVersion: 2
-        x: 7200
-        y: 0
-        width: 480
-        height: 270
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 33da06896d788ef4faca4418df5c718a
-      internalID: 1225198983
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: wave intro-Sheet_16
-      rect:
-        serializedVersion: 2
-        x: 7680
-        y: 0
-        width: 480
-        height: 270
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 922df3b38fd98fb429a8092a1f1f4f0f
-      internalID: -953468242
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: wave intro-Sheet_17
-      rect:
-        serializedVersion: 2
-        x: 8160
-        y: 0
-        width: 480
-        height: 270
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 370da3a31d872834ea90fa107f32fe45
-      internalID: 1524080407
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: wave intro-Sheet_18
-      rect:
-        serializedVersion: 2
-        x: 8640
-        y: 0
-        width: 480
-        height: 270
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 054c3fa75777b8541a3a2f55dbd2c009
-      internalID: -1701451331
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: wave intro-Sheet_19
-      rect:
-        serializedVersion: 2
-        x: 9120
-        y: 0
-        width: 480
-        height: 270
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3d66baf2f0043324fb9a8efbd3e11d2e
-      internalID: -1207964794
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: wave intro-Sheet_20
-      rect:
-        serializedVersion: 2
-        x: 9600
-        y: 0
-        width: 480
-        height: 270
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9796f34073cea6f4d8e7d7fe080310a4
-      internalID: 1886144187
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: wave intro-Sheet_21
-      rect:
-        serializedVersion: 2
-        x: 10080
-        y: 0
-        width: 480
-        height: 270
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 31f4dc1b0ae20bb41b8ed1eca3c5e521
-      internalID: 1589779752
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: wave intro-Sheet_22
-      rect:
-        serializedVersion: 2
-        x: 10560
-        y: 0
-        width: 480
-        height: 270
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4df8b0094967d8840a1563bfa8ba39b1
-      internalID: -1821773958
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: wave intro-Sheet_23
-      rect:
-        serializedVersion: 2
-        x: 11040
-        y: 0
-        width: 480
-        height: 270
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 344ec657ac7a6ae46b3ebec54b27a5a5
-      internalID: 634444871
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: wave intro-Sheet_24
-      rect:
-        serializedVersion: 2
-        x: 11520
-        y: 0
-        width: 480
-        height: 270
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 46ef20cf39874d94e8d5b0b0f5b60a49
-      internalID: 1489965582
+      spriteID: 6b0d558db3dcc094d8a5f439333f25c3
+      internalID: 1123475183
       vertices: []
       indices: 
       edges: []
@@ -684,31 +537,26 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      wave intro-Sheet_0: 1622737867
-      wave intro-Sheet_1: -1089372724
-      wave intro-Sheet_10: 193203581
-      wave intro-Sheet_11: -1857248097
-      wave intro-Sheet_12: 442748180
-      wave intro-Sheet_13: 124812126
-      wave intro-Sheet_14: 118922518
-      wave intro-Sheet_15: 1225198983
-      wave intro-Sheet_16: -953468242
-      wave intro-Sheet_17: 1524080407
-      wave intro-Sheet_18: -1701451331
-      wave intro-Sheet_19: -1207964794
-      wave intro-Sheet_2: -1411682820
-      wave intro-Sheet_20: 1886144187
-      wave intro-Sheet_21: 1589779752
-      wave intro-Sheet_22: -1821773958
-      wave intro-Sheet_23: 634444871
-      wave intro-Sheet_24: 1489965582
-      wave intro-Sheet_3: -107893145
-      wave intro-Sheet_4: -1174887460
-      wave intro-Sheet_5: 785214155
-      wave intro-Sheet_6: -2041997912
-      wave intro-Sheet_7: -1944153071
-      wave intro-Sheet_8: 1209533113
-      wave intro-Sheet_9: 1957252307
+      wave intro-SheetTITLELESS 1_0: -146898589
+      wave intro-SheetTITLELESS 1_1: -173886666
+      wave intro-SheetTITLELESS 1_10: -1904528201
+      wave intro-SheetTITLELESS 1_11: -1692419076
+      wave intro-SheetTITLELESS 1_12: -895103152
+      wave intro-SheetTITLELESS 1_13: -635421141
+      wave intro-SheetTITLELESS 1_14: 1589442327
+      wave intro-SheetTITLELESS 1_15: -2021727526
+      wave intro-SheetTITLELESS 1_16: -778214003
+      wave intro-SheetTITLELESS 1_17: 1123475183
+      wave intro-SheetTITLELESS 1_18: 190960720
+      wave intro-SheetTITLELESS 1_19: 784725445
+      wave intro-SheetTITLELESS 1_2: 716082949
+      wave intro-SheetTITLELESS 1_3: 1179159167
+      wave intro-SheetTITLELESS 1_4: -1559761013
+      wave intro-SheetTITLELESS 1_5: -1629470146
+      wave intro-SheetTITLELESS 1_6: 195453513
+      wave intro-SheetTITLELESS 1_7: -1961325938
+      wave intro-SheetTITLELESS 1_8: 1566419241
+      wave intro-SheetTITLELESS 1_9: -1994855718
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

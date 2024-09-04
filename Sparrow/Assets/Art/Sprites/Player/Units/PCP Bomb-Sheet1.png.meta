@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: afb04c1de87d80b47b1c4430299a219a
+guid: ca51f45757bcbd34fb030319709760dc
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -94,7 +94,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: WebGL
+    buildTarget: iPhone
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -107,7 +107,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: iPhone
+    buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -149,7 +149,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PCTNCannon_0
+      name: PCP Bomb-Sheet1_0
       rect:
         serializedVersion: 2
         x: 0
@@ -163,14 +163,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 95b1a05bb1be1694fbc5b464dbaf931a
-      internalID: -718068008
+      spriteID: c34e33ef48de8ba45a10b402609db15b
+      internalID: 1632039791
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PCTNCannon_1
+      name: PCP Bomb-Sheet1_1
       rect:
         serializedVersion: 2
         x: 64
@@ -184,14 +184,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a9ca4845bdb96514ea6151a4713adbd4
-      internalID: 1676827144
+      spriteID: 0d013fe413b9bc94788af9f59ef1296c
+      internalID: 1295601867
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PCTNCannon_2
+      name: PCP Bomb-Sheet1_2
       rect:
         serializedVersion: 2
         x: 128
@@ -205,14 +205,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4c0a5c6f937aafd4384571d1f3fe42d0
-      internalID: 775990877
+      spriteID: f8579b8e68ef5a6479503136681cda0e
+      internalID: -1580503272
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PCTNCannon_3
+      name: PCP Bomb-Sheet1_3
       rect:
         serializedVersion: 2
         x: 192
@@ -226,8 +226,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 562a05dacc7e2f64a8f8dd95d822ca06
-      internalID: 1229996714
+      spriteID: 69875dcf46996574fb0b9470c0c61800
+      internalID: -1745993691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PCP Bomb-Sheet1_4
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12685a7162874f840a9427b19087bbae
+      internalID: -54920598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PCP Bomb-Sheet1_5
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8f0763ed9987cc49988927f29a6ee45
+      internalID: -19730747
       vertices: []
       indices: 
       edges: []
@@ -243,10 +285,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      PCTNCannon_0: -718068008
-      PCTNCannon_1: 1676827144
-      PCTNCannon_2: 775990877
-      PCTNCannon_3: 1229996714
+      PCP Bomb-Sheet1_0: 1632039791
+      PCP Bomb-Sheet1_1: 1295601867
+      PCP Bomb-Sheet1_2: -1580503272
+      PCP Bomb-Sheet1_3: -1745993691
+      PCP Bomb-Sheet1_4: -54920598
+      PCP Bomb-Sheet1_5: -19730747
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
