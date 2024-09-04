@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4e57822786b114489c18524799fb964, type: 3}
   m_Name: PlayerInRangeDecision
   m_EditorClassIdentifier: 
-  detectionRange: 10
+  detectionRange: 100
   detectionLayerMask:
     serializedVersion: 2
     m_Bits: 64

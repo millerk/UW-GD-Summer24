@@ -15,5 +15,5 @@ MonoBehaviour:
   name: 
   enemiesToSpawn:
   - Enemy: {fileID: 2113082560015712493, guid: f41830b78f52cdc43931b2768d4ba3c8, type: 3}
-    Count: 2
-  nextLevel: {fileID: 11400000, guid: 8af43a745f78fb041ad16900b2cd2c67, type: 2}
+    Count: 10
+  nextLevel: {fileID: 0}

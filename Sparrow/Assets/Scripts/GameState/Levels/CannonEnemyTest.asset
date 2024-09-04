@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: CannonEnemyTest
   enemiesToSpawn:
-  - Enemy: {fileID: 1033850868763416502, guid: 984abc31018bb8e47a6ddf271cf2f30c, type: 3}
-    Count: 3
+  - Enemy: {fileID: 1739139097824912367, guid: caa1042112744b04aa642809da03aa5b, type: 3}
+    Count: 5
   nextLevel: {fileID: 0}

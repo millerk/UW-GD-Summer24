@@ -4,17 +4,26 @@ public class PlayerTargetWithAim : MonoBehaviour
 {
     public ShipConfiguration shipConfig;
     public Cannon cannon;
-    public GameObject target;
     private bool _targetWasClicked = false;
-    private string PLAYER_TAG = "Player";
     private GameObject _predictedTarget; // Dummy target object
+    private GameObject target; // Target is no longer public
+
+    // New variables to adjust the prediction angle and distance
+    public float predictionAdjustment = 0.0f; // Distance adjustment
+    public float angleAdjustment = 0.0f; // Angle adjustment in degrees
 
     void Start()
     {
-        target = null;
         // Create or assign the dummy target object
         _predictedTarget = new GameObject("PredictedTarget");
         _predictedTarget.SetActive(false); // Make it invisible
+
+        // Find the player object
+        target = GameObject.FindGameObjectWithTag("Player");
+        if (target != null)
+        {
+            UpdateTarget(target, false);
+        }
     }
 
     void Update()
@@ -44,7 +53,7 @@ public class PlayerTargetWithAim : MonoBehaviour
     // Enemy ship enters our shooting range
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (target == null && other.CompareTag(PLAYER_TAG))
+        if (target == null)
         {
             UpdateTarget(other.gameObject, false);
         }
@@ -85,22 +94,44 @@ public class PlayerTargetWithAim : MonoBehaviour
 
     Vector3 PredictPosition(Rigidbody2D targetRb)
     {
-
         Vector3 targetPosition = targetRb.transform.position;
-        Vector3 velocity = targetRb.velocity;
+        Vector3 targetVelocity = targetRb.velocity;
         float projectileSpeed = cannon.projectileSpeed;
 
-        // Calculate the distance to the target
-        float distanceToTarget = Vector3.Distance(transform.position, targetPosition);
+        // Get the shooter's Rigidbody2D (assuming this script is attached to the shooter)
+        Rigidbody2D shooterRb = GetComponent<Rigidbody2D>();
+        if (shooterRb == null)
+        {
+            Debug.LogError("Shooter Rigidbody2D not found!");
+            return targetPosition; // Fall back to the target's current position
+        }
+        Vector3 shooterVelocity = shooterRb.velocity;
+
+        // Calculate the direction from the shooter to the target
+        Vector3 directionToTarget = targetPosition - transform.position;
+        float distanceToTarget = directionToTarget.magnitude;
+
+        // Calculate the relative velocity
+        Vector3 relativeVelocity = targetVelocity - shooterVelocity;
 
         // Calculate the time to impact
         float timeToImpact = distanceToTarget / projectileSpeed;
 
-        //great for melee
-        //transform.position = Vector3.Lerp(transform.position, targetPosition + new Vector3(velocity.x, velocity.y, 0f) * 0.5f, Time.deltaTime * 1f);
+        // Adjust the time to impact if both are moving in the same direction
+        float directionDotProduct = Vector3.Dot(directionToTarget.normalized, relativeVelocity.normalized);
+        if (directionDotProduct > 0.9f) // They are moving in approximately the same direction
+        {
+            timeToImpact *= 0.5f; // Increase shooting speed by reducing time to impact
+        }
 
         // Predict the future position of the target
-        Vector3 predictedPosition = targetPosition + velocity * timeToImpact;
+        Vector3 predictedPosition = targetPosition + relativeVelocity * timeToImpact;
+
+        // Apply manual adjustment to the prediction
+        // Convert angle adjustment to radians and adjust position accordingly
+        float angleInRadians = angleAdjustment * Mathf.Deg2Rad;
+        Vector3 adjustedDirection = Quaternion.Euler(0, 0, angleAdjustment) * (predictedPosition - transform.position).normalized;
+        predictedPosition = transform.position + adjustedDirection * distanceToTarget + (predictedPosition - transform.position).normalized * predictionAdjustment;
 
         return predictedPosition;
     }
