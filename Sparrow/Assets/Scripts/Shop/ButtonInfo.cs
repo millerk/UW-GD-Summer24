@@ -11,7 +11,6 @@ public class ButtonInfo : MonoBehaviour
     void Start()
     {
         cost = ShopManager.GetComponent<ShopManagerLogic>().availableCannons[ItemId].shopCost;
-        //displayIcon.sprite = ShopManager.GetComponent<ShopManagerLogic>().availableCannons[ItemId].shopIcon;
         PriceText.text = "Price: " + cost + " gold";
         CheckIfEnoughGoldToBuy();
     }
@@ -24,7 +23,12 @@ public class ButtonInfo : MonoBehaviour
 
     public void OnItemPurchase(GameObject source)
     {
-        CheckIfEnoughGoldToBuy();
+        SuppressButton();
+    }
+
+    private void SuppressButton()
+    {
+        gameObject.GetComponent<Button>().interactable = false;
     }
 
     private void CheckIfEnoughGoldToBuy()
@@ -32,7 +36,7 @@ public class ButtonInfo : MonoBehaviour
         int totalGold = ShopManager.GetComponent<ShopManagerLogic>().totalGold;
         if (totalGold < cost)
         {
-            gameObject.GetComponent<Button>().interactable = false;
+            SuppressButton();
         }
     }
 }

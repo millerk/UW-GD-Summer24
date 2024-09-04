@@ -93,6 +93,9 @@ public class ShipMovement : MonoBehaviour
     {
         isDashing = true;
         lastDashTime = Time.time;
+        float angleRad = angle * Mathf.Deg2Rad;
+        movement.x = Mathf.Cos(angleRad);
+        movement.y = Mathf.Sin(angleRad);
         Vector2 dashDirection = movement.normalized;
 
         // Perform the dash

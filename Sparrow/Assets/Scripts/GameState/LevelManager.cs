@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class LevelManager : MonoBehaviour
 {
@@ -8,11 +9,17 @@ public class LevelManager : MonoBehaviour
     public LevelDefinition levelDefinition;
 
     public static string NEXT_LEVEL = "Next Level";
+    public static string SCREENS_SINCE_SHOP = "Screens since shop";
     public GameEvent LevelLoaded;
     public GameEvent LevelCompleted;
-    
+    public int maxScreensUntilShop;
+    public int oddsOfShop = 3;
+    public GameObject advanceButton;
+
     private List<GameObject> _enemies = new List<GameObject>();
     private bool _levelCleared = false;
+
+    private string _sceneToLoad = "Scenes/Battlefield";
 
     void Start()
     {
@@ -25,10 +32,11 @@ public class LevelManager : MonoBehaviour
         LevelLoaded.TriggerEvent(gameObject);
     }
 
-    public void LoadNextLevel()
+    public void LoadNextScene()
     {
+        LevelCompleted.TriggerEvent(gameObject);
         GlobalVariables.Set(NEXT_LEVEL, levelDefinition.nextLevel);
-        SceneManager.LoadScene("Scenes/Menus/Shop");
+        SceneManager.LoadScene(_sceneToLoad);
     }
 
     public void OnEnemySpawn(GameObject eventSource)
@@ -46,9 +54,27 @@ public class LevelManager : MonoBehaviour
             Metrics.RegisterLevelCleared(totalEnemies);
             _levelCleared = true;
             Debug.Log("Level Cleared");
-            // TODO: Add timer or some mechanism to gate this so player has time to collect loot
-            LevelCompleted.TriggerEvent(gameObject);
-            LoadNextLevel();
+            SetUpNextScene();
         }
+    }
+
+    public void SetUpNextScene()
+    {
+        int screensSinceShop = GlobalVariables.Get<int>(SCREENS_SINCE_SHOP) + 1; // default if not present is 0, add 1 so that comparison below works as expected
+        int getShop = Random.Range(1, oddsOfShop + 1); // Range end is exclusive
+        Debug.Log("get shop is " + getShop);
+        if (screensSinceShop >= maxScreensUntilShop || getShop == oddsOfShop)
+        {
+            GlobalVariables.Set(SCREENS_SINCE_SHOP, 0);
+            _sceneToLoad = "Scenes/Menus/Shop";
+            advanceButton.GetComponentInChildren<Text>().text = "Upgrade!";
+        }
+        else
+        {
+            GlobalVariables.Set(SCREENS_SINCE_SHOP, screensSinceShop++);
+            _sceneToLoad ="Scenes/Battlefield";
+            advanceButton.GetComponentInChildren<Text>().text = "Advance!";
+        }
+        advanceButton.SetActive(true);
     }
 }

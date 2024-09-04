@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: 'Level 3: Tokyo Drift'
   enemiesToSpawn:
-  - Enemy: {fileID: 1739139097824912367, guid: e6705a9387e6dc540b52c0d10860a8db, type: 3}
+  - Enemy: {fileID: 1739139097824912367, guid: caa1042112744b04aa642809da03aa5b, type: 3}
     Count: 10
-  nextLevel: {fileID: 0}
+  nextLevel: {fileID: 11400000, guid: 735dcbdadd265694995a06a3216425b1, type: 2}
