@@ -8,11 +8,12 @@ TagManager:
   - PlayerAttack
   - EnemyAttack
   - Explosion
+  - Border
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Border
   - Water
   - UI
   - Player

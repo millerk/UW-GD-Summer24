@@ -61,6 +61,9 @@ public class MapGeneratorWithSpawn : MonoBehaviour
     public Transform mapCenterTransform;
     public CinemachineCameraController cameraController;
 
+    public string colliderTag = "Border";
+    public string colliderLayerName = "Border";
+
     //Activations on LevelLoaded
     public void OnLevelLoad(GameObject levelManager)
     {
@@ -303,19 +306,31 @@ public class MapGeneratorWithSpawn : MonoBehaviour
 
     void CreateBorderColliders()
     {
-        // Create edge colliders for each side of the terrain
 
-        // Bottom edge
-        AddEdgeCollider2D(new Vector2(terrainMin.x, terrainMin.y), new Vector2(terrainMax.x, terrainMin.y));
 
-        // Top edge
-        AddEdgeCollider2D(new Vector2(terrainMin.x, terrainMax.y), new Vector2(terrainMax.x, terrainMax.y));
+        // Define the layer index
+        int layerIndex = LayerMask.NameToLayer(colliderLayerName);
 
-        // Left edge
-        AddEdgeCollider2D(new Vector2(terrainMin.x, terrainMin.y), new Vector2(terrainMin.x, terrainMax.y));
+        // Create colliders for each edge
+        CreateEdgeCollider(new Vector2(terrainMin.x, terrainMin.y), new Vector2(terrainMax.x, terrainMin.y), "BottomEdge", layerIndex);
+        CreateEdgeCollider(new Vector2(terrainMin.x, terrainMax.y), new Vector2(terrainMax.x, terrainMax.y), "TopEdge", layerIndex);
+        CreateEdgeCollider(new Vector2(terrainMin.x, terrainMin.y), new Vector2(terrainMin.x, terrainMax.y), "LeftEdge", layerIndex);
+        CreateEdgeCollider(new Vector2(terrainMax.x, terrainMin.y), new Vector2(terrainMax.x, terrainMax.y), "RightEdge", layerIndex);
+    }
 
-        // Right edge
-        AddEdgeCollider2D(new Vector2(terrainMax.x, terrainMin.y), new Vector2(terrainMax.x, terrainMax.y));
+    private void CreateEdgeCollider(Vector2 start, Vector2 end, string name, int layerIndex)
+    {
+        GameObject edgeObject = new GameObject(name); // Create a new GameObject with a specific name
+        edgeObject.tag = colliderTag; // Set the tag
+        edgeObject.layer = layerIndex; // Set the layer
+
+        // Add EdgeCollider2D component
+        EdgeCollider2D edgeCollider = edgeObject.AddComponent<EdgeCollider2D>();
+
+        // Set the points of the EdgeCollider2D
+        edgeCollider.points = new Vector2[] { start, end };
+
+        // Optionally, set other properties of the EdgeCollider2D here
     }
 
     void AddEdgeCollider2D(Vector2 pointA, Vector2 pointB)
