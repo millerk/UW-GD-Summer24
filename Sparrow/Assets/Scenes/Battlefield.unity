@@ -155,8 +155,8 @@ MonoBehaviour:
   points:
   - {x: -35, y: -22}
   - {x: 34, y: -22}
-  - {x: 34, y: 20}
-  - {x: -35, y: 20}
+  - {x: 34, y: 21}
+  - {x: -35, y: 21}
 --- !u!4 &24460829
 Transform:
   m_ObjectHideFlags: 0
