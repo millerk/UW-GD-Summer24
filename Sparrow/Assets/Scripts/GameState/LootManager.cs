@@ -15,6 +15,7 @@ public class LootManager : MonoBehaviour
             if (drawn <= item.chance)
             {
                 Instantiate(item.item, spawnLoc.transform.position, Quaternion.identity);
+                return;
             }
         }
 

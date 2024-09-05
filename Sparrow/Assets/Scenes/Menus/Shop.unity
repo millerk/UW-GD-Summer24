@@ -490,7 +490,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: b10e627261f058b4ebf0e71ca3bfae5a, type: 2}
   - {fileID: 11400000, guid: d8ed48c2720aaa64d8e7a6961abaafca, type: 2}
   availableCannons: []
-  totalGold: 100
+  totalGold: 0
   playerCannons: []
   goldText: {fileID: 591353964}
   cannonsLoadedEvent: {fileID: 11400000, guid: cb06ff2c14693314286535e3d7140af5, type: 2}

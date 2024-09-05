@@ -3370,6 +3370,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lootTable:
+  - {fileID: 11400000, guid: 99a9be17e9c46e14a89992ededd78bc3, type: 2}
   - {fileID: 11400000, guid: b1edf3c5d1e23fc448ebc5d74f661a49, type: 2}
 --- !u!4 &1398541030
 Transform:
