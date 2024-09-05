@@ -8,16 +8,12 @@ public class ButtonInfo : MonoBehaviour
     public GameObject ShopManager;
     public int cost;
     public Image displayIcon;
-    void Start()
+
+    public void CannonsLoaded(GameObject source)
     {
         cost = ShopManager.GetComponent<ShopManagerLogic>().availableCannons[ItemId].shopCost;
-        PriceText.text = "Price: " + cost + " gold";
+        PriceText.text = cost.ToString();
         CheckIfEnoughGoldToBuy();
-    }
-
-    public void UpdateDisplaySprite(GameObject source)
-    {
-        Debug.Log("Updating display sprite");
         displayIcon.sprite = ShopManager.GetComponent<ShopManagerLogic>().availableCannons[ItemId].shopIcon;
     }
 

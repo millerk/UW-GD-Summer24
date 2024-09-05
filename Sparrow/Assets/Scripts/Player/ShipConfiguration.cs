@@ -40,6 +40,7 @@ public class ShipConfiguration : MonoBehaviour
                 _maxDistance = Math.Max(_maxDistance, _cannon.attackDistance);
             }
         }
+        GlobalVariables.Set(PLAYER_CANNON_DEF, cannonDefs);
         CircleCollider2D _autoTargetCollider = gameObject.GetComponent<CircleCollider2D>();
         _autoTargetCollider.radius = _maxDistance - 0.05f; // a little wiggle room so that we don't auto-target things just on the edge of range
     }

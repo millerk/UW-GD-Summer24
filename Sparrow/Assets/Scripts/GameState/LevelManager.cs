@@ -60,10 +60,18 @@ public class LevelManager : MonoBehaviour
 
     public void SetUpNextScene()
     {
+        // If player has filled out their cannon list already, make sure we skip the shop
+        Cannon[] currentCannons = GlobalVariables.Get<Cannon[]>(ShipConfiguration.PLAYER_CANNON_DEF);
+        bool playerIsMaxCannons = true;
+        for (int i = 0; i < currentCannons.Length; i++)
+        {
+            playerIsMaxCannons = playerIsMaxCannons && currentCannons[i] != null;
+        }
+
         int screensSinceShop = GlobalVariables.Get<int>(SCREENS_SINCE_SHOP) + 1; // default if not present is 0, add 1 so that comparison below works as expected
+
         int getShop = Random.Range(1, oddsOfShop + 1); // Range end is exclusive
-        Debug.Log("get shop is " + getShop);
-        if (screensSinceShop >= maxScreensUntilShop || getShop == oddsOfShop)
+        if (!playerIsMaxCannons && screensSinceShop >= maxScreensUntilShop || getShop == oddsOfShop)
         {
             GlobalVariables.Set(SCREENS_SINCE_SHOP, 0);
             _sceneToLoad = "Scenes/Menus/Shop";
