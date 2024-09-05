@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ed61c9823e90af1448cf7e4a4f5ce50a
+guid: d6ee404b5a14362429f2b62e226e4960
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -69,7 +69,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -94,7 +94,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: WebGL
+    buildTarget: iPhone
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -107,7 +107,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: iPhone
+    buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -149,7 +149,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PCTBlunderB_0
+      name: healthDrop-Sheet_0
       rect:
         serializedVersion: 2
         x: 0
@@ -163,14 +163,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eb979edc9ba353b4b898c9c3fed92918
-      internalID: 847143511
+      spriteID: e99baf60d3f228e48baaf4c34d877b91
+      internalID: -234448305
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PCTBlunderB_1
+      name: healthDrop-Sheet_1
       rect:
         serializedVersion: 2
         x: 64
@@ -184,14 +184,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 776c93477eb31b641b4f33175b6ce964
-      internalID: -1025874084
+      spriteID: eb0616b513f6bf34d862589919b177ad
+      internalID: 1289969151
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PCTBlunderB_2
+      name: healthDrop-Sheet_2
       rect:
         serializedVersion: 2
         x: 128
@@ -205,14 +205,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 60c9304dd40c77d4cb859e859a0490c7
-      internalID: -300125578
+      spriteID: 48a940a915e45cb47ba410f18ff8aaaa
+      internalID: -1343929754
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PCTBlunderB_3
+      name: healthDrop-Sheet_3
       rect:
         serializedVersion: 2
         x: 192
@@ -226,8 +226,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f1be11a2ed11dd8408f44d2de625bb66
-      internalID: -902431557
+      spriteID: 32b5e966442bbc343bd5e819877843e5
+      internalID: 1251778172
       vertices: []
       indices: 
       edges: []
@@ -243,10 +243,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      PCTBlunderB_0: 847143511
-      PCTBlunderB_1: -1025874084
-      PCTBlunderB_2: -300125578
-      PCTBlunderB_3: -902431557
+      healthDrop-Sheet_0: -234448305
+      healthDrop-Sheet_1: 1289969151
+      healthDrop-Sheet_2: -1343929754
+      healthDrop-Sheet_3: 1251778172
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
