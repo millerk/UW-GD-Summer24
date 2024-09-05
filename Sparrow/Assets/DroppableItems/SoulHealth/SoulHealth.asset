@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f1d07fedd2972024c8b71e9793438115, type: 3}
-  m_Name: Gold
+  m_Name: SoulHealth
   m_EditorClassIdentifier: 
-  item: {fileID: 5743417108097213276, guid: 8294936f375755e46bb734b3c3af1913, type: 3}
-  chance: 100
-  minQuantity: 5
-  maxQuantity: 5
+  item: {fileID: 0}
+  chance: 66
+  minQuantity: 1
+  maxQuantity: 1

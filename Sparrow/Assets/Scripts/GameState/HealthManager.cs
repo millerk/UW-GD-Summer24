@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
@@ -80,6 +81,16 @@ public class HealthManager : MonoBehaviour
         }
 
         CheckHealthStatus();
+    }
+
+    public void ApplyHealing(GameObject healingSource)
+    {
+        hitPoints += healingSource.GetComponent<SoulHealth>().value;
+        hitPoints = Math.Min(hitPoints, maxHealth);
+        if (healthChanged != null)
+        {
+            healthChanged.TriggerEvent(gameObject);
+        }
     }
 
     private void CheckHealthStatus()

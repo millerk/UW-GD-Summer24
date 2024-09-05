@@ -245,7 +245,6 @@ public class MapGeneratorWithSpawn : MonoBehaviour
     {
         int stupidTileTestID = 0;
         int stupiderTileTestID = 1;
-        Debug.Log("TESTING");
         //clears tilemap
         //tileMap.ClearAllTiles();
         for (int x = 0; x < mapWidth; x++)
