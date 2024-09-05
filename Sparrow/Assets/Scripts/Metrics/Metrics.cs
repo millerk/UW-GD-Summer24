@@ -9,6 +9,7 @@ public static class Metrics
     public static string InPauseMenu = "Pause Menu";
     public static string InTitleMenu = "Title Menu";
     public static string LevelCompleted = "Level Completed";
+    public static string GameOver = "GameOver";
 
     // Combat events
     public static string EnemyKilled = "Enemy Killed";
@@ -49,5 +50,10 @@ public static class Metrics
         Value props = new Value();
         props["Total enemies"] = totalEnemies;
         Mixpanel.Track(LevelCompleted, props);
+    }
+
+    public static void RegisterGameOver()
+    {
+        Mixpanel.Track(GameOver);
     }
 }
