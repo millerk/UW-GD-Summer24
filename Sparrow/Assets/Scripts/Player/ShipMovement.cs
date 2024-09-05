@@ -29,6 +29,9 @@ public class ShipMovement : MonoBehaviour
     private bool isDashing = false;
     private float lastDashTime = -Mathf.Infinity;
 
+    public AudioClip dashSound; // Reference to the dash sound effect
+    private AudioSource audioSource; // Reference to the AudioSource component
+
     void Start()
     {
         cam = Camera.main;
@@ -36,8 +39,13 @@ public class ShipMovement : MonoBehaviour
         {
             Debug.LogError("Main camera is either not found or not perspective. Ensure there's a perspective camera with the 'MainCamera' tag.");
         }
-    }
 
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+        {
+            Debug.LogError("No AudioSource component found on the GameObject. Please add one.");
+        }
+    }
     void Update()
     {
         if (moveMode == MovementMode.mouseLook)
@@ -93,6 +101,13 @@ public class ShipMovement : MonoBehaviour
     {
         isDashing = true;
         lastDashTime = Time.time;
+
+        // Play the dash sound effect
+        if (audioSource != null && dashSound != null)
+        {
+            audioSource.PlayOneShot(dashSound);
+        }
+
         float angleRad = angle * Mathf.Deg2Rad;
         movement.x = Mathf.Cos(angleRad);
         movement.y = Mathf.Sin(angleRad);
