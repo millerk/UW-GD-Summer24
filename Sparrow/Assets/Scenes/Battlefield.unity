@@ -1318,9 +1318,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 215481229}
+  - component: {fileID: 215481227}
   - component: {fileID: 215481228}
   - component: {fileID: 215481230}
-  - component: {fileID: 215481227}
+  - component: {fileID: 215481231}
   m_Layer: 0
   m_Name: LevelManager
   m_TagString: Untagged
@@ -1409,6 +1410,34 @@ MonoBehaviour:
       - m_Target: {fileID: 215481227}
         m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
         m_MethodName: OnEnemyDeath
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &215481231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 215481226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d71e0b6cc8f7e5f4f85b219916a62af4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 8e3057e6593dc5d4680bd97ccea321d6, type: 2}
+  onEventTriggered:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 215481227}
+        m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
+        m_MethodName: OnPlayerDeath
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

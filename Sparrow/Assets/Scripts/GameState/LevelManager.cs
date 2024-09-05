@@ -58,6 +58,12 @@ public class LevelManager : MonoBehaviour
         }
     }
 
+    public void OnPlayerDeath(GameObject player)
+    {
+        Metrics.RegisterGameOver();
+        SceneManager.LoadScene("Scenes/Menus/GameOver");
+    }
+
     public void SetUpNextScene()
     {
         // If player has filled out their cannon list already, make sure we skip the shop
