@@ -73,7 +73,8 @@ public class PlayerTargetWithAim : MonoBehaviour
     {
         target = newTarget;
         _targetWasClicked = wasClicked;
-        if (target != null && cannon != null)
+
+        if (target != null && cannon != null && shipConfig != null)
         {
             Rigidbody2D targetRb = target.GetComponent<Rigidbody2D>();
             if (targetRb != null)
@@ -83,9 +84,22 @@ public class PlayerTargetWithAim : MonoBehaviour
                 _predictedTarget.SetActive(true);
                 shipConfig.UpdateCannonTarget(_predictedTarget);
             }
+            else
+            {
+                // If targetRb is null, handle this case appropriately
+                Debug.LogError("Target Rigidbody2D not found!");
+                _predictedTarget.SetActive(false);
+                shipConfig.UpdateCannonTarget(null);
+            }
         }
         else
         {
+            if (shipConfig == null)
+                Debug.LogError("ShipConfiguration is not assigned!");
+
+            if (cannon == null)
+                Debug.LogError("Cannon is not assigned!");
+
             // If no target, deactivate the dummy target
             _predictedTarget.SetActive(false);
             shipConfig.UpdateCannonTarget(null); // Handle no target situation

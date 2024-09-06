@@ -161,10 +161,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d0808cb445cc5744a9ed304949f25fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxDistance: 5
+  maxDistance: 7
   attackStrength: 2
   projectileSpawnPoint: {x: 0, y: 0, z: 0}
   projectileSpeed: 3
+  explosionPrefab: {fileID: 0}
+  explosionRadius: 5
+  explosionDamage: 10
+  hasExplosives: 0
   collisionLayerMask:
     serializedVersion: 2
     m_Bits: 1088
+  damageableLayer:
+    serializedVersion: 2
+    m_Bits: 0

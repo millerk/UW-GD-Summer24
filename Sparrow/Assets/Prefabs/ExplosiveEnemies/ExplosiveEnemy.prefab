@@ -146,11 +146,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthChanged: {fileID: 0}
   onDeath: {fileID: 11400000, guid: 414dfc9853bd0654daa1e3928b01376e, type: 2}
-  damageSourceTags: 000000000100000002000000
-  maxHealth: 0
+  damageSourceTags: 00000000
+  maxHealth: 5
   hitPoints: 5
   isPlayer: 0
-  model: {fileID: 6538813755857491185}
+  model: {fileID: 2113082560015712493}
   hitInvulnDurationSeconds: 0.6
   invulnDeltaTime: 0.15
 --- !u!114 &9034353145717550610
@@ -165,7 +165,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 545aeb05ff8efda4fa37ca43d2560716, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _initialState: {fileID: 11400000, guid: bc5b51c68f3e3314bbbc20628a42d13e, type: 2}
+  _initialState: {fileID: 11400000, guid: 7f648bb4a9578ef4baadc5bf7eb29310, type: 2}
 --- !u!114 &7017518644806560652
 MonoBehaviour:
   m_ObjectHideFlags: 0

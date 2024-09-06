@@ -86,7 +86,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: a0b04ae0f7daa3f43b25a02bb5bdbd53, type: 3}
-  m_Color: {r: 0.83396226, g: 0.1054254, b: 0.1054254, a: 1}
+  m_Color: {r: 0.30000156, g: 0.28855106, b: 0.89433956, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -208,8 +208,12 @@ MonoBehaviour:
   healthChanged: {fileID: 0}
   onDeath: {fileID: 11400000, guid: 414dfc9853bd0654daa1e3928b01376e, type: 2}
   damageSourceTags: 0000000003000000
+  maxHealth: 25
   hitPoints: 25
   isPlayer: 0
+  model: {fileID: 769043245617342556}
+  hitInvulnDurationSeconds: 0
+  invulnDeltaTime: 0
 --- !u!114 &8215240886526113579
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -222,7 +226,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 545aeb05ff8efda4fa37ca43d2560716, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _initialState: {fileID: 11400000, guid: bc5b51c68f3e3314bbbc20628a42d13e, type: 2}
+  _initialState: {fileID: 11400000, guid: f65fb4e492ab0eb4abc00657d6f2654a, type: 2}
 --- !u!114 &-4116276440994432840
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -242,11 +246,11 @@ MonoBehaviour:
   - {fileID: 926552227227818805}
   - {fileID: 6038787438590038884}
   cannonDefs:
-  - {fileID: 11400000, guid: 42d809bc0ca08194689935d656157514, type: 2}
-  - {fileID: 11400000, guid: 42d809bc0ca08194689935d656157514, type: 2}
-  - {fileID: 11400000, guid: 42d809bc0ca08194689935d656157514, type: 2}
-  - {fileID: 11400000, guid: 42d809bc0ca08194689935d656157514, type: 2}
-  - {fileID: 11400000, guid: 42d809bc0ca08194689935d656157514, type: 2}
+  - {fileID: 11400000, guid: 05ba34594da86284894be8b91736d2b7, type: 2}
+  - {fileID: 11400000, guid: 05ba34594da86284894be8b91736d2b7, type: 2}
+  - {fileID: 11400000, guid: 05ba34594da86284894be8b91736d2b7, type: 2}
+  - {fileID: 11400000, guid: 05ba34594da86284894be8b91736d2b7, type: 2}
+  - {fileID: 11400000, guid: 05ba34594da86284894be8b91736d2b7, type: 2}
   cannonTemplate: {fileID: 248383343662709132, guid: 6b9d6f80cad33044893fbbf9221d52b1, type: 3}
   shipRb: {fileID: -4682805084416169749}
 --- !u!114 &-3615500057710259700

@@ -14,13 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: MagicCannon
   description: Shoots Magic Cannonball
-  attackStrength: 1
+  attackStrength: 10
   attackDistance: 15
   cannonSpriteOffsetFromBase: {x: 0, y: 0}
   firePointOffset: {x: 0, y: 0}
   cannonBaseSprite: {fileID: 0}
-  projectile: {fileID: 0}
-  projectileSpeed: 6
-  animationController: {fileID: 0}
-  shopCost: 18
-  shopIcon: {fileID: 0}
+  projectile: {fileID: 8399225056010469974, guid: 69aafdfbd6c778f4b9c478a6d1e86f59, type: 3}
+  projectileSpeed: 4
+  animationController: {fileID: 9100000, guid: df66c28be3350fe44a3c99ce2fc57f1e, type: 2}
+  shopCost: 100
+  shopIcon: {fileID: 304877178, guid: 6bc782c47936deb448a862252cfbb126, type: 3}

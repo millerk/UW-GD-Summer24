@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 2838014572800479170}
   m_Layer: 9
   m_Name: EnemyOrb
-  m_TagString: EnemyAttack
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -183,10 +183,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d0808cb445cc5744a9ed304949f25fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxDistance: 10
-  attackStrength: 0
+  maxDistance: 15
+  attackStrength: 2
   projectileSpawnPoint: {x: 0, y: 0, z: 0}
-  projectileSpeed: 0
+  projectileSpeed: 7
   explosionPrefab: {fileID: 0}
   explosionRadius: 5
   explosionDamage: 10

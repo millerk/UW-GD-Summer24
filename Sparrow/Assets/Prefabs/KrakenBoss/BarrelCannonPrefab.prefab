@@ -204,8 +204,12 @@ MonoBehaviour:
   healthChanged: {fileID: 0}
   onDeath: {fileID: 11400000, guid: 414dfc9853bd0654daa1e3928b01376e, type: 2}
   damageSourceTags: 00000000
+  maxHealth: 5
   hitPoints: 5
   isPlayer: 0
+  model: {fileID: 0}
+  hitInvulnDurationSeconds: 0
+  invulnDeltaTime: 0
 --- !u!114 &3215271099032546087
 MonoBehaviour:
   m_ObjectHideFlags: 0
