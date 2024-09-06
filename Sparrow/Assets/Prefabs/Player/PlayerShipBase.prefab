@@ -349,10 +349,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51ba13f8d2e72714890dcc58d6dc5220, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
-  dashSpeed: 27
-  dashDuration: 0.1
-  dashCooldown: 5
+  moveSpeed: 10
+  dashSpeed: 35
+  dashDuration: 0.17
+  dashCooldown: 2
   dashCooldownRemaining: 0
   dashCooldownUpdated: {fileID: 11400000, guid: 11ee4d590a9194b409968a15a757f4af, type: 2}
   rb: {fileID: 8430742869276604322}
@@ -583,7 +583,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: -1175812463021559193, guid: b3086eca371015843aadc4a71f46f272, type: 2}
   m_audioClip: {fileID: 8300000, guid: 318074dfe48424c46b69710909395b15, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.632
+  m_Volume: 0.171
   m_Pitch: 1
   Loop: 0
   Mute: 0
