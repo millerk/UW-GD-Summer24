@@ -165,7 +165,7 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -184,5 +184,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxDistance: 10
+  attackStrength: 0
   projectileSpawnPoint: {x: 0, y: 0, z: 0}
   projectileSpeed: 0
+  explosionPrefab: {fileID: 0}
+  explosionRadius: 5
+  explosionDamage: 10
+  hasExplosives: 0
+  collisionLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
+  damageableLayer:
+    serializedVersion: 2
+    m_Bits: 0
