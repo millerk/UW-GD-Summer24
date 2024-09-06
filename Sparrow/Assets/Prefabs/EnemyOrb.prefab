@@ -193,7 +193,7 @@ MonoBehaviour:
   hasExplosives: 0
   collisionLayerMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1088
   damageableLayer:
     serializedVersion: 2
     m_Bits: 0

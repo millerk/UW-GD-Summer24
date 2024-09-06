@@ -17,12 +17,13 @@ public class ShipMovement : MonoBehaviour
     public float dashCooldown = 1f; // Cooldown between dashes
     public float dashCooldownRemaining = 0f;
     public GameEvent dashCooldownUpdated;
+    public GameEvent playerDashed;
 
     public Rigidbody2D rb;
     public Camera cam;
     public MovementMode moveMode;
     public float rotateSpeed;
-
+    
     private Vector2 movement;
     private Vector2 mousePos;
     private float angle;
@@ -115,6 +116,7 @@ public class ShipMovement : MonoBehaviour
 
         // Perform the dash
         float startTime = Time.time;
+        playerDashed.TriggerEvent(gameObject);
         while (Time.time < startTime + dashDuration)
         {
             rb.MovePosition(rb.position + dashDirection * dashSpeed * Time.fixedDeltaTime);
