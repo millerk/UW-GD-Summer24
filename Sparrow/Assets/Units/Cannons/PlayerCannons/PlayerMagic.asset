@@ -22,5 +22,5 @@ MonoBehaviour:
   projectile: {fileID: 0}
   projectileSpeed: 6
   animationController: {fileID: 0}
-  shopCost: 0
+  shopCost: 18
   shopIcon: {fileID: 0}

@@ -487,7 +487,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   numCannonsToChoose: 3
   cannonsList:
-  - {fileID: 11400000, guid: b10e627261f058b4ebf0e71ca3bfae5a, type: 2}
+  - {fileID: 11400000, guid: 6d96aeaa8878ccd40a5b355020c1e756, type: 2}
+  - {fileID: 11400000, guid: 3aad6bc5957e7d2409bf9cd3d8a99a06, type: 2}
+  - {fileID: 11400000, guid: a3f06560a6a606846a45b0ed33328706, type: 2}
   - {fileID: 11400000, guid: d8ed48c2720aaa64d8e7a6961abaafca, type: 2}
   availableCannons: []
   totalGold: 0
@@ -1478,7 +1480,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e09737f86c9d544f823e114b9ab2ea6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ItemId: 0
+  ItemId: 2
   PriceText: {fileID: 1719414766}
   ShopManager: {fileID: 332796622}
   cost: 0
@@ -2283,7 +2285,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e09737f86c9d544f823e114b9ab2ea6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ItemId: 0
+  ItemId: 1
   PriceText: {fileID: 1952044924}
   ShopManager: {fileID: 332796622}
   cost: 0
