@@ -1346,7 +1346,7 @@ MonoBehaviour:
   LevelLoaded: {fileID: 11400000, guid: 2beee4ca3cbcfad4b83f26ea70d6c0e0, type: 2}
   LevelCompleted: {fileID: 11400000, guid: a2ea2112d92e16a4094caba09b6161b2, type: 2}
   maxScreensUntilShop: 3
-  oddsOfShop: 2
+  oddsOfShop: 1
   advanceButton: {fileID: 752906869}
 --- !u!114 &215481228
 MonoBehaviour:
