@@ -15,5 +15,5 @@ MonoBehaviour:
   name: CannonEnemyTest
   enemiesToSpawn:
   - Enemy: {fileID: 1739139097824912367, guid: caa1042112744b04aa642809da03aa5b, type: 3}
-    Count: 5
+    Count: 15
   nextLevel: {fileID: 0}

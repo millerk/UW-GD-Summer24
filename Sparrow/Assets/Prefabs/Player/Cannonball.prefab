@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6429600250352139018}
   - component: {fileID: 7309664084518155287}
   - component: {fileID: 4372930403595334076}
+  - component: {fileID: 2543577267017316814}
   m_Layer: 7
   m_Name: Cannonball
   m_TagString: PlayerAttack
@@ -126,13 +127,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d0808cb445cc5744a9ed304949f25fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxDistance: 5
+  maxDistance: 10
   attackStrength: 2
   projectileSpawnPoint: {x: 0, y: 0, z: 0}
-  projectileSpeed: 3
+  projectileSpeed: 8
+  explosionPrefab: {fileID: 0}
+  explosionRadius: 5
+  explosionDamage: 10
+  hasExplosives: 0
   collisionLayerMask:
     serializedVersion: 2
     m_Bits: 3328
+  damageableLayer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!58 &4372930403595334076
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -168,3 +176,24 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.16
+--- !u!95 &2543577267017316814
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2208619554058997048}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 491737e22b393a54f8a021ddec54e0aa, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

@@ -15,12 +15,12 @@ MonoBehaviour:
   name: EnemyCannon
   description: This fires stuff too
   attackStrength: 2
-  attackDistance: 15
+  attackDistance: 20
   cannonSpriteOffsetFromBase: {x: -0.25, y: 0.2}
   firePointOffset: {x: -0.45, y: 0}
   cannonBaseSprite: {fileID: 0}
   projectile: {fileID: 5427650957570344865, guid: b2f844b181137dd4db4e25c00bed37c1, type: 3}
-  projectileSpeed: 8
+  projectileSpeed: 10.25
   animationController: {fileID: 9100000, guid: 281f83d0860a20c44b342a3c12eefd31, type: 2}
   shopCost: 0
   shopIcon: {fileID: 0}

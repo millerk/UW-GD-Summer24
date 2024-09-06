@@ -161,7 +161,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d0808cb445cc5744a9ed304949f25fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxDistance: 2
+  maxDistance: 4
   attackStrength: 5
   projectileSpawnPoint: {x: 0, y: 0, z: 0}
   projectileSpeed: 8

@@ -181,8 +181,12 @@ MonoBehaviour:
   healthChanged: {fileID: 0}
   onDeath: {fileID: 11400000, guid: 414dfc9853bd0654daa1e3928b01376e, type: 2}
   damageSourceTags: 00000000
+  maxHealth: 5
   hitPoints: 5
   isPlayer: 0
+  model: {fileID: 574842582035637928}
+  hitInvulnDurationSeconds: 0
+  invulnDeltaTime: 0
 --- !u!114 &5325439912083948640
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -429,8 +433,12 @@ MonoBehaviour:
   healthChanged: {fileID: 0}
   onDeath: {fileID: 11400000, guid: 414dfc9853bd0654daa1e3928b01376e, type: 2}
   damageSourceTags: 00000000
+  maxHealth: 5
   hitPoints: 5
   isPlayer: 0
+  model: {fileID: 2041622748964906154}
+  hitInvulnDurationSeconds: 0
+  invulnDeltaTime: 0
 --- !u!114 &7699756531878155784
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -615,8 +623,12 @@ MonoBehaviour:
   healthChanged: {fileID: 0}
   onDeath: {fileID: 11400000, guid: 414dfc9853bd0654daa1e3928b01376e, type: 2}
   damageSourceTags: 00000000
+  maxHealth: 5
   hitPoints: 5
   isPlayer: 0
+  model: {fileID: 2159367076896506422}
+  hitInvulnDurationSeconds: 0
+  invulnDeltaTime: 0
 --- !u!114 &6118756614032310125
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -832,8 +844,12 @@ MonoBehaviour:
   healthChanged: {fileID: 0}
   onDeath: {fileID: 11400000, guid: 414dfc9853bd0654daa1e3928b01376e, type: 2}
   damageSourceTags: 00000000
+  maxHealth: 5
   hitPoints: 5
   isPlayer: 0
+  model: {fileID: 3055081666224872956}
+  hitInvulnDurationSeconds: 0
+  invulnDeltaTime: 0
 --- !u!114 &7467854981976003855
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1018,8 +1034,12 @@ MonoBehaviour:
   healthChanged: {fileID: 0}
   onDeath: {fileID: 11400000, guid: 414dfc9853bd0654daa1e3928b01376e, type: 2}
   damageSourceTags: 00000000
+  maxHealth: 5
   hitPoints: 5
   isPlayer: 0
+  model: {fileID: 3307758010577481703}
+  hitInvulnDurationSeconds: 0
+  invulnDeltaTime: 0
 --- !u!114 &6717934774329388304
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1204,8 +1224,12 @@ MonoBehaviour:
   healthChanged: {fileID: 0}
   onDeath: {fileID: 11400000, guid: 414dfc9853bd0654daa1e3928b01376e, type: 2}
   damageSourceTags: 00000000
+  maxHealth: 5
   hitPoints: 5
   isPlayer: 0
+  model: {fileID: 3593972374923753531}
+  hitInvulnDurationSeconds: 0
+  invulnDeltaTime: 0
 --- !u!114 &7358107510954121640
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1452,8 +1476,12 @@ MonoBehaviour:
   healthChanged: {fileID: 0}
   onDeath: {fileID: 11400000, guid: 414dfc9853bd0654daa1e3928b01376e, type: 2}
   damageSourceTags: 00000000
+  maxHealth: 5
   hitPoints: 5
   isPlayer: 0
+  model: {fileID: 6353910834356579636}
+  hitInvulnDurationSeconds: 0
+  invulnDeltaTime: 0
 --- !u!114 &9010278431717627867
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1729,8 +1757,12 @@ MonoBehaviour:
   healthChanged: {fileID: 0}
   onDeath: {fileID: 11400000, guid: 414dfc9853bd0654daa1e3928b01376e, type: 2}
   damageSourceTags: 00000000
+  maxHealth: 30
   hitPoints: 30
   isPlayer: 0
+  model: {fileID: 7755128683342313001}
+  hitInvulnDurationSeconds: 0
+  invulnDeltaTime: 0
 --- !u!114 &5677997009656851762
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1743,7 +1775,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 545aeb05ff8efda4fa37ca43d2560716, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _initialState: {fileID: 11400000, guid: bc5b51c68f3e3314bbbc20628a42d13e, type: 2}
+  _initialState: {fileID: 11400000, guid: 1453aa62904ea664abc12e2df4465f55, type: 2}
 --- !u!114 &3377210559871924644
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1941,8 +1973,12 @@ MonoBehaviour:
   healthChanged: {fileID: 0}
   onDeath: {fileID: 11400000, guid: 414dfc9853bd0654daa1e3928b01376e, type: 2}
   damageSourceTags: 00000000
+  maxHealth: 5
   hitPoints: 5
   isPlayer: 0
+  model: {fileID: 8524822645278138636}
+  hitInvulnDurationSeconds: 0
+  invulnDeltaTime: 0
 --- !u!114 &1897936127510496413
 MonoBehaviour:
   m_ObjectHideFlags: 0

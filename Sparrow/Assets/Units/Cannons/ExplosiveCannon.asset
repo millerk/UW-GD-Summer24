@@ -15,7 +15,7 @@ MonoBehaviour:
   name: ExplosiveCannon
   description: ShootsExplosive
   attackStrength: 5
-  attackDistance: 3
+  attackDistance: 4
   cannonSpriteOffsetFromBase: {x: -0.25, y: 0.2}
   firePointOffset: {x: -0.45, y: 0}
   cannonBaseSprite: {fileID: 0}

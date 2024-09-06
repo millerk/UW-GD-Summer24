@@ -30,11 +30,6 @@ public class CannonballLogic : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (animator != null)
-        {
-            animator.Play("ProjectileAnimation");
-        }
-
         Vector3 _distance = projectileSpawnPoint - transform.position;
         if (maxDistance < Mathf.Abs(_distance.magnitude))
         {
