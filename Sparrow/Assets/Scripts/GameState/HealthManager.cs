@@ -22,13 +22,14 @@ public class HealthManager : MonoBehaviour
     public int hitPoints = 5;
     public bool isPlayer = false;
     public GameObject model;
+    public float additionalDashIFrame;
     
     [SerializeField]
     private float hitInvulnDurationSeconds;
     [SerializeField]
     private float invulnDeltaTime;
 
-    private bool isInvlun = false;
+    private bool isInvuln = false;
     private static string PLAYER_HEALTH = "Player Health";
 
     void OnEnable()
@@ -54,7 +55,7 @@ public class HealthManager : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D other)
     {
-        if (isInvlun) return;
+        if (isInvuln) return;
 
         foreach (DamageSourceTag tag in damageSourceTags)
         {
@@ -110,7 +111,7 @@ public class HealthManager : MonoBehaviour
 
     private IEnumerator BecomeInvuln()
     {
-        isInvlun = true;
+        isInvuln = true;
         for (float i = 0; i < hitInvulnDurationSeconds; i += invulnDeltaTime)
         {
             if (model.transform.localScale == Vector3.one)
@@ -125,11 +126,28 @@ public class HealthManager : MonoBehaviour
 
         }
         ScaleModelTo(Vector3.one);
-        isInvlun = false;
+        isInvuln = false;
     }
 
     private void ScaleModelTo(Vector3 scale)
     {
         model.transform.localScale = scale;
     }
+    public void PlayerDashed(GameObject player)
+    {
+        float invulntime = player.GetComponent<ShipMovement>().dashDuration + additionalDashIFrame;
+        StartCoroutine(ApplyDashIFrames(invulntime));
+    }       
+
+    private IEnumerator ApplyDashIFrames(float dashDuration)
+    {
+        isInvuln = true;
+        for (float i = 0; i < dashDuration; i += invulnDeltaTime)
+        {
+            yield return new WaitForSeconds(invulnDeltaTime);
+
+        }
+        isInvuln = false;
+    }
+
 }
