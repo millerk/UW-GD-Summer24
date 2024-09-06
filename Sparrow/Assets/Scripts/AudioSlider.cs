@@ -23,6 +23,7 @@ public class AudioSlider : MonoBehaviour
         // Load saved values
         LoadSettings();
 
+
         // Add listeners for slider changes
         volumeSlider.onValueChanged.AddListener(SetVolume);
         musicSlider.onValueChanged.AddListener(SetMusicVolume);
@@ -50,9 +51,9 @@ public class AudioSlider : MonoBehaviour
     void LoadSettings()
     {
         // Load saved values or use defaults if none found
-        float volume = PlayerPrefs.GetFloat(PREF_VOLUME, 1f); // Default to 0.75
-        float music = PlayerPrefs.GetFloat(PREF_MUSIC, 1f); // Default to 0.75
-        float effect = PlayerPrefs.GetFloat(PREF_EFFECT, 1f); // Default to 0.75
+        float volume = PlayerPrefs.GetFloat(PREF_VOLUME, 1f);
+        float music = PlayerPrefs.GetFloat(PREF_MUSIC, 1f);
+        float effect = PlayerPrefs.GetFloat(PREF_EFFECT, 1f); 
 
         volumeSlider.value = volume;
         musicSlider.value = music;
