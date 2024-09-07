@@ -494,7 +494,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 6d96aeaa8878ccd40a5b355020c1e756, type: 2}
   - {fileID: 11400000, guid: 3aad6bc5957e7d2409bf9cd3d8a99a06, type: 2}
   - {fileID: 11400000, guid: a3f06560a6a606846a45b0ed33328706, type: 2}
-  totalGold: 100
+  totalGold: 0
   playerCannons: []
   goldText: {fileID: 591353964}
   cannonsLoadedEvent: {fileID: 11400000, guid: cb06ff2c14693314286535e3d7140af5, type: 2}
@@ -596,7 +596,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1519055756}
   m_HandleRect: {fileID: 1519055755}
   m_Direction: 0
-  m_Value: 1
+  m_Value: 0
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -779,6 +779,9 @@ MonoBehaviour:
   ShopManager: {fileID: 332796622}
   cost: 0
   displayIcon: {fileID: 1168265797}
+  tooExpensiveColor:
+    serializedVersion: 2
+    rgba: 3777828723
 --- !u!114 &719144356
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1487,6 +1490,9 @@ MonoBehaviour:
   ShopManager: {fileID: 332796622}
   cost: 0
   displayIcon: {fileID: 99992159}
+  tooExpensiveColor:
+    serializedVersion: 2
+    rgba: 3777828723
 --- !u!114 &1394122283
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2292,6 +2298,9 @@ MonoBehaviour:
   ShopManager: {fileID: 332796622}
   cost: 0
   displayIcon: {fileID: 1603604993}
+  tooExpensiveColor:
+    serializedVersion: 2
+    rgba: 3777828723
 --- !u!114 &1935512919
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -8,6 +8,12 @@ public class ButtonInfo : MonoBehaviour
     public GameObject ShopManager;
     public int cost;
     public Image displayIcon;
+    public Color32 tooExpensiveColor;
+
+    void OnEnable()
+    {
+        tooExpensiveColor = new Color32(115, 23, 45, 225);
+    }
 
     public void CannonsLoaded(GameObject source)
     {
@@ -32,6 +38,7 @@ public class ButtonInfo : MonoBehaviour
         int totalGold = ShopManager.GetComponent<ShopManagerLogic>().totalGold;
         if (totalGold < cost)
         {
+            PriceText.color = tooExpensiveColor;
             SuppressButton();
         }
     }
