@@ -23,7 +23,10 @@ public class ResolutionScript : MonoBehaviour
         // Populate the list with screen resolutions
         foreach (Resolution resolution in allResolutions)
         {
-            resolutions.Add(resolution);
+            if (!resolutions.Exists(r => r.width == resolution.width && r.height == resolution.height))
+            {
+                resolutions.Add(resolution);
+            }
         }
 
         // Clear any existing options in the dropdown
@@ -43,7 +46,8 @@ public class ResolutionScript : MonoBehaviour
         resolutionDropdown.AddOptions(options);
 
         // Optionally, set the default resolution to the current screen resolution
-        int currentResolutionIndex = options.IndexOf(Screen.currentResolution.width + " x " + Screen.currentResolution.height);
+        string currentResolutionString = Screen.currentResolution.width + " x " + Screen.currentResolution.height;
+        int currentResolutionIndex = options.IndexOf(currentResolutionString);
         if (currentResolutionIndex != -1)
         {
             resolutionDropdown.value = currentResolutionIndex;
