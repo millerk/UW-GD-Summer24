@@ -10,12 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9cfcda6365f4eae4396f1f23e45bb59a, type: 3}
-  m_Name: Level1
+  m_Name: New Level Definition
   m_EditorClassIdentifier: 
-  name: Level 1 (Game Start)
-  enemiesToSpawn:
-  - Enemy: {fileID: 1795344308091871500, guid: 02522e0b3cf225f45b2b4db9830ec321, type: 3}
-    Count: 4
-  - Enemy: {fileID: 8532208803328321596, guid: e3016a59409ad45419a4517d72fa9bec, type: 3}
-    Count: 3
-  nextLevel: {fileID: 11400000, guid: 7684873cb041e3448ae15d02e29d6b67, type: 2}
+  name: 
+  enemiesToSpawn: []
+  nextLevel: {fileID: 0}

@@ -15,7 +15,7 @@ MonoBehaviour:
   name: PlayerCannon
   description: Normal Cannon
   attackStrength: 2
-  attackDistance: 10
+  attackDistance: 12
   cannonSpriteOffsetFromBase: {x: 0, y: 0}
   firePointOffset: {x: 0, y: 0}
   cannonBaseSprite: {fileID: 0}
