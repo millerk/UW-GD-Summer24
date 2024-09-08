@@ -12,7 +12,7 @@ public class PlayerTargetWithAim : MonoBehaviour
     public float predictionAdjustment = 0.0f; // Distance adjustment
     public float angleAdjustment = 0.0f; // Angle adjustment in degrees
 
-    void Start()
+    void Awake()
     {
         // Create or assign the dummy target object
         _predictedTarget = new GameObject("PredictedTarget");

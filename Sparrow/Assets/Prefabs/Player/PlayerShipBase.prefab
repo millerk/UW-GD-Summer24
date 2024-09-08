@@ -797,6 +797,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3524277429257895905}
     m_Modifications:
+    - target: {fileID: 265910063497478008, guid: ca8a0af04f93a09418e2d240f7b56170, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2974351712868875505, guid: ca8a0af04f93a09418e2d240f7b56170, type: 3}
       propertyPath: m_Name
       value: PC Turret Mast-Sheet_0
