@@ -94,6 +94,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9150356713637775854}
+  - component: {fileID: 8453363172764271525}
   m_Layer: 8
   m_Name: CannonPoint0
   m_TagString: Untagged
@@ -116,6 +117,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3907858210975410641}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8453363172764271525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7522904804610820599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 955d0205bb2709b478cf28a8d4ddad25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  particleSystem: {fileID: 175966499204905672, guid: 96e10b2cb3a6bf649b9df1b6e7d2508b, type: 3}
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  maxDistance: 10
 --- !u!1 &8678284688648251416
 GameObject:
   m_ObjectHideFlags: 0
@@ -236,6 +254,7 @@ MonoBehaviour:
   hitPoints: 5
   isPlayer: 0
   model: {fileID: 2466755578648080353}
+  additionalDashIFrame: 0
   hitInvulnDurationSeconds: 0.6
   invulnDeltaTime: 0.15
 --- !u!114 &8914662128600569659
@@ -266,7 +285,7 @@ MonoBehaviour:
   anchorPoints:
   - {fileID: 7522904804610820599}
   cannonDefs:
-  - {fileID: 11400000, guid: 1d8240a3e22a14c46a4bbe38caa9ef0c, type: 2}
+  - {fileID: 11400000, guid: 42d809bc0ca08194689935d656157514, type: 2}
   cannonTemplate: {fileID: 248383343662709132, guid: 6b9d6f80cad33044893fbbf9221d52b1, type: 3}
   shipRb: {fileID: -8151760289926994441}
 --- !u!58 &-9205748010682149557

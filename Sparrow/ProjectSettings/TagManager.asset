@@ -52,3 +52,6 @@ TagManager:
   - name: Ships
     uniqueID: 2247510495
     locked: 0
+  - name: ParticleEffects
+    uniqueID: 2636913573
+    locked: 0
