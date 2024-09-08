@@ -13,7 +13,7 @@ public class ShipConfiguration : MonoBehaviour
     public static string PLAYER_CANNON_DEF = "Player Cannon Configuration";
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         // If we have transitioned from previous screen, use the players existing cannon setup, otherwise
         // reset to default (definied in editor Player ship prefab)
@@ -33,14 +33,17 @@ public class ShipConfiguration : MonoBehaviour
                 GameObject _cannonObj = Instantiate(cannonTemplate, _anchorPoint.transform.position, _anchorPoint.transform.rotation);
                 CannonContainer container = _cannonObj.GetComponent<CannonContainer>();
                 container.cannonDef = _cannon;
-                container.shipRb = shipRb;
+                container.shipRb = gameObject.GetComponent<Rigidbody2D>();
                 _cannonObj.transform.parent = _anchorPoint.transform;
                 _cannons.Add(_cannonObj);
 
                 _maxDistance = Math.Max(_maxDistance, _cannon.attackDistance);
             }
         }
-        GlobalVariables.Set(PLAYER_CANNON_DEF, cannonDefs);
+        if (gameObject.CompareTag("Player"))
+        {
+            GlobalVariables.Set(PLAYER_CANNON_DEF, cannonDefs);
+        }
         CircleCollider2D _autoTargetCollider = gameObject.GetComponent<CircleCollider2D>();
         _autoTargetCollider.radius = _maxDistance - 0.05f; // a little wiggle room so that we don't auto-target things just on the edge of range
     }

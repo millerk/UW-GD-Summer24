@@ -239,8 +239,9 @@ MonoBehaviour:
   hitPoints: 5
   isPlayer: 0
   model: {fileID: 8532208803328321596}
-  hitInvulnDurationSeconds: 0
-  invulnDeltaTime: 0
+  additionalDashIFrame: 0
+  hitInvulnDurationSeconds: 0.45
+  invulnDeltaTime: 0.15
 --- !u!114 &4556469796641766037
 MonoBehaviour:
   m_ObjectHideFlags: 0
