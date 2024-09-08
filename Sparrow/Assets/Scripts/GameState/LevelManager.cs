@@ -21,6 +21,8 @@ public class LevelManager : MonoBehaviour
 
     private string _sceneToLoad = "Scenes/Battlefield";
 
+    public Text enemyCountText;
+
     void Start()
     {
         LevelDefinition requestedLevel = GlobalVariables.Get<LevelDefinition>(NEXT_LEVEL);
@@ -30,6 +32,16 @@ public class LevelManager : MonoBehaviour
         }
         Debug.Log("Loaded level " + levelDefinition.name);
         LevelLoaded.TriggerEvent(gameObject);
+
+        UpdateEnemyCountText();
+    }
+
+    void UpdateEnemyCountText()
+    {
+        if (enemyCountText != null)
+        {
+            enemyCountText.text = "Remaining: " + totalEnemies.ToString();
+        }
     }
 
     public void LoadNextScene()
@@ -43,11 +55,14 @@ public class LevelManager : MonoBehaviour
     {
         _enemies.Add(eventSource);
         totalEnemies++;
+        UpdateEnemyCountText();
     }
 
     public void OnEnemyDeath(GameObject eventSource)
     {
         _enemies.RemoveAll(enemy => ReferenceEquals(enemy, eventSource));
+        totalEnemies--;
+        UpdateEnemyCountText();
         Metrics.RegisterEnemyKilled(eventSource);
         if (!_levelCleared && _enemies.Count <= 0)
         {
