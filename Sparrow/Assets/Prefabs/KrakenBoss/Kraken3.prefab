@@ -111,8 +111,13 @@ MonoBehaviour:
   healthChanged: {fileID: 0}
   onDeath: {fileID: 11400000, guid: 414dfc9853bd0654daa1e3928b01376e, type: 2}
   damageSourceTags: 00000000
+  maxHealth: 0
   hitPoints: 5
   isPlayer: 0
+  model: {fileID: 0}
+  additionalDashIFrame: 0
+  hitInvulnDurationSeconds: 0
+  invulnDeltaTime: 0
 --- !u!1 &250386920661646367
 GameObject:
   m_ObjectHideFlags: 0
@@ -378,8 +383,13 @@ MonoBehaviour:
   healthChanged: {fileID: 0}
   onDeath: {fileID: 11400000, guid: 414dfc9853bd0654daa1e3928b01376e, type: 2}
   damageSourceTags: 00000000
+  maxHealth: 0
   hitPoints: 5
   isPlayer: 0
+  model: {fileID: 0}
+  additionalDashIFrame: 0
+  hitInvulnDurationSeconds: 0
+  invulnDeltaTime: 0
 --- !u!114 &6337516722564690523
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -424,7 +434,6 @@ GameObject:
   - component: {fileID: 6998928770152645900}
   - component: {fileID: 4678754082690815350}
   - component: {fileID: 8689071490316621584}
-  - component: {fileID: 2858533961949176842}
   - component: {fileID: 8700169133995922697}
   - component: {fileID: 3030936961560080983}
   - component: {fileID: 990925306226565462}
@@ -575,41 +584,6 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 5, y: 6}
   m_Direction: 0
---- !u!58 &2858533961949176842
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1011234398079243751}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 3
 --- !u!114 &8700169133995922697
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -625,8 +599,13 @@ MonoBehaviour:
   healthChanged: {fileID: 0}
   onDeath: {fileID: 11400000, guid: 414dfc9853bd0654daa1e3928b01376e, type: 2}
   damageSourceTags: 00000000
+  maxHealth: 0
   hitPoints: 30
   isPlayer: 0
+  model: {fileID: 0}
+  additionalDashIFrame: 0
+  hitInvulnDurationSeconds: 0
+  invulnDeltaTime: 0
 --- !u!114 &3030936961560080983
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -877,8 +856,13 @@ MonoBehaviour:
   healthChanged: {fileID: 0}
   onDeath: {fileID: 11400000, guid: 414dfc9853bd0654daa1e3928b01376e, type: 2}
   damageSourceTags: 00000000
+  maxHealth: 0
   hitPoints: 5
   isPlayer: 0
+  model: {fileID: 0}
+  additionalDashIFrame: 0
+  hitInvulnDurationSeconds: 0
+  invulnDeltaTime: 0
 --- !u!114 &45415057789879407
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1176,8 +1160,13 @@ MonoBehaviour:
   healthChanged: {fileID: 0}
   onDeath: {fileID: 11400000, guid: 414dfc9853bd0654daa1e3928b01376e, type: 2}
   damageSourceTags: 00000000
+  maxHealth: 0
   hitPoints: 5
   isPlayer: 0
+  model: {fileID: 0}
+  additionalDashIFrame: 0
+  hitInvulnDurationSeconds: 0
+  invulnDeltaTime: 0
 --- !u!114 &3894808808416603480
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1413,8 +1402,13 @@ MonoBehaviour:
   healthChanged: {fileID: 0}
   onDeath: {fileID: 11400000, guid: 414dfc9853bd0654daa1e3928b01376e, type: 2}
   damageSourceTags: 00000000
+  maxHealth: 0
   hitPoints: 5
   isPlayer: 0
+  model: {fileID: 0}
+  additionalDashIFrame: 0
+  hitInvulnDurationSeconds: 0
+  invulnDeltaTime: 0
 --- !u!114 &1916220338556616545
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1650,8 +1644,13 @@ MonoBehaviour:
   healthChanged: {fileID: 0}
   onDeath: {fileID: 11400000, guid: 414dfc9853bd0654daa1e3928b01376e, type: 2}
   damageSourceTags: 00000000
+  maxHealth: 0
   hitPoints: 5
   isPlayer: 0
+  model: {fileID: 0}
+  additionalDashIFrame: 0
+  hitInvulnDurationSeconds: 0
+  invulnDeltaTime: 0
 --- !u!114 &4412569622401324645
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2011,8 +2010,13 @@ MonoBehaviour:
   healthChanged: {fileID: 0}
   onDeath: {fileID: 11400000, guid: 414dfc9853bd0654daa1e3928b01376e, type: 2}
   damageSourceTags: 00000000
+  maxHealth: 0
   hitPoints: 5
   isPlayer: 0
+  model: {fileID: 0}
+  additionalDashIFrame: 0
+  hitInvulnDurationSeconds: 0
+  invulnDeltaTime: 0
 --- !u!114 &4879755218026747470
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2248,8 +2252,13 @@ MonoBehaviour:
   healthChanged: {fileID: 0}
   onDeath: {fileID: 11400000, guid: 414dfc9853bd0654daa1e3928b01376e, type: 2}
   damageSourceTags: 00000000
+  maxHealth: 0
   hitPoints: 5
   isPlayer: 0
+  model: {fileID: 0}
+  additionalDashIFrame: 0
+  hitInvulnDurationSeconds: 0
+  invulnDeltaTime: 0
 --- !u!114 &281822391758712190
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2485,8 +2494,13 @@ MonoBehaviour:
   healthChanged: {fileID: 0}
   onDeath: {fileID: 11400000, guid: 414dfc9853bd0654daa1e3928b01376e, type: 2}
   damageSourceTags: 00000000
+  maxHealth: 0
   hitPoints: 5
   isPlayer: 0
+  model: {fileID: 0}
+  additionalDashIFrame: 0
+  hitInvulnDurationSeconds: 0
+  invulnDeltaTime: 0
 --- !u!114 &1160393979894556888
 MonoBehaviour:
   m_ObjectHideFlags: 0

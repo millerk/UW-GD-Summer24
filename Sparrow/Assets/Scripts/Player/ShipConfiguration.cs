@@ -43,9 +43,9 @@ public class ShipConfiguration : MonoBehaviour
         if (gameObject.CompareTag("Player"))
         {
             GlobalVariables.Set(PLAYER_CANNON_DEF, cannonDefs);
+            CircleCollider2D _autoTargetCollider = gameObject.GetComponent<CircleCollider2D>();
+            _autoTargetCollider.radius = _maxDistance - 0.05f; // a little wiggle room so that we don't auto-target things just on the edge of range
         }
-        CircleCollider2D _autoTargetCollider = gameObject.GetComponent<CircleCollider2D>();
-        _autoTargetCollider.radius = _maxDistance - 0.05f; // a little wiggle room so that we don't auto-target things just on the edge of range
     }
 
     public void UpdateCannonTarget(GameObject target)
