@@ -60,8 +60,8 @@ public class LevelManager : MonoBehaviour
 
     public void OnEnemyDeath(GameObject eventSource)
     {
-        _enemies.RemoveAll(enemy => ReferenceEquals(enemy, eventSource));
-        totalEnemies--;
+        int removed = _enemies.RemoveAll(enemy => ReferenceEquals(enemy, eventSource));
+        totalEnemies -= removed;
         UpdateEnemyCountText();
         Metrics.RegisterEnemyKilled(eventSource);
         if (!_levelCleared && _enemies.Count <= 0)
