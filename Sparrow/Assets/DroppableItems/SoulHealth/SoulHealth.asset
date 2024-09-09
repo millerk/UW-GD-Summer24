@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: SoulHealth
   m_EditorClassIdentifier: 
   item: {fileID: 2526769311790578569, guid: c966b79ed6e81fb439b025186d9a0a64, type: 3}
-  chance: 10
+  chance: 15
   minQuantity: 15
   maxQuantity: 25

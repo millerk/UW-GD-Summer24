@@ -383,8 +383,8 @@ MonoBehaviour:
   - {fileID: 1665600918682020118}
   cannonDefs:
   - {fileID: 11400000, guid: 6d96aeaa8878ccd40a5b355020c1e756, type: 2}
-  - {fileID: 11400000, guid: 3aad6bc5957e7d2409bf9cd3d8a99a06, type: 2}
-  - {fileID: 11400000, guid: a3f06560a6a606846a45b0ed33328706, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   cannonTemplate: {fileID: 248383343662709132, guid: 6b9d6f80cad33044893fbbf9221d52b1, type: 3}
