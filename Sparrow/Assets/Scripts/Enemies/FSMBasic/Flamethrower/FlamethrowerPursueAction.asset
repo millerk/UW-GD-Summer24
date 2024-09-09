@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d54e8ea449cc5af4ca90a0065d00f741, type: 3}
   m_Name: FlamethrowerPursueAction
   m_EditorClassIdentifier: 
-  speed: 7
+  speed: 8.5
   maxSpeed: 10
   avoidanceForceMultiplier: 10
   raySpacing: 10

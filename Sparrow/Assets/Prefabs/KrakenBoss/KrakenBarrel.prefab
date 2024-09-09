@@ -181,8 +181,8 @@ MonoBehaviour:
   healthChanged: {fileID: 0}
   onDeath: {fileID: 11400000, guid: 414dfc9853bd0654daa1e3928b01376e, type: 2}
   damageSourceTags: 00000000
-  maxHealth: 5
-  hitPoints: 5
+  maxHealth: 50
+  hitPoints: 50
   isPlayer: 0
   model: {fileID: 574842582035637928}
   additionalDashIFrame: 0
@@ -434,8 +434,8 @@ MonoBehaviour:
   healthChanged: {fileID: 0}
   onDeath: {fileID: 11400000, guid: 414dfc9853bd0654daa1e3928b01376e, type: 2}
   damageSourceTags: 00000000
-  maxHealth: 5
-  hitPoints: 5
+  maxHealth: 50
+  hitPoints: 50
   isPlayer: 0
   model: {fileID: 2041622748964906154}
   additionalDashIFrame: 0
@@ -625,8 +625,8 @@ MonoBehaviour:
   healthChanged: {fileID: 0}
   onDeath: {fileID: 11400000, guid: 414dfc9853bd0654daa1e3928b01376e, type: 2}
   damageSourceTags: 00000000
-  maxHealth: 5
-  hitPoints: 5
+  maxHealth: 50
+  hitPoints: 50
   isPlayer: 0
   model: {fileID: 2159367076896506422}
   additionalDashIFrame: 0
@@ -847,8 +847,8 @@ MonoBehaviour:
   healthChanged: {fileID: 0}
   onDeath: {fileID: 11400000, guid: 414dfc9853bd0654daa1e3928b01376e, type: 2}
   damageSourceTags: 00000000
-  maxHealth: 5
-  hitPoints: 5
+  maxHealth: 50
+  hitPoints: 50
   isPlayer: 0
   model: {fileID: 3055081666224872956}
   additionalDashIFrame: 0
@@ -1038,8 +1038,8 @@ MonoBehaviour:
   healthChanged: {fileID: 0}
   onDeath: {fileID: 11400000, guid: 414dfc9853bd0654daa1e3928b01376e, type: 2}
   damageSourceTags: 00000000
-  maxHealth: 5
-  hitPoints: 5
+  maxHealth: 50
+  hitPoints: 50
   isPlayer: 0
   model: {fileID: 3307758010577481703}
   additionalDashIFrame: 0
@@ -1229,8 +1229,8 @@ MonoBehaviour:
   healthChanged: {fileID: 0}
   onDeath: {fileID: 11400000, guid: 414dfc9853bd0654daa1e3928b01376e, type: 2}
   damageSourceTags: 00000000
-  maxHealth: 5
-  hitPoints: 5
+  maxHealth: 50
+  hitPoints: 50
   isPlayer: 0
   model: {fileID: 3593972374923753531}
   additionalDashIFrame: 0
@@ -1482,8 +1482,8 @@ MonoBehaviour:
   healthChanged: {fileID: 0}
   onDeath: {fileID: 11400000, guid: 414dfc9853bd0654daa1e3928b01376e, type: 2}
   damageSourceTags: 00000000
-  maxHealth: 5
-  hitPoints: 5
+  maxHealth: 50
+  hitPoints: 50
   isPlayer: 0
   model: {fileID: 6353910834356579636}
   additionalDashIFrame: 0
@@ -1764,8 +1764,8 @@ MonoBehaviour:
   healthChanged: {fileID: 0}
   onDeath: {fileID: 11400000, guid: 414dfc9853bd0654daa1e3928b01376e, type: 2}
   damageSourceTags: 00000000
-  maxHealth: 30
-  hitPoints: 30
+  maxHealth: 200
+  hitPoints: 200
   isPlayer: 0
   model: {fileID: 7755128683342313001}
   additionalDashIFrame: 0
@@ -1981,8 +1981,8 @@ MonoBehaviour:
   healthChanged: {fileID: 0}
   onDeath: {fileID: 11400000, guid: 414dfc9853bd0654daa1e3928b01376e, type: 2}
   damageSourceTags: 00000000
-  maxHealth: 5
-  hitPoints: 5
+  maxHealth: 50
+  hitPoints: 50
   isPlayer: 0
   model: {fileID: 8524822645278138636}
   additionalDashIFrame: 0
