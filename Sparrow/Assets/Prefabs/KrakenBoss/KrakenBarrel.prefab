@@ -42,7 +42,6 @@ GameObject:
   - component: {fileID: 7903300914070724558}
   - component: {fileID: 403491634106973821}
   - component: {fileID: 8982715810985750212}
-  - component: {fileID: 5056459619941696469}
   - component: {fileID: 6846967140643579004}
   - component: {fileID: 5325439912083948640}
   - component: {fileID: 937290611171577792}
@@ -131,41 +130,6 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.5, y: 1}
   m_Direction: 0
---- !u!58 &5056459619941696469
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 574842582035637928}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.5
 --- !u!114 &6846967140643579004
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -220,7 +184,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shipConfig: {fileID: 5325439912083948640}
   cannon: {fileID: 11400000, guid: f651d7c997c65f3469cfc7d4853bc44c, type: 2}
-  predictionAdjustment: 0
+  predictionAdjustment: -10
   angleAdjustment: -15
 --- !u!1 &860288612932418447
 GameObject:
@@ -295,7 +259,6 @@ GameObject:
   - component: {fileID: 4454112285474067078}
   - component: {fileID: 7163389609833827734}
   - component: {fileID: 2724164527652961705}
-  - component: {fileID: 5548311128022452647}
   - component: {fileID: 8490172856257775644}
   - component: {fileID: 7699756531878155784}
   - component: {fileID: 2851133393815967281}
@@ -384,41 +347,6 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.5, y: 1}
   m_Direction: 0
---- !u!58 &5548311128022452647
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2041622748964906154}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.5
 --- !u!114 &8490172856257775644
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -473,7 +401,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shipConfig: {fileID: 7699756531878155784}
   cannon: {fileID: 11400000, guid: f651d7c997c65f3469cfc7d4853bc44c, type: 2}
-  predictionAdjustment: 0
+  predictionAdjustment: -10
   angleAdjustment: 15
 --- !u!1 &2159367076896506422
 GameObject:
@@ -486,7 +414,6 @@ GameObject:
   - component: {fileID: 8399618865975652273}
   - component: {fileID: 2455644819835093813}
   - component: {fileID: 262374121928658045}
-  - component: {fileID: 3231396365608534618}
   - component: {fileID: 1625154929286045828}
   - component: {fileID: 6118756614032310125}
   - component: {fileID: 3832370567769264987}
@@ -505,7 +432,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2159367076896506422}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: 0.60876155, w: -0.7933533}
+  m_LocalRotation: {x: -0, y: -0, z: 0.60876155, w: -0.7933532}
   m_LocalPosition: {x: 5.5, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -575,41 +502,6 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.5, y: 1}
   m_Direction: 0
---- !u!58 &3231396365608534618
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2159367076896506422}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.5
 --- !u!114 &1625154929286045828
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -664,7 +556,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shipConfig: {fileID: 6118756614032310125}
   cannon: {fileID: 11400000, guid: f651d7c997c65f3469cfc7d4853bc44c, type: 2}
-  predictionAdjustment: 0
+  predictionAdjustment: -10
   angleAdjustment: -15
 --- !u!1 &2224148331740404213
 GameObject:
@@ -708,7 +600,6 @@ GameObject:
   - component: {fileID: 6021933188751420885}
   - component: {fileID: 7272262479932436206}
   - component: {fileID: 5130878256238301408}
-  - component: {fileID: 7968860181953181311}
   - component: {fileID: 4112252176804539203}
   - component: {fileID: 7467854981976003855}
   - component: {fileID: 2186096197358873234}
@@ -797,41 +688,6 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.5, y: 1}
   m_Direction: 0
---- !u!58 &7968860181953181311
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3055081666224872956}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.5
 --- !u!114 &4112252176804539203
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -886,8 +742,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shipConfig: {fileID: 7467854981976003855}
   cannon: {fileID: 11400000, guid: f651d7c997c65f3469cfc7d4853bc44c, type: 2}
-  predictionAdjustment: 0
-  angleAdjustment: -15
+  predictionAdjustment: -10
+  angleAdjustment: -20
 --- !u!1 &3307758010577481703
 GameObject:
   m_ObjectHideFlags: 0
@@ -899,7 +755,6 @@ GameObject:
   - component: {fileID: 2316003906860843003}
   - component: {fileID: 7810314984727626967}
   - component: {fileID: 8836499808298444288}
-  - component: {fileID: 7431829015897824647}
   - component: {fileID: 5645554774413530545}
   - component: {fileID: 6717934774329388304}
   - component: {fileID: 5236185381589583189}
@@ -988,41 +843,6 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.5, y: 1}
   m_Direction: 0
---- !u!58 &7431829015897824647
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3307758010577481703}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.5
 --- !u!114 &5645554774413530545
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1077,8 +897,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shipConfig: {fileID: 6717934774329388304}
   cannon: {fileID: 11400000, guid: f651d7c997c65f3469cfc7d4853bc44c, type: 2}
-  predictionAdjustment: 0
-  angleAdjustment: 15
+  predictionAdjustment: -10
+  angleAdjustment: 20
 --- !u!1 &3593972374923753531
 GameObject:
   m_ObjectHideFlags: 0
@@ -1090,7 +910,6 @@ GameObject:
   - component: {fileID: 3866033303023742143}
   - component: {fileID: 7460953892664175267}
   - component: {fileID: 1959789106992508034}
-  - component: {fileID: 459256109577071973}
   - component: {fileID: 1691008526336378587}
   - component: {fileID: 7358107510954121640}
   - component: {fileID: 8289468994632635781}
@@ -1179,41 +998,6 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.5, y: 1}
   m_Direction: 0
---- !u!58 &459256109577071973
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3593972374923753531}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.5
 --- !u!114 &1691008526336378587
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1268,8 +1052,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shipConfig: {fileID: 7358107510954121640}
   cannon: {fileID: 11400000, guid: f651d7c997c65f3469cfc7d4853bc44c, type: 2}
-  predictionAdjustment: 0
-  angleAdjustment: 15
+  predictionAdjustment: -5
+  angleAdjustment: 10
 --- !u!1 &4448405483032623716
 GameObject:
   m_ObjectHideFlags: 0
@@ -1343,7 +1127,6 @@ GameObject:
   - component: {fileID: 1847890217224514807}
   - component: {fileID: 1733706846391873224}
   - component: {fileID: 4827789571541609525}
-  - component: {fileID: 4365848524299426478}
   - component: {fileID: 4489143722913875094}
   - component: {fileID: 9010278431717627867}
   - component: {fileID: 1896073020537279477}
@@ -1432,41 +1215,6 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.5, y: 1}
   m_Direction: 0
---- !u!58 &4365848524299426478
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6353910834356579636}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.5
 --- !u!114 &4489143722913875094
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1521,7 +1269,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shipConfig: {fileID: 9010278431717627867}
   cannon: {fileID: 11400000, guid: f651d7c997c65f3469cfc7d4853bc44c, type: 2}
-  predictionAdjustment: 0
+  predictionAdjustment: -10
   angleAdjustment: 15
 --- !u!1 &7165230999432796763
 GameObject:
@@ -1747,7 +1495,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 545aeb05ff8efda4fa37ca43d2560716, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _initialState: {fileID: 11400000, guid: 1453aa62904ea664abc12e2df4465f55, type: 2}
+  _initialState: {fileID: 11400000, guid: e02b7737f1930794c9d8a5f32512ac04, type: 2}
 --- !u!114 &3377210559871924644
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1806,7 +1554,6 @@ GameObject:
   - component: {fileID: 6245282557970043808}
   - component: {fileID: 4755084777427396443}
   - component: {fileID: 5825062833880804385}
-  - component: {fileID: 5025968315837195230}
   - component: {fileID: 1393391475618631365}
   - component: {fileID: 1897936127510496413}
   - component: {fileID: 1099446075236375338}
@@ -1895,41 +1642,6 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.5, y: 1}
   m_Direction: 0
---- !u!58 &5025968315837195230
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8524822645278138636}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.5
 --- !u!114 &1393391475618631365
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1984,5 +1696,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shipConfig: {fileID: 1897936127510496413}
   cannon: {fileID: 11400000, guid: f651d7c997c65f3469cfc7d4853bc44c, type: 2}
-  predictionAdjustment: 0
-  angleAdjustment: -15
+  predictionAdjustment: -5
+  angleAdjustment: -10

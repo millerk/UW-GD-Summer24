@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 20bda4313f62060489b2d74a29e569dd, type: 3}
-  m_Name: BarrelKrakenState
+  m_Name: FlamethrowerIdolState
   m_EditorClassIdentifier: 
-  Action:
-  - {fileID: 11400000, guid: 63f8a9248a9ffc643ad07d1ef408c7f9, type: 2}
-  Transitions: []
+  Action: []
+  Transitions:
+  - {fileID: 11400000, guid: 9a937a66656ba1648bf9ca06d2c11115, type: 2}

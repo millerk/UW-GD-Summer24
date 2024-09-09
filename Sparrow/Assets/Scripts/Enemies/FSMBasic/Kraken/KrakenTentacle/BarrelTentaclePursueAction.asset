@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d54e8ea449cc5af4ca90a0065d00f741, type: 3}
-  m_Name: BarrelKrakenPursue
+  m_Name: BarrelTentaclePursueAction
   m_EditorClassIdentifier: 
   speed: 9
   maxSpeed: 10
