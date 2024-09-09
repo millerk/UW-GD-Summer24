@@ -100,8 +100,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e250ef7675d4a4641a852e91f233021b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 10
-  damage: 10
+  radius: 5
+  damage: 7
   damageableLayer:
     serializedVersion: 2
     m_Bits: 64

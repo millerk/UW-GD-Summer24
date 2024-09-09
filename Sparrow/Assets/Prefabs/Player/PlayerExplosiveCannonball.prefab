@@ -167,7 +167,7 @@ MonoBehaviour:
   projectileSpawnPoint: {x: 0, y: 0, z: 0}
   projectileSpeed: 8
   explosionPrefab: {fileID: 645328174340558154, guid: 8336b7324895b0f4ca1405fd8949717b, type: 3}
-  explosionRadius: 8
+  explosionRadius: 6
   explosionDamage: 10
   hasExplosives: 1
   collisionLayerMask:
