@@ -187,7 +187,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 545aeb05ff8efda4fa37ca43d2560716, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _initialState: {fileID: 11400000, guid: bc5b51c68f3e3314bbbc20628a42d13e, type: 2}
+  _initialState: {fileID: 11400000, guid: c2b0ac057adc2af4da8b2bb898d2d9d8, type: 2}
 --- !u!114 &910944652587833793
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -222,6 +222,7 @@ MonoBehaviour:
   cannon: {fileID: 11400000, guid: f651d7c997c65f3469cfc7d4853bc44c, type: 2}
   predictionAdjustment: 0
   angleAdjustment: 0
+  startCooldownTime: 5
 --- !u!1 &8441316003030633820
 GameObject:
   m_ObjectHideFlags: 0

@@ -200,7 +200,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthChanged: {fileID: 0}
   onDeath: {fileID: 11400000, guid: 414dfc9853bd0654daa1e3928b01376e, type: 2}
-  damageSourceTags: 00000000
+  damageSourceTags: 0000000003000000
   maxHealth: 5
   hitPoints: 5
   isPlayer: 0
@@ -220,7 +220,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 545aeb05ff8efda4fa37ca43d2560716, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _initialState: {fileID: 11400000, guid: 5a3efcc2723ffe04588fc969b288c524, type: 2}
+  _initialState: {fileID: 11400000, guid: 7a0788c581e1ee04f89492dfabc9918b, type: 2}
 --- !u!114 &-7841565561910008616
 MonoBehaviour:
   m_ObjectHideFlags: 0

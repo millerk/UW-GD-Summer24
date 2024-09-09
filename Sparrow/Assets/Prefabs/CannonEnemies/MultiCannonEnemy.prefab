@@ -191,7 +191,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 545aeb05ff8efda4fa37ca43d2560716, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _initialState: {fileID: 11400000, guid: f65fb4e492ab0eb4abc00657d6f2654a, type: 2}
+  _initialState: {fileID: 11400000, guid: 2b8fdb7ccee0b0e4294222e93e875e37, type: 2}
 --- !u!114 &-4116276440994432840
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -232,6 +232,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shipConfig: {fileID: -4116276440994432840}
   target: {fileID: 6847842634037359419, guid: 9e7965dd074dd0a4abcb3864277b5d27, type: 3}
+  targetingDelay: 1.5
 --- !u!1 &926552227227818805
 GameObject:
   m_ObjectHideFlags: 0

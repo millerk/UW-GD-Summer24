@@ -110,7 +110,6 @@ GameObject:
   - component: {fileID: 1561683083999126908}
   - component: {fileID: 6726093698917275422}
   - component: {fileID: 7634935829954481922}
-  - component: {fileID: 2023170762585100547}
   - component: {fileID: -5300455854589457640}
   - component: {fileID: 4556469796641766037}
   - component: {fileID: -1703809705467668209}
@@ -225,7 +224,7 @@ CapsuleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8532208803328321596}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -253,41 +252,6 @@ CapsuleCollider2D:
   m_Offset: {x: -0.12, y: 0}
   m_Size: {x: 2.23, y: 1.63}
   m_Direction: 0
---- !u!58 &2023170762585100547
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8532208803328321596}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 1.41
 --- !u!114 &-5300455854589457640
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -322,7 +286,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 545aeb05ff8efda4fa37ca43d2560716, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _initialState: {fileID: 11400000, guid: 005ff3cb655bd7443bc28192f390e7c3, type: 2}
+  _initialState: {fileID: 11400000, guid: 304fb521309449c4a827056400eff239, type: 2}
 --- !u!114 &-1703809705467668209
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -355,3 +319,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shipConfig: {fileID: -1703809705467668209}
   target: {fileID: 6847842634037359419, guid: 9e7965dd074dd0a4abcb3864277b5d27, type: 3}
+  targetingDelay: 1.5

@@ -8,15 +8,18 @@ public class PlayerTargeting : MonoBehaviour
     public GameObject target;
     private bool _targetWasClicked = false;
     private string PLAYER_TAG = "Player";
+    public float targetingDelay = 5.0f; // Delay in seconds before allowing targeting
+    private bool canTarget = false;
 
     void Start()
     {
         target = null;
+        StartCoroutine(DelayTargeting());
     }
 
     void Update()
     {
-        
+        // Add any additional logic needed for the Update method
     }
 
     public void OnEnemyDeath(GameObject enemy)
@@ -27,11 +30,9 @@ public class PlayerTargeting : MonoBehaviour
         }
     }
 
-
-    // Enemy ship enters our shooting range
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (target == null && other.CompareTag(PLAYER_TAG))
+        if (canTarget && target == null && other.CompareTag(PLAYER_TAG))
         {
             UpdateTarget(other.gameObject, false);
         }
@@ -39,8 +40,6 @@ public class PlayerTargeting : MonoBehaviour
 
     void OnTriggerExit2D(Collider2D other)
     {
-        // If player clicked to target we should always respect it
-        // If target was selected by auto-fire then deselect when we go out of range
         if (ReferenceEquals(other.gameObject, target) && !_targetWasClicked)
         {
             UpdateTarget(null, false);
@@ -52,7 +51,19 @@ public class PlayerTargeting : MonoBehaviour
         target = newTarget;
         _targetWasClicked = wasClicked;
         shipConfig.UpdateCannonTarget(target);
-        //great for melee
-        //transform.position = Vector3.Lerp(transform.position, targetPosition + new Vector3(velocity.x, velocity.y, 0f) * 0.5f, Time.deltaTime * 1f);
+        // Great for melee
+        // transform.position = Vector3.Lerp(transform.position, targetPosition + new Vector3(velocity.x, velocity.y, 0f) * 0.5f, Time.deltaTime * 1f);
+    }
+
+    private IEnumerator DelayTargeting()
+    {
+        // Disable targeting initially
+        canTarget = false;
+
+        // Wait for the specified delay
+        yield return new WaitForSeconds(targetingDelay);
+
+        // Enable targeting after delay
+        canTarget = true;
     }
 }

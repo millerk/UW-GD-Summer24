@@ -1208,7 +1208,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   totalEnemies: 0
-  levelDefinition: {fileID: 11400000, guid: 367a226acfa1f6c4086d1378655628e4, type: 2}
+  levelDefinition: {fileID: 0}
   LevelLoaded: {fileID: 11400000, guid: 2beee4ca3cbcfad4b83f26ea70d6c0e0, type: 2}
   LevelCompleted: {fileID: 11400000, guid: a2ea2112d92e16a4094caba09b6161b2, type: 2}
   maxScreensUntilShop: 3
@@ -4502,7 +4502,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1553737045}
-  m_Enabled: 0
+  m_Enabled: 1
 --- !u!20 &1553737047
 Camera:
   m_ObjectHideFlags: 0

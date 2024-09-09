@@ -14,13 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: TentacleBarrel
   description: 
-  attackStrength: 78
-  attackDistance: 20
+  attackStrength: 0
+  attackDistance: 30
   cannonSpriteOffsetFromBase: {x: 0, y: 0}
   firePointOffset: {x: 0, y: 0}
   cannonBaseSprite: {fileID: 0}
   projectile: {fileID: 4424456234096029399, guid: 3b99b33affda4eb4c9d31f0c8a531eb0, type: 3}
-  projectileSpeed: 10
+  projectileSpeed: 18
   animationController: {fileID: 9100000, guid: 56dde977aed68e548988d0c303a622d9, type: 2}
   shopCost: 0
   shopIcon: {fileID: 0}

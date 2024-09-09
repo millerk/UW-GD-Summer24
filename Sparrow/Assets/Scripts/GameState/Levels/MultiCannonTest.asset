@@ -14,8 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: 
   enemiesToSpawn:
-  - Enemy: {fileID: 769043245617342556, guid: f68fd8e2d7c8f8140bbb68c99d7ae580, type: 3}
+  - Enemy: {fileID: 6236758807054051810, guid: 3d5ade411814b6d4091b5ea678dde532, type: 3}
     Count: 1
-  - Enemy: {fileID: 1739139097824912367, guid: caa1042112744b04aa642809da03aa5b, type: 3}
-    Count: 5
   nextLevel: {fileID: 0}
