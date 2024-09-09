@@ -153,10 +153,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   points:
-  - {x: -35, y: -22}
-  - {x: 34, y: -22}
-  - {x: 34, y: 21}
-  - {x: -35, y: 21}
+  - {x: -38, y: -22}
+  - {x: 37, y: -22}
+  - {x: 37, y: 21}
+  - {x: -38, y: 21}
 --- !u!4 &24460829
 Transform:
   m_ObjectHideFlags: 0
@@ -2536,7 +2536,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Resolution
+  m_Text: 
 --- !u!222 &976165639
 CanvasRenderer:
   m_ObjectHideFlags: 0
