@@ -362,7 +362,7 @@ MonoBehaviour:
   cam: {fileID: 0}
   moveMode: 1
   rotateSpeed: 1
-  dashSound: {fileID: 8300000, guid: 318074dfe48424c46b69710909395b15, type: 3}
+  dashSound: {fileID: 8300000, guid: b2fe1c4961dc0b944a61b3cd6d5edfbc, type: 3}
 --- !u!114 &9223001490044897287
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -383,8 +383,8 @@ MonoBehaviour:
   - {fileID: 1665600918682020118}
   cannonDefs:
   - {fileID: 11400000, guid: 6d96aeaa8878ccd40a5b355020c1e756, type: 2}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 3aad6bc5957e7d2409bf9cd3d8a99a06, type: 2}
+  - {fileID: 11400000, guid: a3f06560a6a606846a45b0ed33328706, type: 2}
   - {fileID: 0}
   - {fileID: 0}
   cannonTemplate: {fileID: 248383343662709132, guid: 6b9d6f80cad33044893fbbf9221d52b1, type: 3}
@@ -583,9 +583,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -1175812463021559193, guid: b3086eca371015843aadc4a71f46f272, type: 2}
-  m_audioClip: {fileID: 8300000, guid: 318074dfe48424c46b69710909395b15, type: 3}
+  m_audioClip: {fileID: 8300000, guid: b2fe1c4961dc0b944a61b3cd6d5edfbc, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.171
+  m_Volume: 0.9
   m_Pitch: 1
   Loop: 0
   Mute: 0

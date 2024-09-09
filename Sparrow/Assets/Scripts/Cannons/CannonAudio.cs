@@ -1,20 +1,21 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayRandomSoundEffect : MonoBehaviour
+public class PlaySelectedSoundEffect : MonoBehaviour
 {
-   public AudioSource audioSource;
-   public AudioClip[] audioClips;
+    public AudioSource audioSource;
+    public AudioClip[] audioClips;
 
-   public void PlaySound()
-   {
-        if (audioClips.Length > 0)
+    // Method to play a specific sound based on the index in the array
+    public void PlaySound(int index)
+    {
+        if (audioClips.Length > 0 && index >= 0 && index < audioClips.Length)
         {
-            // Randomly select an audio clip from the array 
-            int randomIndex = Random.Range(0, audioClips.Length);
-            audioSource.clip = audioClips[randomIndex];
-                audioSource.Play();
+            audioSource.clip = audioClips[index];
+            audioSource.Play();
         }
-   }
+        else
+        {
+            Debug.LogWarning("Invalid sound index or audio clips not set.");
+        }
+    }
 }
