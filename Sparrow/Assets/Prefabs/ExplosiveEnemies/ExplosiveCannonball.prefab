@@ -167,7 +167,7 @@ MonoBehaviour:
   projectileSpeed: 8
   explosionPrefab: {fileID: 645328174340558154, guid: f8ac8ad2f83166242ae776415e0e7ab8, type: 3}
   explosionRadius: 5
-  explosionDamage: 5
+  explosionDamage: 7
   hasExplosives: 1
   collisionLayerMask:
     serializedVersion: 2
