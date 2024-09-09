@@ -151,7 +151,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1, y: 0.77}
+  m_Size: {x: 1.5, y: 1.5}
   m_Direction: 1
 --- !u!58 &6068696649609005393
 CircleCollider2D:
@@ -187,7 +187,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.52
+  m_Radius: 0.85
 --- !u!114 &5949667790845223335
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -225,7 +225,7 @@ MonoBehaviour:
   anchorPoints:
   - {fileID: 9029002704721577383}
   cannonDefs:
-  - {fileID: 11400000, guid: 42d809bc0ca08194689935d656157514, type: 2}
+  - {fileID: 11400000, guid: b10e627261f058b4ebf0e71ca3bfae5a, type: 2}
   cannonTemplate: {fileID: 248383343662709132, guid: 6b9d6f80cad33044893fbbf9221d52b1, type: 3}
   shipRb: {fileID: 3444548532711474865}
 --- !u!114 &4181543629081529207
@@ -241,7 +241,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shipConfig: {fileID: 3162489764259306103}
-  cannon: {fileID: 11400000, guid: 42d809bc0ca08194689935d656157514, type: 2}
+  cannon: {fileID: 11400000, guid: b10e627261f058b4ebf0e71ca3bfae5a, type: 2}
   predictionAdjustment: 0
   angleAdjustment: 0
 --- !u!1 &9029002704721577383

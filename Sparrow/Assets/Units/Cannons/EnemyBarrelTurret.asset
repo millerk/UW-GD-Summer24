@@ -20,7 +20,7 @@ MonoBehaviour:
   firePointOffset: {x: 0, y: 0}
   cannonBaseSprite: {fileID: 21300000, guid: b9d6f9731e290cc40ac247831a4e29a7, type: 3}
   projectile: {fileID: 5427650957570344865, guid: b2f844b181137dd4db4e25c00bed37c1, type: 3}
-  projectileSpeed: 0
+  projectileSpeed: 10
   animationController: {fileID: 9100000, guid: 281f83d0860a20c44b342a3c12eefd31, type: 2}
   shopCost: 28
   shopIcon: {fileID: -718068008, guid: afb04c1de87d80b47b1c4430299a219a, type: 3}

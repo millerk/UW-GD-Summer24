@@ -185,6 +185,7 @@ MonoBehaviour:
   hitPoints: 5
   isPlayer: 0
   model: {fileID: 574842582035637928}
+  additionalDashIFrame: 0
   hitInvulnDurationSeconds: 0
   invulnDeltaTime: 0
 --- !u!114 &5325439912083948640
@@ -437,6 +438,7 @@ MonoBehaviour:
   hitPoints: 5
   isPlayer: 0
   model: {fileID: 2041622748964906154}
+  additionalDashIFrame: 0
   hitInvulnDurationSeconds: 0
   invulnDeltaTime: 0
 --- !u!114 &7699756531878155784
@@ -627,6 +629,7 @@ MonoBehaviour:
   hitPoints: 5
   isPlayer: 0
   model: {fileID: 2159367076896506422}
+  additionalDashIFrame: 0
   hitInvulnDurationSeconds: 0
   invulnDeltaTime: 0
 --- !u!114 &6118756614032310125
@@ -848,6 +851,7 @@ MonoBehaviour:
   hitPoints: 5
   isPlayer: 0
   model: {fileID: 3055081666224872956}
+  additionalDashIFrame: 0
   hitInvulnDurationSeconds: 0
   invulnDeltaTime: 0
 --- !u!114 &7467854981976003855
@@ -1038,6 +1042,7 @@ MonoBehaviour:
   hitPoints: 5
   isPlayer: 0
   model: {fileID: 3307758010577481703}
+  additionalDashIFrame: 0
   hitInvulnDurationSeconds: 0
   invulnDeltaTime: 0
 --- !u!114 &6717934774329388304
@@ -1228,6 +1233,7 @@ MonoBehaviour:
   hitPoints: 5
   isPlayer: 0
   model: {fileID: 3593972374923753531}
+  additionalDashIFrame: 0
   hitInvulnDurationSeconds: 0
   invulnDeltaTime: 0
 --- !u!114 &7358107510954121640
@@ -1480,6 +1486,7 @@ MonoBehaviour:
   hitPoints: 5
   isPlayer: 0
   model: {fileID: 6353910834356579636}
+  additionalDashIFrame: 0
   hitInvulnDurationSeconds: 0
   invulnDeltaTime: 0
 --- !u!114 &9010278431717627867
@@ -1761,6 +1768,7 @@ MonoBehaviour:
   hitPoints: 30
   isPlayer: 0
   model: {fileID: 7755128683342313001}
+  additionalDashIFrame: 0
   hitInvulnDurationSeconds: 0
   invulnDeltaTime: 0
 --- !u!114 &5677997009656851762
@@ -1977,6 +1985,7 @@ MonoBehaviour:
   hitPoints: 5
   isPlayer: 0
   model: {fileID: 8524822645278138636}
+  additionalDashIFrame: 0
   hitInvulnDurationSeconds: 0
   invulnDeltaTime: 0
 --- !u!114 &1897936127510496413

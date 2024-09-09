@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 453572921845891251}
   - component: {fileID: 8921965305528374913}
-  - component: {fileID: 918576589862859105}
   - component: {fileID: 6582261746735242463}
+  - component: {fileID: 918576589862859105}
   m_Layer: 14
   m_Name: PlayerExplosivePrefab
   m_TagString: Explosion
@@ -86,26 +86,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &918576589862859105
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 645328174340558154}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e250ef7675d4a4641a852e91f233021b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  radius: 0.5
-  damage: 1
-  damageableLayer:
-    serializedVersion: 2
-    m_Bits: 256
-  animationDuration: 0.457
-  initialScale: {x: 1, y: 1, z: 1}
-  finalScale: {x: 5, y: 5, z: 5}
 --- !u!95 &6582261746735242463
 Animator:
   serializedVersion: 5
@@ -127,3 +107,23 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &918576589862859105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 645328174340558154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e250ef7675d4a4641a852e91f233021b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radius: 5
+  damage: 10
+  damageableLayer:
+    serializedVersion: 2
+    m_Bits: 256
+  animationDuration: 0.457
+  initialScale: {x: 1, y: 1, z: 1}
+  finalScale: {x: 2, y: 2, z: 2}
