@@ -42,18 +42,25 @@ public class Explosion : MonoBehaviour
         // Debug log to check radius value
         Debug.Log("Explosion radius: " + radius);
 
-        // Apply damage to colliders
-        Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, radius, damageableLayer);
+        // Get all colliders within a large radius
+        Collider2D[] allColliders = Physics2D.OverlapCircleAll(transform.position, radius * 10f); // Large radius to ensure coverage
 
-        foreach (Collider2D collider in colliders)
+        foreach (Collider2D collider in allColliders)
         {
-            // Debug log to check detected collider positions
-            Debug.Log("Detected collider at position: " + collider.transform.position);
-
-            HealthManager healthManager = collider.GetComponent<HealthManager>();
-            if (healthManager != null)
+            if ((damageableLayer & (1 << collider.gameObject.layer)) != 0)
             {
-                healthManager.ApplyDamage(damage, HealthManager.DamageSourceTag.Explosion);
+                float distance = Vector2.Distance(transform.position, collider.transform.position);
+                if (distance <= radius)
+                {
+                    // Debug log to check detected collider positions
+                    Debug.Log("Detected collider at position: " + collider.transform.position);
+
+                    HealthManager healthManager = collider.GetComponent<HealthManager>();
+                    if (healthManager != null)
+                    {
+                        healthManager.ApplyDamage(damage, HealthManager.DamageSourceTag.Explosion);
+                    }
+                }
             }
         }
 
