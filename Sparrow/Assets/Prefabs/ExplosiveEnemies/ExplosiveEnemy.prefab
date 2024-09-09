@@ -122,7 +122,6 @@ GameObject:
   - component: {fileID: -1325999024209347325}
   - component: {fileID: 9034353145717550610}
   - component: {fileID: 7017518644806560652}
-  - component: {fileID: -2357433500948100505}
   - component: {fileID: -1919192721383592508}
   m_Layer: 8
   m_Name: ExplosiveEnemy
@@ -263,41 +262,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 372bdaa4f76fb7042884d03d332caeef, type: 2}
   cannonTemplate: {fileID: 248383343662709132, guid: 6b9d6f80cad33044893fbbf9221d52b1, type: 3}
   shipRb: {fileID: 4585488000128103596}
---- !u!58 &-2357433500948100505
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2113082560015712493}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 1.72
 --- !u!114 &-1919192721383592508
 MonoBehaviour:
   m_ObjectHideFlags: 0

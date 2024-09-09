@@ -225,7 +225,6 @@ GameObject:
   - component: {fileID: -1270665060887341487}
   - component: {fileID: 8914662128600569659}
   - component: {fileID: -6941661169420318117}
-  - component: {fileID: -9205748010682149557}
   - component: {fileID: 7634314924459837451}
   m_Layer: 8
   m_Name: MeleeEnemy
@@ -366,41 +365,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 42d809bc0ca08194689935d656157514, type: 2}
   cannonTemplate: {fileID: 248383343662709132, guid: 6b9d6f80cad33044893fbbf9221d52b1, type: 3}
   shipRb: {fileID: -8151760289926994441}
---- !u!58 &-9205748010682149557
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8678284688648251416}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 1
 --- !u!114 &7634314924459837451
 MonoBehaviour:
   m_ObjectHideFlags: 0
