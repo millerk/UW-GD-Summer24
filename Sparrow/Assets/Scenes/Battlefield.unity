@@ -488,7 +488,7 @@ MonoBehaviour:
   enemyPrefab: {fileID: 1033850868763416502, guid: 984abc31018bb8e47a6ddf271cf2f30c, type: 3}
   enemySpawned: {fileID: 11400000, guid: 116bf5fb3f66a75418355019acb7228a, type: 2}
   numberOfEnemies: 5
-  enemySpawnRadius: 5
+  enemySpawnRadius: 20
   minDistanceFromPlayer: 10
   mapWidth: 120
   mapHeight: 68
@@ -1208,7 +1208,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   totalEnemies: 0
-  levelDefinition: {fileID: 11400000, guid: 367a226acfa1f6c4086d1378655628e4, type: 2}
+  levelDefinition: {fileID: 0}
   LevelLoaded: {fileID: 11400000, guid: 2beee4ca3cbcfad4b83f26ea70d6c0e0, type: 2}
   LevelCompleted: {fileID: 11400000, guid: a2ea2112d92e16a4094caba09b6161b2, type: 2}
   maxScreensUntilShop: 3
