@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Gold
   m_EditorClassIdentifier: 
   item: {fileID: 5743417108097213276, guid: 8294936f375755e46bb734b3c3af1913, type: 3}
-  chance: 100
-  minQuantity: 5
-  maxQuantity: 5
+  chance: 70
+  minQuantity: 7
+  maxQuantity: 10
