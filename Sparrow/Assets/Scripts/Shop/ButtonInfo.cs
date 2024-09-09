@@ -34,6 +34,7 @@ public class ButtonInfo : MonoBehaviour
 
     public void OnItemPurchase(GameObject source)
     {
+        CheckIfEnoughGoldToBuy();
         SuppressButton();
     }
 
