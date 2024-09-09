@@ -14,12 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: 
   enemiesToSpawn:
-  - Enemy: {fileID: 1795344308091871500, guid: 02522e0b3cf225f45b2b4db9830ec321, type: 3}
-    Count: 10
+  - Enemy: {fileID: 769043245617342556, guid: f68fd8e2d7c8f8140bbb68c99d7ae580, type: 3}
+    Count: 2
   - Enemy: {fileID: 1739139097824912367, guid: caa1042112744b04aa642809da03aa5b, type: 3}
-    Count: 6
+    Count: 15
   - Enemy: {fileID: 2113082560015712493, guid: f41830b78f52cdc43931b2768d4ba3c8, type: 3}
     Count: 8
   - Enemy: {fileID: 1739139097824912367, guid: 119916f1191b0414fa57c28fffdcaea3, type: 3}
-    Count: 2
+    Count: 8
   nextLevel: {fileID: 11400000, guid: 8949c97fbdf38374b8485d31df8a96f6, type: 2}

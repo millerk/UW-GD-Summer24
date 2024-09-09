@@ -15,9 +15,9 @@ MonoBehaviour:
   name: 'Level 2: The Squeakquel'
   enemiesToSpawn:
   - Enemy: {fileID: 1795344308091871500, guid: 02522e0b3cf225f45b2b4db9830ec321, type: 3}
-    Count: 5
+    Count: 3
   - Enemy: {fileID: 8532208803328321596, guid: e3016a59409ad45419a4517d72fa9bec, type: 3}
     Count: 3
-  - Enemy: {fileID: 2113082560015712493, guid: f41830b78f52cdc43931b2768d4ba3c8, type: 3}
-    Count: 2
+  - Enemy: {fileID: 1739139097824912367, guid: caa1042112744b04aa642809da03aa5b, type: 3}
+    Count: 4
   nextLevel: {fileID: 11400000, guid: 3d385fbc7e76a014bab11b3c3fbdbb80, type: 2}
