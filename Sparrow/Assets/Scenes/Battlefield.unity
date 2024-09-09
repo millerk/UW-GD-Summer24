@@ -153,10 +153,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   points:
-  - {x: -35, y: -22}
-  - {x: 34, y: -22}
-  - {x: 34, y: 21}
-  - {x: -35, y: 21}
+  - {x: -38, y: -22}
+  - {x: 37, y: -22}
+  - {x: 37, y: 21}
+  - {x: -38, y: 21}
 --- !u!4 &24460829
 Transform:
   m_ObjectHideFlags: 0
@@ -488,7 +488,7 @@ MonoBehaviour:
   enemyPrefab: {fileID: 1033850868763416502, guid: 984abc31018bb8e47a6ddf271cf2f30c, type: 3}
   enemySpawned: {fileID: 11400000, guid: 116bf5fb3f66a75418355019acb7228a, type: 2}
   numberOfEnemies: 5
-  enemySpawnRadius: 5
+  enemySpawnRadius: 20
   minDistanceFromPlayer: 10
   mapWidth: 120
   mapHeight: 68
@@ -1208,7 +1208,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   totalEnemies: 0
-  levelDefinition: {fileID: 11400000, guid: 9c9bc89b524547d44a84dcafea3e6d12, type: 2}
+  levelDefinition: {fileID: 0}
   LevelLoaded: {fileID: 11400000, guid: 2beee4ca3cbcfad4b83f26ea70d6c0e0, type: 2}
   LevelCompleted: {fileID: 11400000, guid: a2ea2112d92e16a4094caba09b6161b2, type: 2}
   maxScreensUntilShop: 3
@@ -2536,7 +2536,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Resolution
+  m_Text: 
 --- !u!222 &976165639
 CanvasRenderer:
   m_ObjectHideFlags: 0

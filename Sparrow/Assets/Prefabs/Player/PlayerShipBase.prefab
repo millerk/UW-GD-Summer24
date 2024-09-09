@@ -379,12 +379,10 @@ MonoBehaviour:
   - {fileID: 2776254383517004704}
   - {fileID: 8211575455811548723}
   - {fileID: 1279858412334187348}
-  - {fileID: 4098763210983959559}
   - {fileID: 7597696367023192810}
   - {fileID: 1665600918682020118}
   cannonDefs:
   - {fileID: 11400000, guid: 6d96aeaa8878ccd40a5b355020c1e756, type: 2}
-  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
