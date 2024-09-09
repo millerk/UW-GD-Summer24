@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -6697065720088972506}
   m_Layer: 7
   m_Name: ExplosiveCannonball
-  m_TagString: Player
+  m_TagString: PlayerAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -167,11 +167,11 @@ MonoBehaviour:
   projectileSpeed: 8
   explosionPrefab: {fileID: 645328174340558154, guid: f8ac8ad2f83166242ae776415e0e7ab8, type: 3}
   explosionRadius: 5
-  explosionDamage: 10
+  explosionDamage: 5
   hasExplosives: 1
   collisionLayerMask:
     serializedVersion: 2
     m_Bits: 1344
   damageableLayer:
     serializedVersion: 2
-    m_Bits: 320
+    m_Bits: 64
