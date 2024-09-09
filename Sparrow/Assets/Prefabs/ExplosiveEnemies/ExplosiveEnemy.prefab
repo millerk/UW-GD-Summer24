@@ -130,7 +130,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: -0.05142725}
-  m_Size: {x: 1.49, y: 3.12}
+  m_Size: {x: 1.49, y: 2.4}
   m_Direction: 0
 --- !u!114 &-1325999024209347325
 MonoBehaviour:
@@ -151,6 +151,7 @@ MonoBehaviour:
   hitPoints: 5
   isPlayer: 0
   model: {fileID: 2113082560015712493}
+  additionalDashIFrame: 0
   hitInvulnDurationSeconds: 0.6
   invulnDeltaTime: 0.15
 --- !u!114 &9034353145717550610
