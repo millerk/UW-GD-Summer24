@@ -1065,9 +1065,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Bryan Yee\n\nCole Ritmire\n\t-UI/UX designer\n\t-Lead Game Designer\n\t-System
-    Analyst\n\t-Junior Coding Extraordinaire\n\nJacob Robbins\n\nKeith Miller\n\t-Lead
-    System Designer\n\nMichael Prather\n\t-System Designer\n\nNick Khan"
+  m_text: "Bryan Yee\n\nCole Ritmire\n\tUI/UX designer\n\tLead Game Designer\n\tSystem
+    Analyst\n\tJunior Coding Extraordinaire\n\nJacob Robbins\n\nKeith Miller - mkm2010@gmail.com\n\tLead
+    System Designer\n\nMichael Prather\n\tSystem Designer\n\nNick Khan"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
