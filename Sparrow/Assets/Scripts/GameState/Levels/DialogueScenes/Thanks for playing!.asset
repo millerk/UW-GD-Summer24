@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: 
   enemiesToSpawn: []
-  nextLevel: {fileID: 0}
+  nextLevel: {fileID: 11400000, guid: 9c9bc89b524547d44a84dcafea3e6d12, type: 2}
   DialogueScene: Scenes/Thanks for playing
