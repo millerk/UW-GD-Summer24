@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: PlayerExplosive
   m_EditorClassIdentifier: 
   name: ExplosiveCannon
-  description: Explosve Cannon
+  description: This cannon fires explosive cannon balls that explode on impact, damaging
+    nearby enemies.
   attackStrength: 1
   attackDistance: 10
   cannonSpriteOffsetFromBase: {x: 0, y: 0}
