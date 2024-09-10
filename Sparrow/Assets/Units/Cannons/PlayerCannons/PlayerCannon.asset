@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: PlayerCannon
   m_EditorClassIdentifier: 
   name: PlayerCannon
-  description: Normal Cannon
+  description: Standard Cannon and Cannonball
   attackStrength: 2
   attackDistance: 12
   cannonSpriteOffsetFromBase: {x: 0, y: 0}
