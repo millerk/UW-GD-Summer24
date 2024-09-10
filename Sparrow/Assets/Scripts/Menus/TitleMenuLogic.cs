@@ -4,8 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class TitleMenuLogic : MonoBehaviour
 {
-    public string newGameScene;
-    public LevelDefinition gameStartLevel;
+    public DialogueLevelDefinition introDialogue;
 
     public void Start()
     {
@@ -17,8 +16,9 @@ public class TitleMenuLogic : MonoBehaviour
     public void loadNewGame()
     {
         GlobalVariables.ClearAll();
-        GlobalVariables.Set(LevelManager.NEXT_LEVEL, gameStartLevel);
-        SceneManager.LoadScene(newGameScene);
+        // First scene is a dialogue scene, set the next enemy level to whatever it is pointing to
+        GlobalVariables.Set(LevelManager.NEXT_LEVEL, introDialogue.nextLevel);
+        SceneManager.LoadScene(introDialogue.DialogueScene);
     }
 
     public void QuitGame()
