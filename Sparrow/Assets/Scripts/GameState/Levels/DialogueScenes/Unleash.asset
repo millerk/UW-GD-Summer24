@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c85e4e39d133a7f419c83857a8d15915, type: 3}
-  m_Name: I warned you
+  m_Name: Unleash
   m_EditorClassIdentifier: 
-  name: I warned you
+  name: Unleash
   enemiesToSpawn: []
-  nextLevel: {fileID: 11400000, guid: ab66796388963b9449a4271760f8e042, type: 2}
-  DialogueScene: Scenes/Cutscene 3 I warned you
+  nextLevel: {fileID: 11400000, guid: 8949c97fbdf38374b8485d31df8a96f6, type: 2}
+  DialogueScene: Scenes/Cutscene 4 Unleash
