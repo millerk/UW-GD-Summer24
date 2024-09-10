@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c85e4e39d133a7f419c83857a8d15915, type: 3}
   m_Name: BackOff
   m_EditorClassIdentifier: 
-  name: 
+  name: Back Off
   enemiesToSpawn: []
-  nextLevel: {fileID: 0}
-  DialogueScene: 
+  nextLevel: {fileID: 11400000, guid: 3d385fbc7e76a014bab11b3c3fbdbb80, type: 2}
+  DialogueScene: Scenes/Cutscene 2 back off
