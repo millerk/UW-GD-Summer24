@@ -178,6 +178,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerShipBase
       objectReference: {fileID: 0}
+    - target: {fileID: 9223001490044897287, guid: 9e7965dd074dd0a4abcb3864277b5d27, type: 3}
+      propertyPath: cannonDefs.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: a3f06560a6a606846a45b0ed33328706, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -289,11 +293,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2803948586991084623, guid: e6705a9387e6dc540b52c0d10860a8db, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.02
+      value: 6.76
       objectReference: {fileID: 0}
     - target: {fileID: 2803948586991084623, guid: e6705a9387e6dc540b52c0d10860a8db, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.42
+      value: 4.11
       objectReference: {fileID: 0}
     - target: {fileID: 2803948586991084623, guid: e6705a9387e6dc540b52c0d10860a8db, type: 3}
       propertyPath: m_LocalPosition.z

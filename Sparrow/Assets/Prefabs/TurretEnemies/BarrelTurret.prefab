@@ -208,7 +208,6 @@ MonoBehaviour:
   cannon: {fileID: 11400000, guid: b10e627261f058b4ebf0e71ca3bfae5a, type: 2}
   predictionAdjustment: 0
   angleAdjustment: 0
-  startCooldownTime: 1.5
 --- !u!1 &9029002704721577383
 GameObject:
   m_ObjectHideFlags: 0
@@ -235,7 +234,7 @@ Transform:
   m_GameObject: {fileID: 9029002704721577383}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.003, y: 0.008, z: 0}
+  m_LocalPosition: {x: -0, y: 0.25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
