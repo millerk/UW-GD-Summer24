@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: TentacleCannon
   description: For Tentacle Damage
-  attackStrength: 2
+  attackStrength: 3
   attackDistance: 30
   cannonSpriteOffsetFromBase: {x: 0, y: 0}
   firePointOffset: {x: -1, y: 0}
