@@ -5,6 +5,7 @@ public class ButtonInfo : MonoBehaviour
 {
     public int ItemId;
     public Text PriceText;
+    public Text DescriptionText;
     public GameObject ShopManager;
     public int cost;
     public Image displayIcon;
@@ -17,7 +18,8 @@ public class ButtonInfo : MonoBehaviour
 
     public void CannonsLoaded(GameObject source)
     {
-        cost = ShopManager.GetComponent<ShopManagerLogic>().availableCannons[ItemId].shopCost;
+        Cannon cannon = ShopManager.GetComponent<ShopManagerLogic>().availableCannons[ItemId];
+        cost = cannon.shopCost;
         // Check if text fits in display, scale down font size if it doesn't
         if (cost > 99 && cost <= 999)
         {
@@ -27,7 +29,8 @@ public class ButtonInfo : MonoBehaviour
         {
             PriceText.fontSize = 11;
         }
-        PriceText.text = cost.ToString();
+        PriceText.text = cannon.shopCost.ToString();
+        DescriptionText.text = cannon.description;
         CheckIfEnoughGoldToBuy();
         displayIcon.sprite = ShopManager.GetComponent<ShopManagerLogic>().availableCannons[ItemId].shopIcon;
     }

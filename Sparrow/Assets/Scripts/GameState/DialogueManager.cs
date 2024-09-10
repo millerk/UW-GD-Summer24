@@ -7,6 +7,7 @@ public class DialogueManager : MonoBehaviour
 {
     public Text dialogueText; // Reference to the Text component
     public string[] dialogues; // Array of dialogues
+    public bool isFinalDialogue = false;
     private int currentDialogueIndex = 0; // Current index in the dialogue array
 
     void Start()
@@ -34,7 +35,14 @@ public class DialogueManager : MonoBehaviour
         }
         else
         {
-            SceneManager.LoadScene("Scenes/Battlefield");
+            if (isFinalDialogue)
+            {
+                SceneManager.LoadScene("Scenes/Thanks for playing");
+            }
+            else
+            {
+                SceneManager.LoadScene("Scenes/Battlefield");
+            }
         }
     }
 }

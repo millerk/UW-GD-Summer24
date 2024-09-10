@@ -32,4 +32,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Cutscene 3 I warned you.unity
     guid: a608402c7ced3684d9bad04c99afeafd
+  - enabled: 1
+    path: Assets/Scenes/Cutscene 4 Unleash.unity
+    guid: e32075e86bfa1d24d891ac275145edab
+  - enabled: 1
+    path: Assets/Scenes/Cutscene 5 nice job.unity
+    guid: 137385d78ad7a994cb133e666f5d6428
+  - enabled: 1
+    path: Assets/Scenes/Thanks for playing.unity
+    guid: 8c615ca3f7603d042880447138f8d671
   m_configObjects: {}

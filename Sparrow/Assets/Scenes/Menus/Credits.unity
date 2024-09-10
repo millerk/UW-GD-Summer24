@@ -463,8 +463,9 @@ MonoBehaviour:
     Designer\n\tLead Game Designer\n\tSystem Analyst\n\tQA & Playtester\n\nJacob
     Robbins - robbinsfour@gmail.com\n\tExecutive Producer\r\n\tLead Narrative Designer
     & Cutscene Developer\r\n\tQ&A & System Analyst\n\nKeith Miller - mkm2010@gmail.com\n\tLead
-    System Designer\n\tUnity Tutorial Googling Expert\n\nMichael Prather - prathermd@aol.com\r\n\tLead
-    Level Designer\r\n\tLead Combat Designer\r\n\tGame Designer\r\n\tSystem Designer"
+    System Designer\n\tLead Gameplay Engineer\n\tGame Designer\n\nMichael Prather
+    - prathermd@aol.com\r\n\tLead Level Designer\r\n\tLead Combat Designer\r\n\tGame
+    Designer\r\n\tSystem Designer"
 --- !u!222 &204190265
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1032,11 +1033,12 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: "Bryan Yee - https://bryanyee.itch.io/\n\tLead Artist\n\tTechnical Artist\n\tConcept
     Artist\n\tUI/UX Artist/Designer\n\tGame Designer\n\nCole Ritmire - ritmirec@gmail.com\n\tUI/UX
-    designer\n\tLead Game Designer\n\tSystem Analyst\n\tQA & Playtester\n\nJacob
+    Designer\n\tLead Game Designer\n\tSystem Analyst\n\tQA & Playtester\n\nJacob
     Robbins - robbinsfour@gmail.com\n\tExecutive Producer\r\n\tLead Narrative Designer
     & Cutscene Developer\r\n\tQ&A & System Analyst\n\nKeith Miller - mkm2010@gmail.com\n\tLead
-    System Designer\n\tUnity Tutorial Googling Expert\n\nMichael Prather - prathermd@aol.com\r\n\tLead
-    Level Designer\r\n\tLead Combat Designer\r\n\tGame Designer\r\n\tSystem Designer"
+    System Designer\n\tLead Gameplay Engineer\n\tGame Designer\n\nMichael Prather
+    - prathermd@aol.com\r\n\tLead Level Designer\r\n\tLead Combat Designer\r\n\tGame
+    Designer\r\n\tSystem Designer"
 --- !u!222 &684229129
 CanvasRenderer:
   m_ObjectHideFlags: 0

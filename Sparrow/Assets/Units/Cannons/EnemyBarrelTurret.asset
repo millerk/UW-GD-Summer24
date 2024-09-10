@@ -17,10 +17,10 @@ MonoBehaviour:
   attackStrength: 1
   attackDistance: 10
   cannonSpriteOffsetFromBase: {x: 0, y: 0}
-  firePointOffset: {x: 0, y: 0}
+  firePointOffset: {x: -1, y: 0}
   cannonBaseSprite: {fileID: 21300000, guid: b9d6f9731e290cc40ac247831a4e29a7, type: 3}
   projectile: {fileID: 5427650957570344865, guid: b2f844b181137dd4db4e25c00bed37c1, type: 3}
   projectileSpeed: 10
-  animationController: {fileID: 9100000, guid: 370114a09d56afc47a0416adcf6e21d4, type: 2}
+  animationController: {fileID: 9100000, guid: 21a2e19c324b1764182c524bb2e8b335, type: 2}
   shopCost: 28
-  shopIcon: {fileID: -718068008, guid: afb04c1de87d80b47b1c4430299a219a, type: 3}
+  shopIcon: {fileID: 1539193036, guid: 7d6931cb078d423419f636b5c80bbf4b, type: 3}
