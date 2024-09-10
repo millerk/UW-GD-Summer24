@@ -20,4 +20,4 @@ MonoBehaviour:
     Count: 10
   - Enemy: {fileID: 4186142410671700258, guid: cf414ebd602649e4a9109e981b0158dd, type: 3}
     Count: 4
-  nextLevel: {fileID: 11400000, guid: ab66796388963b9449a4271760f8e042, type: 2}
+  nextLevel: {fileID: 11400000, guid: ddd41ad15fbddb8498126614ac2ea742, type: 2}
