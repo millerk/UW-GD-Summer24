@@ -78,6 +78,15 @@ public class ShopManagerLogic : MonoBehaviour
     {
         GlobalVariables.Set(PlayerStatus.CURRENT_GOLD, totalGold);
         GlobalVariables.Set(ShipConfiguration.PLAYER_CANNON_DEF, playerCannons);
-        SceneManager.LoadScene("Scenes/Battlefield");
+        LevelDefinition nextScreen = GlobalVariables.Get<LevelDefinition>(LevelManager.NEXT_LEVEL);
+        if (nextScreen is DialogueLevelDefinition)
+        {
+            GlobalVariables.Set(LevelManager.NEXT_LEVEL, nextScreen.nextLevel);
+            SceneManager.LoadScene((nextScreen as DialogueLevelDefinition).DialogueScene);
+        }
+        else
+        {
+            SceneManager.LoadScene("Scenes/Battlefield");
+        }
     }
 }

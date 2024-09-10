@@ -1111,10 +1111,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Bryan Yee - https://bryanyee.itch.io/\n\tLead Artist\n\tTechnical Artist\n\tConcept
-    Artist\n\tUI/UX Artist/Designer\n\tGame Designer\nCole Ritmire\n\tUI/UX designer\n\tLead
-    Game Designer\n\tSystem Analyst\n\tJunior Coding Extraordinaire\n\nJacob Robbins\n\nKeith
-    Miller - mkm2010@gmail.com\n\tLead System Designer\n\tUnity Tutorial Googling
-    Expert\n\nMichael Prather\n\tSystem Designer\n\nNick Khan"
+    Artist\n\tUI/UX Artist/Designer\n\tGame Designer\nCole Ritmire - ritmirec@gmail.com\n\tUI/UX designer\n\tLead
+    Game Designer\n\tSystem Analyst\n\tJunior Coding Extraordinaire\n\tQA & Playtester\n\nJacob
+    Robbins - robbinsfour@gmail.com\n\t-Executive Producer\r\n\t-Lead Narrative Designer
+    & Cutscene Developer\r\n\t-Q&A & System Analyst\n\nKeith Miller - mkm2010@gmail.com\n\tLead
+    System Designer\n\tUnity Tutorial Googling Expert\n\nMichael Prather - prathermd@aol.com\r\n\tLead
+    Level Designer\r\n\tLead Combat Designer\r\n\tGame Designer\r\n\tSystem Designer\n\nNick
+    Khan"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1141,8 +1144,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 28
+  m_fontSizeBase: 28
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

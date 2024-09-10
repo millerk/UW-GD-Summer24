@@ -889,8 +889,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8402db157795a684996a53075b73a286, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  newGameScene: Scenes/Battlefield
-  gameStartLevel: {fileID: 11400000, guid: 9c9bc89b524547d44a84dcafea3e6d12, type: 2}
+  introDialogue: {fileID: 11400000, guid: 12cd4514f12f67a4bacb6be54d0e1287, type: 2}
 --- !u!4 &722231711
 Transform:
   m_ObjectHideFlags: 0

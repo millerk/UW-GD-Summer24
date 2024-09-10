@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName ="Level Configuration")]
+[CreateAssetMenu(menuName ="Level/Battlefield Level")]
 public class LevelDefinition : ScriptableObject
 {
     [System.Serializable]
