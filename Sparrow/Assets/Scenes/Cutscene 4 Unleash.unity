@@ -309,7 +309,8 @@ MonoBehaviour:
   - I told you to not make a mess!
   - Now you've done it
   - No matter...
-  - unleash the Cannaken!!!
+  - Unleash the Krakens!!
+  isFinalDialogue: 0
 --- !u!1 &662263303
 GameObject:
   m_ObjectHideFlags: 0
