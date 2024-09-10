@@ -4984,7 +4984,6 @@ GameObject:
   - component: {fileID: 2803948586991084623}
   - component: {fileID: 4332703334164343706}
   - component: {fileID: 605418080969120408}
-  - component: {fileID: 7260513372849428912}
   - component: {fileID: 974075676751969829}
   - component: {fileID: 7149692812225392152}
   - component: {fileID: -7841565561910008616}
@@ -5077,41 +5076,6 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: -0.051427245}
   m_Size: {x: 2, y: 4.06}
   m_Direction: 0
---- !u!58 &7260513372849428912
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1739139097824912367}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 1.85
 --- !u!114 &974075676751969829
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5146,7 +5110,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 545aeb05ff8efda4fa37ca43d2560716, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _initialState: {fileID: 11400000, guid: 5a3efcc2723ffe04588fc969b288c524, type: 2}
+  _initialState: {fileID: 11400000, guid: 2e423973f48787943bbe5e477881d454, type: 2}
 --- !u!114 &-7841565561910008616
 MonoBehaviour:
   m_ObjectHideFlags: 0

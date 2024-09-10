@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 20bda4313f62060489b2d74a29e569dd, type: 3}
-  m_Name: ExplosiveState
+  m_Name: FlamethrowerPursueState
   m_EditorClassIdentifier: 
   Action:
-  - {fileID: 11400000, guid: ad3659c90be88694fa6b4b051bf8ad56, type: 2}
+  - {fileID: 11400000, guid: a858536e89ed9e64b88ee38753430369, type: 2}
   Transitions: []

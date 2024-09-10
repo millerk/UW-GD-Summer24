@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 8135175822143399236}
   - component: {fileID: -7801349114137960917}
   - component: {fileID: -5095724165131227897}
-  - component: {fileID: -1302857460594714932}
   - component: {fileID: -2910938558028449925}
   - component: {fileID: 5461709906190230059}
   - component: {fileID: -8965846186406707897}
@@ -154,41 +153,6 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 3, y: 3}
   m_Direction: 0
---- !u!58 &-1302857460594714932
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 135509283537529223}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 2
 --- !u!114 &-2910938558028449925
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -208,6 +172,7 @@ MonoBehaviour:
   hitPoints: 5
   isPlayer: 0
   model: {fileID: 135509283537529223}
+  additionalDashIFrame: 0
   hitInvulnDurationSeconds: 0
   invulnDeltaTime: 0
 --- !u!114 &5461709906190230059
@@ -222,7 +187,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 545aeb05ff8efda4fa37ca43d2560716, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _initialState: {fileID: 11400000, guid: bc5b51c68f3e3314bbbc20628a42d13e, type: 2}
+  _initialState: {fileID: 11400000, guid: a7dc3bca6e894204ba151e56e616903c, type: 2}
 --- !u!114 &-8965846186406707897
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -257,6 +222,7 @@ MonoBehaviour:
   cannon: {fileID: 11400000, guid: 405f36c6a1c506d478d1b574ec3de240, type: 2}
   predictionAdjustment: 0
   angleAdjustment: 0
+  startCooldownTime: 5
 --- !u!1 &928976068086658845
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 1967662949920922427}
   - component: {fileID: 7209846477368653438}
   - component: {fileID: 3825436788023796077}
-  - component: {fileID: 2644779676416397477}
   - component: {fileID: 5724945622929543249}
   - component: {fileID: -1310329126172400587}
   - component: {fileID: 8023703662039456121}
@@ -154,41 +153,6 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 2.25, y: 5.21875}
   m_Direction: 0
---- !u!58 &2644779676416397477
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2811579824418986743}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 2.609375
 --- !u!114 &5724945622929543249
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -204,8 +168,13 @@ MonoBehaviour:
   healthChanged: {fileID: 0}
   onDeath: {fileID: 11400000, guid: 414dfc9853bd0654daa1e3928b01376e, type: 2}
   damageSourceTags: 00000000
+  maxHealth: 0
   hitPoints: 5
   isPlayer: 0
+  model: {fileID: 0}
+  additionalDashIFrame: 0
+  hitInvulnDurationSeconds: 0
+  invulnDeltaTime: 0
 --- !u!114 &-1310329126172400587
 MonoBehaviour:
   m_ObjectHideFlags: 0

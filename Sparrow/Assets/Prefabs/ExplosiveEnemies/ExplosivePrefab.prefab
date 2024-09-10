@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 2729366731923572923}
   - component: {fileID: -4372300726866389850}
   - component: {fileID: 6582261746735242463}
-  m_Layer: 9
+  m_Layer: 14
   m_Name: ExplosivePrefab
-  m_TagString: Enemy
+  m_TagString: Explosion
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -75,6 +75,8 @@ public class HealthManager : MonoBehaviour
     }
     public void ApplyDamage(float damageAmount, DamageSourceTag damageSourceTag)
     {
+        if (isInvuln) return; // Handle case where explosion applies direct damage
+
         hitPoints -= Mathf.RoundToInt(damageAmount); // Assuming damage is an integer
         if (healthChanged != null)
         {

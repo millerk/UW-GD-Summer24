@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c85e4e39d133a7f419c83857a8d15915, type: 3}
+  m_Name: IntroDialogue
+  m_EditorClassIdentifier: 
+  name: Intro
+  enemiesToSpawn: []
+  nextLevel: {fileID: 11400000, guid: 9c9bc89b524547d44a84dcafea3e6d12, type: 2}
+  DialogueScene: Scenes/Cutscene 1 intro

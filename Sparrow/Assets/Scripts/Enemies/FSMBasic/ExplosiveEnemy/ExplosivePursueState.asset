@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 20bda4313f62060489b2d74a29e569dd, type: 3}
-  m_Name: CannonKrakenState
+  m_Name: ExplosivePursueState
   m_EditorClassIdentifier: 
   Action:
-  - {fileID: 11400000, guid: 8b761d6dc203a6f4db72bede6a7be04a, type: 2}
+  - {fileID: 11400000, guid: ad3659c90be88694fa6b4b051bf8ad56, type: 2}
   Transitions: []
