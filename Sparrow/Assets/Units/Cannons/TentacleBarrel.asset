@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: TentacleBarrel
   description: 
-  attackStrength: 0
+  attackStrength: 5
   attackDistance: 30
   cannonSpriteOffsetFromBase: {x: 0, y: 0}
   firePointOffset: {x: 0, y: 0}
