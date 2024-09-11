@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: EnemyCannon
   description: This fires stuff too
-  attackStrength: 10
+  attackStrength: 4
   attackDistance: 20
   cannonSpriteOffsetFromBase: {x: -0.25, y: 0.2}
   firePointOffset: {x: -0.45, y: 0}
